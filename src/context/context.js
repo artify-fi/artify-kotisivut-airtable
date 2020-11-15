@@ -18,8 +18,7 @@ const GatsbyProvider = ({ children }) => {
 
   return (
     <GatsbyContext.Provider
-      // value={{ isSidebarOpen, links, showSidebar, hideSidebar }}
-      value='hello world'
+      value={{ isSidebarOpen, links, showSidebar, hideSidebar }}
     >
       {children}
     </GatsbyContext.Provider>

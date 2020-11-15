@@ -13,12 +13,11 @@ import './layout.css'
 
 const Layout = ({ children }) => {
 
-  const data = useContext(GatsbyContext)
-  console.log(data);
+  const { isSidebarOpen } = useContext(GatsbyContext)
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <Sidebar />
+      {isSidebarOpen && <Sidebar />}
       {children}
       <Footer />
     </ThemeProvider>

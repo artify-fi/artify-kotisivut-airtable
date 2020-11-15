@@ -4,8 +4,20 @@ import logo from "../../assets/images/logo2.jpg"
 import { GoThreeBars } from "react-icons/go"
 import { Link } from "gatsby"
 import NavLink from "./NavLink"
+import { GatsbyContext } from '../../context/context'
 
 const Navbar = () => {
+  const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
+
+  const tempLinks = [
+    ...new Set(
+      links.map(link => {
+        return link.page
+      })
+    )
+  ]
+  console.log(tempLinks);
+
   return (
     <Wrapper>
       <div className="nav-center">
@@ -13,26 +25,16 @@ const Navbar = () => {
           <Link to='/'>
             <img src={logo} alt='artify_logo' />
           </Link>
-          <button className='toggle-btn'>
-            <GoThreeBars />
-          </button>
+          {!isSidebarOpen && (
+            <button className='toggle-btn' onClick={showSidebar}>
+              <GoThreeBars />
+            </button>
+          )}
         </div>
         <ul className="nav-links">
-          <li>
-            <button>etusivu</button>
-          </li>
-          <li>
-            <button>ratkaisut</button>
-          </li>
-          <li>
-            <button>blogi</button>
-          </li>
-          <li>
-            <button>yhteystiedot</button>
-          </li>
-          <li>
-            <button>yhteystiedot</button>
-          </li>
+          {tempLinks.map((page, index) => {
+            return <NavLink key={index} page={page}></NavLink>
+          })}
         </ul>
       </div>
     </Wrapper>
