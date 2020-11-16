@@ -4,12 +4,15 @@ require("dotenv").config({
 // const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
-    title: "Nykyaikaiset Progressiiviset Hakukonenoptimoidut Verkkosivut Ja Mobiilisovellukset Pienyrittajalle",
-    description: "This is WebDev Portfolio Site",
-    author: "@art_bachmann",
-    twitterUsername: "@artbachmann",
-    image: "/twitter-img.png",
-    siteUrl: "https://artify.fi",
+    title: `Nykyaikaiset Progressiiviset Hakukonenoptimoidut Verkkosivut Ja Mobiilisovellukset Pienyrittajalle`,
+    description: `Laadukasta ja luotettavaa palvelua hyvällä hinta-laatusuhteella.
+    Tyylikkäät responsiiviset kotisivut, jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.
+    Kattavan palveluvalikoiman, josta saat sivuillesi kaiken asiantuntevasta sivuston suunnittelusta ja rakentamisesta sen tehokkaaseen mainostamiseen. `,
+    titleTemplate: `%s | Hakukonenoptimoidut Verkkosivut`,
+    url: `https://artify.fi/`,
+    twitterUsername: `@ArtBachmann`,
+    image: `logo.jpg`,
+
   },
   plugins: [
     `gatsby-plugin-sharp`,

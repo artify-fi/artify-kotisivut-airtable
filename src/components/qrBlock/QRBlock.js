@@ -93,7 +93,7 @@ export default function QRBlock(props) {
           align="center"
           className={classes.missionStatement}
         >
-           Gatsbyn lisääminen on loistava tapa lisätä nykyaikaisia suorituskykyä,
+           GatsbyJS:n käyttäminen on loistava tapa lisätä nykyaikaista suorituskykyä,
           skaalautuvuutta, turvallisuutta ja kehityksen nopeuden etuja
           Älä tilaa verkkosivustoa, jolla on edellisen vuosikymmenen tekniikkaa.
           Gatsby.js rakentaa nopeimman mahdollisen verkkosivuston.

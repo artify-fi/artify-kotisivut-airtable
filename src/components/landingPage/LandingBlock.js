@@ -51,27 +51,27 @@ const useStyles = makeStyles(theme => ({
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
       width: '52vw',
-      height: '154vh',
+      height: '164vh',
       marginLeft: '6vw'
     },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
       width: '58em',
-      height: '148vh',
+      height: '156vh',
       marginLeft: '3vw'
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
       width: '50em',
-      height: '130vh'
+      height: '156vh'
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      width: '42em',
-      height: '140vh',
+      width: '40em',
+      height: '156vh',
     },
 
     // 0 upt to 600
@@ -113,6 +113,9 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '2em',
     paddingTop: '1em',
   },
+  cardHeading: {
+    marginTop: '2em'
+  }
 }))
 
 const LandingBlock = () => {
@@ -147,7 +150,7 @@ const LandingBlock = () => {
                   component="h2"
                   align='center'
                   className={classes.cardHeading}>
-                  Nykyaikaiset  progressiiviset kotisivut ja  mobiilisovellukset
+                  Nykyaikaiset  progressiiviset* kotisivut ja  mobiilisovellukset
                   pienyrittäjille mikä tukevat uusien asiakkaiden tavoittamista.
                 </Typography>
               </CardContent>
@@ -162,6 +165,30 @@ const LandingBlock = () => {
                 </Typography>
                 <Typography variant="h4" component="p" className={classes.cardText}>
                   Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+                <Typography variant="body1" component="p" className={classes.cardText}>
+                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+                <Typography variant="body1" component="p" className={classes.cardText}>
+                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+                <Typography variant="body1" component="p" className={classes.cardText}>
+                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+                <Typography variant="body1" component="p" className={classes.cardText}>
+                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+                <Typography variant="body1" component="p" className={classes.cardText}>
+                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                  across all continents except Antarctica
+                </Typography>
+                <Typography variant="body1" component="p" className={classes.cardText}>
+                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                   across all continents except Antarctica
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.cardText}>

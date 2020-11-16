@@ -7,15 +7,20 @@ import Header from './navbar/Navbar'
 import Footer from './footer/Footer'
 import Sidebar from './sidebar/Sidebar'
 import { GatsbyContext } from '../context/context'
+import Helmet from "react-helmet"
 import './layout.css'
 
 
 
 const Layout = ({ children }) => {
 
+
   const { isSidebarOpen } = useContext(GatsbyContext)
   return (
     <ThemeProvider theme={theme}>
+      <Helmet>
+        <title>Artify progressiiviset kotisivut ja mobiilissovellukset</title>
+      </Helmet>
       <Header />
       {isSidebarOpen && <Sidebar />}
       {children}
