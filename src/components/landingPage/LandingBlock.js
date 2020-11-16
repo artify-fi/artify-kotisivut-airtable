@@ -160,8 +160,8 @@ const LandingBlock = () => {
                 <Typography gutterBottom variant="h1" component="h2">
 
                 </Typography>
-                <Typography variant="body1" component="p" className={classes.cardText}>
-                  # Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                <Typography variant="h4" component="p" className={classes.cardText}>
+                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                   across all continents except Antarctica
                 </Typography>
                 <Typography variant="body1" component="p" className={classes.cardText}>

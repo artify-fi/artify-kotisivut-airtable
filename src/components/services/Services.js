@@ -1,5 +1,6 @@
 import React from "react"
 import Title from "../title/Title"
+import { Link } from 'gatsby'
 import services from "../constants/services"
 
 const Services = () => {
@@ -8,14 +9,18 @@ const Services = () => {
       <Title title='palvelut' />
       <div className="section-center services-center">
         {services.map((service) => {
-          const { id, icon, title, text } = service
+          const { id, icon, title, text, link } = service
 
-          return <article key={id} className='service'>
-            {icon}
-            <h2>{title}</h2>
-            <div className='underline'></div>
-            <p>{text}</p>
-          </article>
+          return (
+            <Link to={link} key={id} className='service'>
+
+              {icon}
+              <h2>{title}</h2>
+              <div className='underline'></div>
+              <p>{text}</p>
+
+            </Link>
+          )
         })}
       </div>
     </section>

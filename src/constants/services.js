@@ -12,6 +12,7 @@ export default [
     label: "mission",
     text:
       " Activated charcoal post-ironic unicorn flexitarian tumeric, direct trade man bun mumblecore kickstarter art party. ",
+    link: `/palvelut/hakukoneOptimointi`,
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ export default [
     label: "vision",
     text:
       " Brooklyn mustache polaroid neutra. Wolf subway tile gluten-free bushwick, godard letterpress pitchfork direct trade put a bird on",
+    link: '/'
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ export default [
     label: "history",
     text:
       "Chia pinterest locavore letterpress tote bag. Subway tile PBR&B knausgaard locavore quinoa four loko disrupt photo booth hella.",
+    link: '/'
   },
   {
     id: 4,
@@ -33,5 +36,6 @@ export default [
     label: "work",
     text:
       "Man braid banh mi prism disrupt hella cray mlkshk jean shorts typewriter synth salvia direct trade pabst knausgaard.",
+    link: '/'
   },
 ]

@@ -2,6 +2,12 @@ import React from "react"
 import { FaCcStripe, FaCreditCard, FaAlipay } from "react-icons/fa"
 export default [
   {
+    page: "koti",
+    label: "etusivu",
+    url: `/koti/index`,
+    icon: <FaCreditCard className="icon" />,
+  },
+  {
     page: "palvelut",
     label: "verkkosivut",
     url: `/products/payments`,
@@ -37,12 +43,12 @@ export default [
     url: `/ratkaisut/projektit`,
     icon: <FaAlipay className="icon" />,
   },
-  // {
-  //   page: "projektit",
-  //   label: "gatsby.js",
-  //   url: `/products/payments`,
-  //   icon: <FaAlipay className="icon" />,
-  // },
+  {
+    page: "yritys",
+    label: "yhteystiedot",
+    url: `/yritys/yhteystiedot`,
+    icon: <FaAlipay className="icon" />,
+  },
   // {
   //   page: "projektit",
   //   label: "headless-cms",
