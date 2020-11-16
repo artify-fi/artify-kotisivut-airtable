@@ -9,7 +9,7 @@ module.exports = {
     Tyylikkäät responsiiviset kotisivut, jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.
     Kattavan palveluvalikoiman, josta saat sivuillesi kaiken asiantuntevasta sivuston suunnittelusta ja rakentamisesta sen tehokkaaseen mainostamiseen. `,
     titleTemplate: `%s | Hakukonenoptimoidut Verkkosivut`,
-    siteUrl: `https://artifykotisivutairtabledevelop.gtsb.io/`,
+    // url: `https://artifykotisivutairtabledevelop.gtsb.io/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,
 
