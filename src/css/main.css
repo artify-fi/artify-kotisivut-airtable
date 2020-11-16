@@ -145,13 +145,13 @@ p {
 
 /* section */
 .section {
-  padding: 5rem 0;
+  padding: 5rem 0;  
 }
 
 .section-center {
   width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
+  margin: 0 auto;  
+  max-width: 1170px; 
 }
 
 @media screen and (min-width: 992px) {
@@ -748,12 +748,13 @@ Services
     -webkit-column-gap: 2rem;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
+    padding-right: 3em;
   }
 }
 
 @media screen and (min-width: 992px) {
   .services-center {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
   }
 }
 

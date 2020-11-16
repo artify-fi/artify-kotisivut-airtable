@@ -1,11 +1,12 @@
 import React from 'react'
 import '../../css/main.css'
 import Layout from "../../components/layout"
+import UC from '../../components/UnderConstruction'
 
-const googleAnalyticks = () => (
+const jamStack = () => (
   <Layout>
-    Google Analytics
+    <UC />
   </Layout>
 )
 
-export default googleAnalyticks
+export default jamStack

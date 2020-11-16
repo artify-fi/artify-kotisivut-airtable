@@ -2,10 +2,10 @@ import React from 'react'
 import '../../css/main.css'
 import Layout from "../../components/layout"
 
-const googleAnalyticks = () => (
+const kestäväKehitys = () => (
   <Layout>
-    Google Analytics
+    Kestävä Kehitys.
   </Layout>
 )
 
-export default googleAnalyticks
+export default kestäväKehitys

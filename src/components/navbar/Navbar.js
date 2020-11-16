@@ -45,7 +45,7 @@ const Wrapper = styled.nav`
   position: relative;
   background-color: #e0e0e0;
   z-index: 1;
-  height: 5rem;
+  height: 7rem;
   display: flex;
   align-items: center;
   position: fixed;
@@ -58,7 +58,7 @@ const Wrapper = styled.nav`
       color: var(--clr-white);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     img {
       width: 120px;      
