@@ -114,10 +114,10 @@ export default createMuiTheme({
       color: grey5,
     },
     subtitle1: {
-      fontFamily: 'Montserrat',
+      fontFamily: 'Open Sans',
       color: grey5,
       fontWeight: 500,
-      fontSize: '1.1rem',
+      fontSize: '1.2rem',
       lineHeight: 1.4
     },
     subtitle2: {
@@ -143,15 +143,15 @@ export default createMuiTheme({
       fontWeight: 400,
       color: violet,
     },
-    learnButton: {
+    learnButtonHero: {
       borderColor: grey4,
       borderWidth: 2,
       textTransform: 'none',
       textDecoration: 'none',
       textDecorationStyle: 'none',
       borderRadius: 50,
-      fontFamily: 'Montserrat',
-      fontWeight: '600',
+      fontFamily: 'Roboto',
+      fontWeight: '300',
       color: grey4,
     },
   },

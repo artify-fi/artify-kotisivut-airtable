@@ -1,10 +1,12 @@
 import React from 'react'
+import HeadlessWP from '../../components/headlessWP/HeadlessWordPress'
+import Layout from '../../components/layout'
 
 const headlessCMS = () => {
   return (
-    <div>
-      Headless CMS Page
-    </div>
+    <Layout>
+      <HeadlessWP />
+    </Layout>
   )
 }
 

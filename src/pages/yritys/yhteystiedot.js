@@ -1,10 +1,12 @@
 import React from 'react'
+import Contact from '../../components/contactComponent/Contact'
+import Layout from '../../components/layout'
 
 const yhteystiedot = () => {
   return (
-    <div>
-      Yhteystiedot
-    </div>
+    <Layout>
+      <Contact />
+    </Layout>
   )
 }
 
