@@ -53,6 +53,13 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://artifykotisivutairtabledevelop.gtsb.io/`,
+      },
+    },
+
     // {
     //   resolve: 'gatsby-source-apiserver',
     //   options: {
