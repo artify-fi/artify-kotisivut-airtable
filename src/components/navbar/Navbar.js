@@ -43,7 +43,7 @@ const Navbar = () => {
 
 const Wrapper = styled.nav`
   position: relative;
-  background-color: #e0e0e0;
+  background-color: #cccccc;
   z-index: 1;
   height: 7rem;
   display: flex;
