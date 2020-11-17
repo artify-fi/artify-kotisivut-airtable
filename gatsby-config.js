@@ -49,16 +49,8 @@ module.exports = {
       options: {
         host: 'https://artifykotisivutairtabledevelop.gtsb.io/',
         sitemap: 'https://artifykotisivutairtabledevelop.gtsb.io/sitemap.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: '*', allow: ['/'] }]
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
-      }
+        policy: [{ userAgent: '*', allow: ['/'] }]
+      },
     },
 
     // {
