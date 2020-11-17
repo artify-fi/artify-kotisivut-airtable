@@ -1,7 +1,7 @@
 import React from "react"
 import Title from "../title/Title"
 import { Link } from 'gatsby'
-import services from "../constants/services"
+import services from "../../constants/services"
 
 const Services = () => {
   return (

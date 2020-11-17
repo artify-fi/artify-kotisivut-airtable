@@ -31,7 +31,7 @@ Variables
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
   --clr-grey-5: hsl(210, 22%, 49%);
-  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-8: hsl(210, 12%, 81%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-green-dark: hsl(125, 67%, 35%);
@@ -171,8 +171,10 @@ p {
 }
 
 .section-title {
+  color: var(--clr-primary-2);
   margin-bottom: 4rem;
   text-align: center;
+  font-family: Open Sans;
 }
 
 .bg-grey {
@@ -702,16 +704,21 @@ Services
 ===============
 */
 .service {
-  background: var(--clr-white);
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--clr-grey-8);
+  justify-items: center;
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
   text-align: center;
+  color: var(--clr-primary-2);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
 
 .service-icon {
+
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -726,19 +733,20 @@ Services
 .service p {
   -webkit-transition: var(--transition);
   transition: var(--transition);
+  font-size: 1.2rem;
 }
 
 .service:hover {
-  background: var(--clr-primary-5);
-  color: var(--clr-primary-9);
+  background: var(--clr-grey-5);
+  color: var(--clr-grey-9);
 }
 
 .service:hover p {
-  color: var(--clr-primary-9);
+  color: var(--clr-grey-9);
 }
 
 .service:hover .underline {
-  background: var(--clr-primary-9);
+  background: var(--clr-grey-8);
 }
 
 @media screen and (min-width: 676px) {
@@ -754,7 +762,7 @@ Services
 
 @media screen and (min-width: 992px) {
   .services-center {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

@@ -114,7 +114,9 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '1em',
   },
   cardHeading: {
-    marginTop: '2em'
+    marginTop: '1.2em',
+    paddingLeft: '2em',
+    paddingRight: '2em'
   }
 }))
 
@@ -147,7 +149,7 @@ const LandingBlock = () => {
                 <Typography
                   gutterBottom
                   variant={matchesSM ? "h4" : 'h1'}
-                  component="h2"
+                  component="h1"
                   align='center'
                   className={classes.cardHeading}>
                   Nykyaikaiset  progressiiviset* kotisivut ja  mobiilisovellukset
@@ -157,13 +159,17 @@ const LandingBlock = () => {
               <CardMedia
                 className={classes.media}
                 image={cardImage}
-                title="Contemplative Reptile"
+                title="Responsive devices"
               />
               <CardContent>
                 <Typography gutterBottom variant="h1" component="h2">
 
                 </Typography>
-                <Typography variant="h4" component="p" className={classes.cardText}>
+                <Typography
+                  variant={matchesSM ? "h5" : 'h2'}
+                  component="h2"
+                  align='center'
+                  className={classes.cardText}>
                   Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
                   across all continents except Antarctica
                 </Typography>

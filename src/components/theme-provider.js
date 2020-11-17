@@ -50,7 +50,7 @@ const theme = createMuiTheme({
   },
   typography: {
     tab: {
-      fontFamily: 'Proza Libre',
+      fontFamily: 'Montserrat',
       textTransform: 'none',
       fontWeight: '600',
       fontSize: '1.2rem',
@@ -59,41 +59,41 @@ const theme = createMuiTheme({
       fontSize: '1.3rem',
       textTransform: 'none',
       textDecoration: 'none',
-      fontFamily: 'Proza Libre',
+      fontFamily: 'Montserrat',
       color: 'white',
       backgroundColor: grey4
     },
     h1: {
-      fontFamily: 'Proza Libre',
-      fontWeight: 600,
-      fontSize: '1.8rem',
+      fontFamily: 'Roboto',
+      fontWeight: 500,
+      fontSize: '1.9rem',
       color: blue1dark,
       lineHeight: 1.6,
     },
     h2: {
-      fontFamily: 'Proza Libre',
+      fontFamily: 'Roboto',
       fontWeight: 600,
-      fontSize: '1.8rem',
+      fontSize: '1.6rem',
       color: grey4,
       lineHeight: 1.4,
     },
     h3: {
-      fontFamily: 'Proza Libre',
+      fontFamily: 'Roboto',
       fontWeight: 600,
-      fontSize: '1.7rem',
+      fontSize: '1.6rem',
       color: violet,
       lineHeight: 1.5,
     },
     h4: {
-      fontFamily: 'Proza Libre',
-      fontWeight: 600,
+      fontFamily: 'Roboto',
+      fontWeight: 500,
       fontSize: '1.4rem',
       color: blue1dark,
       lineHeight: 1.3
     },
     h5: {
-      fontFamily: 'Proza Libre',
-      fontWeight: 600,
+      fontFamily: 'Roboto',
+      fontWeight: 500,
       fontSize: '1.2rem',
       color: grey5,
       lineHeight: 1.3
@@ -101,9 +101,11 @@ const theme = createMuiTheme({
     h6: {
       fontSize: '1rem',
       fontWeight: 500,
-      fontFamily: 'Proza Libre',
+      fontFamily: 'Montserrat',
       color: grey5,
     },
+
+
     subtitle1: {
       fontFamily: 'Open Sans',
       color: grey5,

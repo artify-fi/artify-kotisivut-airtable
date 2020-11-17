@@ -91,7 +91,7 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: 'Proza Libre',
+              family: 'Merriweather Sans',
               variants: ['400', '500', '600', '700'],
               text: "Hello",
               formatAgents: {
