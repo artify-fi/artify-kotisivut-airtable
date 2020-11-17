@@ -12,8 +12,8 @@ module.exports = {
     siteUrl: `https://artifykotisivutairtabledevelop.gtsb.io/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,
-
   },
+
   plugins: [
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
@@ -21,7 +21,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
 
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,9 +30,23 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://artifykotisivutairtabledevelop.gtsb.io/',
+        sitemap: 'https://artifykotisivutairtabledevelop.gtsb.io/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-180499768-1'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/admin`, `/tags/links`]
       }
     },
 
@@ -62,34 +75,5 @@ module.exports = {
         trackingId: 'UA-180499768-1'
       }
     },
-    // {
-    //   resolve: `gatsby-source-airtable`,
-    //   options: {
-    //     apiKey: process.env.GATSBY_AIRTABLE_API,
-    //     concurrency: 5,
-    //     tables: [
-    //       {
-    //         baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-    //         tableName: `Projects`,
-    //         mapping: { image: `fileNode` },
-    //       },
-    //       {
-    //         baseId: process.env.GATSBY_AIRTABLE_BASE_ID,
-    //         tableName: `Customers`,
-    //         mapping: { image: `fileNode` },
-    //       },
-    //     ],
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-algolia`,
-    //   options: {
-    //     appId: process.env.GATSBY_ALGOLIA_APP_ID,
-    //     apiKey: process.env.GATSBY_ALGOLIA_ADMIN_KEY,
-    //     indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
-    //     queries: require("./src/constants/algolia"),
-    //     chunkSize: 10000,
-    //   },
-    // },
   ],
 }
