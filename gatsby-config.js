@@ -29,51 +29,98 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }          
+        }`,
+      }
+    },
+
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://artifykotisivutairtabledevelop.gtsb.io/',
         sitemap: 'https://artifykotisivutairtabledevelop.gtsb.io/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
       }
     },
+
+    // {
+    //   resolve: 'gatsby-source-apiserver',
+    //   options: {
+    //     url: 'https://swapi.co/api/people/',
+    //     method: 'get',
+    //     entityLevel: `results`,
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     typePrefix: 'internal__',
+    //     name: `posts`,
+    //     params: {
+    //       results: 10
+    //     },
+    //     verboseOutput: true,
+    //   }
+    // },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-180499768-1'
-      }
-    },
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        exclude: [`/admin`, `/tags/links`]
       }
     },
 
     {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
+      resolve: 'gatsby-plugin-webfonts',
       options: {
-        fonts: [
-          {
-            family: 'Proza Libre',
-            variants: ['400', '500', '600', '700'],
-          },
-          {
-            family: 'Open Sans',
-            variants: ['200', '400', '500', '600', '700'],
-          },
-          {
-            family: `Montserrat`,
-            variants: [`400`, `500`, `600`, `700`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: 'Proza Libre',
+              variants: ['400', '500', '600', '700'],
+              text: "Hello",
+              formatAgents: {
+                woff: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko`,
+                woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
+              },
+            },
+            {
+              family: 'Open Sans',
+              variants: ['200', '400', '500', '600', '700'],
+              text: "Hello",
+              formatAgents: {
+                woff: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko`,
+                woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
+              },
+            },
+            {
+              family: `Montserrat`,
+              variants: [`400`, `500`, `600`, `700`],
+              text: "Hello",
+              formatAgents: {
+                woff: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; rv:11.0) like Gecko`,
+                woff2: `Mozilla/5.0 (Windows NT 10.0; Win64; x64; ServiceUI 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393`,
+              },
+            },
+          ],
+        }
       },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: 'UA-180499768-1'
-      }
     },
   ],
 }
