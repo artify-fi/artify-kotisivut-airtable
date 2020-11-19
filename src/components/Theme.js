@@ -1,12 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 
 const white = '#FFFFFF'
-
+const grey0 = '#e0e0e0'
 const grey1 = '#dae1e2'
 const grey2 = '#f3f3f3'
 const grey3 = '#6c8084'
 const grey4 = '#607D8B'
-const grey5 = '#274549'
+const grey5 = '#344d63'
 
 // Greens
 const green5 = '#313c2e'
@@ -15,6 +15,7 @@ const green5 = '#313c2e'
 const aqua3dark = '#62acb5'
 const aqua3light = '#ade4ea'
 const blue1dark = '#213b4f'
+const blueLogo = '#344d63'
 
 // Misc.. 
 const sea_foam = '#a5c0ad'
@@ -35,7 +36,9 @@ export default createMuiTheme({
   palette: {
     common: {
       blue1dark: `${blue1dark}`,
+      blueLogo: `${blueLogo}`,
       white: `${white}`,
+      grey0: `${grey0}`,
       grey1: `${grey1}`,
       grey2: `${grey2}`,
       grey3: `${grey3}`,

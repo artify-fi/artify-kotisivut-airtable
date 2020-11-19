@@ -9,8 +9,14 @@ export default [
   },
   {
     page: "palvelut",
-    label: "verkkosivut",
-    url: `/palvelut/verkkosivut`,
+    label: "yhteenveto",
+    url: `/palvelut/tiivistelmä`,
+    icon: <FaCreditCard className="icon" />,
+  },
+  {
+    page: "palvelut",
+    label: "kotisivut",
+    url: `/palvelut/kotisivut`,
     icon: <FaCreditCard className="icon" />,
   },
   {
@@ -25,12 +31,12 @@ export default [
     url: `/palvelut/hakukoneMarkkinointi`,
     icon: <FaCreditCard className="icon" />,
   },
-  {
-    page: "palvelut",
-    label: "google analytics",
-    url: `/palvelut/googleAnalytics`,
-    icon: <FaCreditCard className="icon" />,
-  },
+  // {
+  //   page: "palvelut",
+  //   label: "google analytics",
+  //   url: `/palvelut/googleAnalytics`,
+  //   icon: <FaCreditCard className="icon" />,
+  // },
   {
     page: "ratkaisut",
     label: "GatsbyJS",

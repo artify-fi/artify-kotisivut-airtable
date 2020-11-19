@@ -1,22 +1,45 @@
 import React from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
+
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+
 import Button from '@material-ui/core/Button';
 import ButtonArrow from '../original'
+
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import GroupAddIcon from '@material-ui/icons/GroupAdd';
+import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
+import WebIcon from '@material-ui/icons/Web';
+import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import infoBackground from '../../assets/images/abstract_background_small.webp'
-import cardImage from '../../assets/images/multi_screens.jpg'
+import cardImage from '../../assets/images/multiple_screens_optimized.webp'
+import { OpenInBrowser } from '@material-ui/icons';
 
 
 
 const useStyles = makeStyles(theme => ({
+  ListItemText1: {
+    width: '100%',
+    backgroundColor: 'white',
+    marginBottom: '2em'
+  },
+  ListItemText2: {
+    width: '100%',
+    backgroundColor: 'white',
+    marginBottom: '2em'
+  },
   mainContainer: {
     marginTop: '6em',
     [theme.breakpoints.down('md')]: {
@@ -41,11 +64,15 @@ const useStyles = makeStyles(theme => ({
   learnButtonHero: {
     ...theme.typography.learnButton,
     fontSize: '1rem',
-    fontWeight: 400,
+    fontWeight: 500,
     height: 45,
     width: 160,
+    marginTop: '2em',
+    marginLeft: '4em',
+    backgroundColor: theme.palette.common.grey1,
     '&:hover': {
-      backgroundColor: theme.palette.common.grey1,
+      backgroundColor: theme.palette.common.grey3,
+      color: 'white'
     }
   },
   infoBackground: {
@@ -57,51 +84,63 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
-      height: '200vh',
+      height: '220vh',
     },
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      height: '190vh',
+      height: '210vh',
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      height: '180vh'
+      height: '198vh'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      height: '190vh',
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      height: '220vh',
     },
   },
+
 
   cardContainer: {
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
       width: '52vw',
       height: '164vh',
-      marginLeft: '6vw'
+      marginLeft: '2em',
     },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
       width: '58em',
-      height: '166vh',
-      marginLeft: '3vw'
+      height: '186vh',
+      marginLeft: '2em',
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
       width: '50em',
-      height: '156vh'
+      height: '172vh',
+      marginLeft: '2em',
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
 
       width: '40em',
-      height: '142vh',
+      height: '166vh',
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
       width: '90vw',
-      height: '150vh',
+      height: '192vh',
     },
   },
 
@@ -140,49 +179,116 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 400,
     color: '#443f3f'
   },
+
   cardHeading: {
-    fontFamily: 'Roboto',
-    fontWeight: '500',
-    marginTop: '1.2em',
-    paddingLeft: '2em',
-    paddingRight: '2em',
-    [theme.breakpoints.down('sm')]: {
-      marginTop: '2.6em',
-    },
-  },
-  cardTextHeding: {
-    fontFamily: 'Roboto',
+
+    // larger than 1920
     [theme.breakpoints.down('xl')]: {
-      fontSize: '2.2rem',
+      marginTop: '2.6em',
+      fontSize: '1.8rem',
+      fontWeight: '500',
+      marginTop: '1.6em',
+      marginBottom: '-2em',
+      paddingLeft: '3em',
+      paddingRight: '3em',
     },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '1.6rem',
+      marginTop: '2.6em',
+      fontSize: '1.8rem',
+      fontWeight: '500',
+      marginTop: '1.6em',
+      marginBottom: '-2em',
       paddingLeft: '3em',
-      paddingRight: '3em'
+      paddingRight: '3em',
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      fontSize: '1.4rem',
+      marginTop: '2.6em',
+      fontSize: '1.8rem',
+      fontWeight: '500',
+      marginTop: '1.6em',
+      marginBottom: '-2em',
+      paddingLeft: '3em',
+      paddingRight: '3em',
+    },
+
+    // 600 up to 960
+    fontFamily: 'Roboto',
+    fontWeight: '500',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '2.4em',
+      fontSize: '1.2rem',
+      marginBottom: '-2em',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+    // 0 upt to 600
+    fontFamily: 'Roboto',
+    fontWeight: '500',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '2.2em',
+      fontSize: '1.2rem',
+      marginBottom: '-2em',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+  },
+
+  cardTextHeading: {
+
+    // larger than 1920
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1.8rem',
+      fontFamily: 'Roboto',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.5rem',
+      marginTop: '2em',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.3rem',
       paddingLeft: '2em',
       paddingRight: '2em'
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.4rem',
+      fontSize: '1.1rem',
       paddingLeft: '2em',
       paddingRight: '2em'
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      fontSize: '1.4rem',
+      fontSize: '1rem',
       paddingLeft: '1.6em',
       paddingRight: '1.6em'
     },
+  },
+
+
+  Avatar: {
+    backgroundColor: '#d4f1f4',
+    height: '55px',
+    width: '55px'
+  },
+  ImageIcon: {
+    color: '#213b4f',
+    height: '45px',
+    width: '45px'
   }
 }))
 
@@ -210,10 +316,9 @@ const LandingBlock = () => {
 
         <Grid item md>
           <Card className={classes.cardContainer}>
-            <CardActionArea>
+            <CardActionArea style={{ cursor: 'default' }}>
               <CardContent>
                 <Typography
-                  gutterBottom
                   variant={matchesSM ? "h4" : 'h1'}
                   component="h1"
                   align='center'
@@ -228,43 +333,65 @@ const LandingBlock = () => {
                 title="Responsive devices"
               />
               <CardContent>
-                <Typography gutterBottom variant="h1" component="h2">
-
-                </Typography>
                 <Typography
-                  variant={matchesSM ? "h5" : 'h2'}
-                  component="h2"
                   align='center'
-                  className={classes.cardTextHeding}>
+                  className={classes.cardTextHeading}>
                   Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla rakennettu
                   kotisivut parantaa näkyvyyttä  ja lisää huomattavasti kävijöiden määrää.
                 </Typography>
 
-                <Typography className={classes.cardText}>
-                  # Uusien asiakkuuksien löytämisessä, rekrytoinneissa tai brändin vahvistamisessa kotisivut
-                  ovat avainasemassa. Kävijät etsivät sivustolta muutakin kuin yhteystietoja.
+                <List>
+                  <ListItem className={classes.ListItemText1}>
+
+                    <ListItemAvatar sm>
+                      <Avatar className={classes.Avatar}>
+                        <GroupAddIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
+
+                    <ListItemText sm>
+                      <Typography className={classes.cardText}>
+                        #Ensiluokkainen konversio (asetettu tavoite tai päämäärä) saavutetaan perusteellisella suunnittelulla,
+                        kaikenkattavalla testaamisella ja jatkuvalla parantamisella.
+                      </Typography>
+                    </ListItemText>
+
+                  </ListItem>
+
+                  <Divider variant="inset" component="li" />
+
+                  <ListItem className={classes.ListItemText2}>
+                    <ListItemAvatar>
+                      <Avatar className={classes.Avatar}>
+                        <WebIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText>
+                      <Typography className={classes.cardText}>
+                        # Päättömällä Wordpressillä (Headless Wordpress) luodu sisältö on yrityksen digitaalisen sisällön koti
+                        missä sama ainestoa saa käyttää esimerkiksi mobillisovelluksissa, kotisivuilla, yrityksen
+                        sisäisessä wikissa...	Yksi sisällönhallintajärjestelmä = erityyppiset käyttötiittymät.
+
                 </Typography>
-                {/* <Typography variant="body1" component="p" className={classes.cardText}>
-                  # Laadukkaat kotisivut kertovat yrityksestä sekä yrityksen palveluista tai
-                  tuotteista ja tämän avulla luodaan vierailijalle usein ensimmäinen mielikuva yrityksestä.
-                </Typography> */}
-                <Typography variant="body1" component="p" className={classes.cardText}>
-                  # Verkkosivut ovat yrityksen digitaalisen sisällön koti, josta voidaan jaella
-                  sisältöä kaikkiin niihin kanaviin, joissa yritys haluaa olla läsnä.
+                    </ListItemText>
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+
+                  <ListItem className={classes.ListItemText1}>
+                    <ListItemAvatar>
+                      <Avatar className={classes.Avatar}>
+                        <OpenInBrowserIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText>
+                      <Typography className={classes.cardText}>
+                        # Yritykset taistelevat asiakkaista ja valtaosa kotisivsivustojen vierailijoista tulee hakukoneista,
+                        joten hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohta.
                 </Typography>
-                <Typography variant="body1" component="p" className={classes.cardText}>
-                  # Asiakkaamme tehtävänä on kertoa meille tavoitteistaan,
-                  kommentoida työmme tuloksia projektin eri vaiheissa sekä tuottaa
-                  tarkoituksenmukaista sisältöä tai antaa meille riittävät suuntaviivat sisällöntuotantoa varten.
-                </Typography>
-                <Typography variant="body1" component="p" className={classes.cardText}>
-                  # Miellyttävä käyttökokemus syntyy siitä, että kävijä löytää etsimänsä ja pääsee tekemään ne asiat,
-                  joita hän tuli tekemään.
-                </Typography>
-                <Typography variant="body1" component="p" className={classes.cardText}>
-                  # Korkea konversio rakennetaan huolellisella suunnittelulla,
-                  perusteellisella testaamisella ja jatkuvalla parantamisella.
-                </Typography>
+                    </ListItemText>
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+                </List>
                 <Typography variant="body1" component="p" className={classes.cardText}>
                   * Progressiivinen verkkosovellus (englanniksi Progressive Web Application eli PWA) on mobiilin sekä pöytäkonen verkkoselaimessa
                   toimiva verkkosivu tai sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja responsiivisen verkkosivun parhaat puolet.

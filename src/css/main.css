@@ -30,7 +30,7 @@ Variables
   --clr-grey-3: hsl(209, 34%, 30%);
   --clr-grey-4: hsl(209, 28%, 39%);
   /* grey used for paragraphs */
-  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-5: hsl(208, 31%, 30%);
   --clr-grey-8: hsl(210, 12%, 81%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
@@ -78,7 +78,7 @@ ul {
 a {
   text-decoration: none;
 }
-/* 
+
 h1,
 h2,
 h3,
@@ -94,7 +94,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 h3 {
@@ -108,7 +108,7 @@ h4 {
 p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-3);
-} */
+} 
 
 /*  global classes */
 
@@ -651,13 +651,14 @@ Services
 .service {
   display: grid;
   grid-template-columns: 1fr;
-  background: var(--clr-grey-8);
+  background: var(--clr-grey-9);
   justify-items: center;
   padding: 3rem 1.5rem;
   margin-bottom: 2rem;
   border-radius: var(--radius);
   text-align: center;
-  color: var(--clr-primary-2);
+  min-width: 370px;
+  color: var(--clr-grey-5);
   -webkit-transition: var(--transition);
   transition: var(--transition);
 }
@@ -679,6 +680,7 @@ Services
   -webkit-transition: var(--transition);
   transition: var(--transition);
   font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .service:hover {
@@ -701,11 +703,11 @@ Services
     -webkit-column-gap: 2rem;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
-    padding-right: 3em;
+    /* padding-right: 3em; */
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1360px) {
   .services-center {
     grid-template-columns: 1fr 1fr 1fr;
   }

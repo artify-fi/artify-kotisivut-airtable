@@ -8,7 +8,7 @@ const grey1 = '#dae1e2'
 const grey2 = '#f3f3f3'
 const grey3 = '#6c8084'
 const grey4 = '#607D8B'
-const grey5 = '#274549'
+const grey5 = '#344d63'
 
 // Greens
 const green5 = '#313c2e'
