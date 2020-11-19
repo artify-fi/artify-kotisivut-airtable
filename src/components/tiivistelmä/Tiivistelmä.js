@@ -7,6 +7,7 @@ import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import ButtonArrow from "../original";
+import infoBackground from '../../assets/images/3d-background.jpg'
 import customSoftwareIcon from "../../assets/Custom Software Icon.svg";
 import mobileAppsIcon from "../../assets/mobileIcon.svg";
 import websitesIcon from "../../assets/websiteIcon.svg";
@@ -17,7 +18,12 @@ const useStyles = makeStyles(theme => ({
   //   color: theme.palette.common.orange
   // },
   subtitle: {
-    marginBottom: "1em"
+    marginBottom: "1em",
+    maxWidth: '40vw',
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: '860vw',
+      textAlign: 'center'
+    }
   },
   icon: {
     marginLeft: "2em",
@@ -26,20 +32,34 @@ const useStyles = makeStyles(theme => ({
     }
   },
   serviceContainer: {
-    marginTop: "10em",
+    marginTop: "1.6em",
     [theme.breakpoints.down("sm")]: {
       padding: 25
     }
   },
   learnButton: {
     ...theme.typography.learnButton,
-    fontSize: "0.7rem",
-    height: 35,
-    padding: 5,
-    [theme.breakpoints.down("sm")]: {
-      marginBottom: "2em"
+    fontSize: '1rem',
+    fontWeight: 500,
+    height: 45,
+    width: 160,
+    marginTop: '2em',
+    marginBottom: '3em',
+    marginLeft: '4em',
+    backgroundColor: theme.palette.common.grey1,
+    '&:hover': {
+      backgroundColor: theme.palette.common.grey3,
+      color: 'white'
     }
-  }
+  },
+  infoBackground: {
+    backgroundImage: `url(${infoBackground})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    position: 'sticky',
+    width: '100%',
+  },
 }));
 
 export default function Services(props) {
@@ -48,99 +68,104 @@ export default function Services(props) {
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
-    <Grid container direction="column">
+    <Grid
+      container
+      direction="column"
+      className={classes.infoBackground}>
+
       <Grid
         item
         style={{
           marginLeft: matchesSM ? 0 : "5em",
-          marginTop: matchesSM ? "1em" : "2em"
+          marginTop: matchesSM ? "10em" : "12em"
         }}
       >
         <Typography
           align={matchesSM ? "center" : undefined}
-          variant="h2"
+          variant="h1"
           gutterBottom
         >
-          Services
+          Palvelut
         </Typography>
       </Grid>
+
+
       <Grid item>
         {" "}
-        {/*-----iOS/Android Block-----*/}
-        <Grid
-          container
-          direction="row"
-          justify={matchesSM ? "center" : "flex-end"}
-          className={classes.serviceContainer}
-          style={{ marginTop: matchesSM ? "1em" : "5em" }}
-        >
-          <Grid
-            item
-            style={{
-              textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em"
-            }}
-          >
-            <Typography variant="h4">iOS/Android App Development</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Extend Functionality. Extend Access. Increase Engagement.
-            </Typography>
-            <Typography variant="subtitle1">
-              Integrate your web experience or create a standalone app
-              {matchesSM ? null : <br />}with either mobile platform.
-            </Typography>
-            <Button
-              component={Link}
-              to="/mobileapps"
-              variant="outlined"
-              className={classes.learnButton}
-              onClick={() => {
-                props.setValue(1);
-                props.setSelectedIndex(2);
-              }}
-            >
-              <span style={{ marginRight: 10 }}>Learn More</span>
-              <ButtonArrow
-                width={10}
-                height={10}
-                fill={theme.palette.common.blue}
-              />
-            </Button>
-          </Grid>
-          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
-            <img
-              className={classes.icon}
-              alt="mobile phone icon"
-              src={mobileAppsIcon}
-              width="250em"
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid item>
-        {" "}
-        {/*-----Custom Software Block-----*/}
+        {/*-- 1.  ---Verkkosivut Block-----*/}
         <Grid
           container
           direction="row"
           justify={matchesSM ? "center" : undefined}
-          className={classes.serviceContainer}
-        >
+          className={classes.serviceContainer}   >
+
           <Grid
             item
             style={{
               marginLeft: matchesSM ? 0 : "5em",
               textAlign: matchesSM ? "center" : undefined
-            }}
-          >
-            <Typography variant="h4">Custom Software Development</Typography>
+            }} >
+
+
+            <Typography paragraph variant="h4">Progressiiviset GatsbyJS-kotisivut</Typography>
+            <Typography variant="subtitle1" style={{ marginRight: matchesSM ? 0 : '8em' }} className={classes.subtitle}>
+              Progressiiviset verkkosovellukset ovat verkkosivustoja, jotka toimivat kuin natiivisovellukset, mutta ne näkyvät mobiilin tai tietokonen selaimessasi.
+              Ne latautuvat ilman verkkoa, synkronoituvat taustalla ja lähettävät push-ilmoituksia.
+              Mobiilaitteilla hyvin toimivat kotisivut nostavat sivujesi sijoitusta Googlen hauissa ja antavat parempia hakukonetuloksia.
+            </Typography>
+            <Button
+              component={Link}
+              to="/palvelut/kotisivut"
+              variant="outlined"
+              className={classes.learnButton}
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(2);
+              }}>
+
+              <span style={{ marginRight: 10 }}>Katso Lisää</span>
+              <ButtonArrow
+                width={10}
+                height={10}
+                fill={theme.palette.common.blue} />
+
+            </Button>
+          </Grid>
+          <Grid item>
+            <img
+              className={classes.icon}
+              alt="mobile phone icon"
+              src={mobileAppsIcon}
+            />
+
+          </Grid>
+        </Grid>
+      </Grid>
+
+
+      <Grid item>
+        {" "}
+        {/*--  2.  ---Custom Software Block-----*/}
+        <Grid
+          container
+          direction="row"
+          justify={matchesSM ? "center" : "flex-end"}
+          className={classes.serviceContainer}
+          style={{ marginTop: matchesSM ? "1em" : "5em" }} >
+
+          <Grid
+            item
+            style={{
+              textAlign: matchesSM ? "center" : undefined,
+              width: matchesSM ? undefined : "35em"
+            }} >
+
+            <Typography paragraph variant="h4">Hakukoneoptimointi (SEO)</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              Save Energy. Save Time. Save Money.
+              SEO (Search Engine Optimization) on hakukoneoptimointi, mikä tarkoittaa, että luomamme kotisivut ovat helposti löydettävissä Googlelta,
+              Yahoolta ja muilta, ja siksi sivustoosi saapuu enemmän vierailuja ihmisiltä, ​​jotka etsivät tarjoamaasi palvelua tai tuotetta.
             </Typography>
-            <Typography variant="subtitle1">
-              Complete digital solutions, from investigation to{" "}
-              <span className={classes.specialText}>celebration.</span>
-            </Typography>
+
             <Button
               component={Link}
               to="/customsoftware"
@@ -159,11 +184,12 @@ export default function Services(props) {
               />
             </Button>
           </Grid>
-          <Grid item>
+          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
             <img
               className={classes.icon}
               alt="custom software icon"
               src={customSoftwareIcon}
+              width="250em"
             />
           </Grid>
         </Grid>
@@ -171,19 +197,18 @@ export default function Services(props) {
 
       <Grid item>
         {" "}
-        {/*-----Websites Block-----*/}
+        {/*-- 3.  ---Websites Block-----*/}
         <Grid
           container
           direction="row"
-          justify={matchesSM ? "center" : "flex-end"}
+          justify={matchesSM ? "center" : undefined}
           className={classes.serviceContainer}
-          style={{ marginBottom: "10em" }}
         >
           <Grid
             item
             style={{
-              textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em"
+              marginLeft: matchesSM ? 0 : "5em",
+              textAlign: matchesSM ? "center" : undefined
             }}
           >
             <Typography variant="h4">Website Development</Typography>
