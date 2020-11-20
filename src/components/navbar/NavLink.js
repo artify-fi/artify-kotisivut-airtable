@@ -55,7 +55,7 @@ const Wrapper = styled.li`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem 2rem;
-    grid-gap: 1rem 4rem;
+    grid-gap: 1rem 4rem;    
     a {
       display: grid;
       grid-template-columns: auto 1fr;

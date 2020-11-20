@@ -343,15 +343,15 @@ const LandingBlock = () => {
                 <List>
                   <ListItem className={classes.ListItemText1}>
 
-                    <ListItemAvatar sm>
+                    <ListItemAvatar>
                       <Avatar className={classes.Avatar}>
                         <GroupAddIcon className={classes.ImageIcon} />
                       </Avatar>
                     </ListItemAvatar>
 
-                    <ListItemText sm>
+                    <ListItemText>
                       <Typography className={classes.cardText}>
-                        #Ensiluokkainen konversio (asetettu tavoite tai päämäärä) saavutetaan perusteellisella suunnittelulla,
+                        #Ensiluokkainen konversio (etukäteen asetettu tavoite tai päämäärä ??  ) saavutetaan perusteellisella suunnittelulla,
                         kaikenkattavalla testaamisella ja jatkuvalla parantamisella.
                       </Typography>
                     </ListItemText>

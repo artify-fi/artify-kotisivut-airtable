@@ -7,7 +7,7 @@ module.exports = {
     title: `Hakukonenoptimoidut verkkosivut ja mobiilisovellukset`,
     description: `Laadukkaat ja luotettavat responsiiviset kotisivut ja mobiilisovellukset 
     jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.`,
-    titleTemplate: `%s | Hakukonenoptimoidut Verkkosivut`,
+    titleTemplate: `%s | Hakukonenoptimointi ja kotisivut`,
     siteUrl: `https://artifykotisivutairtabledevelop.gtsb.io/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,

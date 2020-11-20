@@ -21,22 +21,22 @@ export default [
   },
   {
     page: "palvelut",
-    label: "hakukoneoptimointi",
+    label: "hakukoneoptimointi- ja markkinointi",
     url: `/palvelut/hakukoneOptimointi`,
-    icon: <FaCreditCard className="icon" />,
-  },
-  {
-    page: "palvelut",
-    label: "hakukonemarkkinointi",
-    url: `/palvelut/hakukoneMarkkinointi`,
     icon: <FaCreditCard className="icon" />,
   },
   // {
   //   page: "palvelut",
-  //   label: "google analytics",
-  //   url: `/palvelut/googleAnalytics`,
+  //   label: "hakukonemarkkinointi",
+  //   url: `/palvelut/hakukoneMarkkinointi`,
   //   icon: <FaCreditCard className="icon" />,
   // },
+  {
+    page: "palvelut",
+    label: "digimarkkinointi googleAnalytics",
+    url: `/palvelut/googleAnalytics`,
+    icon: <FaCreditCard className="icon" />,
+  },
   {
     page: "ratkaisut",
     label: "GatsbyJS",

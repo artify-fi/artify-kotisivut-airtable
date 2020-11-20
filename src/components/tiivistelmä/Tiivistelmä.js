@@ -85,7 +85,8 @@ export default function Services(props) {
           variant="h1"
           gutterBottom
         >
-          Palvelut
+          Kattava palveluvalikoima josta saat kotisivuillesi kaiken asiantuntevasta sivuston
+          suunnittelusta ja kehittämisestä sekä sen tehokkaaseen mainostamiseen.
         </Typography>
       </Grid>
 
@@ -211,12 +212,14 @@ export default function Services(props) {
               textAlign: matchesSM ? "center" : undefined
             }}
           >
-            <Typography variant="h4">Website Development</Typography>
+            <Typography variant="h4">Hakukonemarkkinointi (SEM)</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              Reach More. Discover More. Sell More.
+              SEM (Search Engine Marketing) on maksullisten strategioiden käyttö hakujen näkyvyyden lisäämiseksi.
+              Tuotemerkit* maksavat siitä,
+              että mainokset näkyvät hakutuloksina hakukoneiden tulossivuilla.
             </Typography>
             <Typography variant="subtitle1">
-              Optimized for Search Engines, built for speed.
+              *tuotemerkki määritellään "henkilön käsitykseksi tuotteesta, palvelusta, kokemuksesta tai organisaatiosta".
             </Typography>
             <Button
               component={Link}
