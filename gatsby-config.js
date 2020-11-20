@@ -84,28 +84,38 @@ module.exports = {
       }
     },
 
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: "Roboto",
+    //         variants: ["300", "400", "500", "600"],
+    //       },
+    //       {
+    //         family: "Merriweather Sans",
+    //         variants: ['400', '500', '600', '700'],
+    //       },
+    //       {
+    //         family: "Open Sans Condensed",
+    //         variants: ['300', '400', '500', '600', '700'],
+    //       },
+    //       {
+    //         family: "Montserrat",
+    //         variants: [`400`, `500`, `600`, `700`],
+    //       },
+    //     ],
+    //   },
+    // },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: "Roboto",
-            variants: ["300", "400", "500", "600"],
-          },
-          {
-            family: "Merriweather Sans",
-            variants: ['400', '500', '600', '700'],
-          },
-          {
-            family: "Open Sans Condensed",
-            variants: ['300', '400', '500', '600', '700'],
-          },
-          {
-            family: "Montserrat",
-            variants: [`400`, `500`, `600`, `700`],
-          },
+          `Open Sans Condensed`,
+          `source \:300,400,500,400i,600` // you can also specify font weights and styles
         ],
-      },
-    },
+        display: 'swap'
+      }
+    }
   ],
 }
