@@ -7,7 +7,9 @@ import LandingPage from '../components/landingPage/LandingPage'
 
 const IndexPage = () => (
   <Layout>
-    <SEO />
+    <SEO
+      title='Nykuaikaiset progressiiviset kotisivut'
+    />
     <LandingPage />
   </Layout>
 )

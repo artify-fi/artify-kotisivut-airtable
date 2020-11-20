@@ -3,15 +3,13 @@ import Layout from "../../components/layout"
 import UC from '../../components/UnderConstruction'
 import SEO from "../../components/SEO"
 
-const jamStack = () => {
+const kotisivut = () => {
   return (
     <Layout>
-      <SEO title='JAMstack blogi' />
+      <SEO title='Kotisivujen kehittäminen pienyrittäjille' />
       <UC />
     </Layout>
   )
 }
 
-
-
-export default jamStack
+export default kotisivut

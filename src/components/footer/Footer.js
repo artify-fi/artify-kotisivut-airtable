@@ -28,7 +28,7 @@ const Footer = () => {
         })}
       </div> */}
       <div className={styles.copyright}>
-        copyright &copy; Developed By Art Bachmann {" "}
+        copyright &copy; Developed By Artify {" "}
         {new Date().getFullYear()} with Gatsby.js-WordPress-Github-Netlify
       </div>
     </footer>
