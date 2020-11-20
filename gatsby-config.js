@@ -95,17 +95,14 @@ module.exports = {
           {
             family: "Merriweather Sans",
             variants: ['400', '500', '600', '700'],
-            text: "Hello",
           },
           {
             family: "Open Sans Condensed",
             variants: ['300', '400', '500', '600', '700'],
-            text: "Hello",
           },
           {
             family: "Montserrat",
             variants: [`400`, `500`, `600`, `700`],
-            text: "Hello",
           },
         ],
       },
