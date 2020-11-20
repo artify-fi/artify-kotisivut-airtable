@@ -6,7 +6,7 @@ export default [
     icon: <FaCode className="service-icon" />,
     title: "Progressiiviset kotisivut ja mobiilisovellukset",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
-    link: `/palvelut/verkkosivut`,
+    link: `/palvelut/kotisivut`,
   },
   {
     id: 2,
@@ -20,6 +20,6 @@ export default [
     icon: <FaChartLine className="service-icon" />,
     title: "Digitaalininen markkinointi ja Google Analytics",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
-    link: `/palvelut/hakukoneMarkkinointi`,
+    link: `/palvelut/googleAnalytics`,
   },
 ]

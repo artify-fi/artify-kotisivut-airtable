@@ -60,6 +60,11 @@ const useStyles = makeStyles(theme => ({
     position: 'sticky',
     width: '100%',
   },
+  mainHeading: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: '1.2rem',
+    }
+  }
 }));
 
 export default function Services(props) {
@@ -77,16 +82,20 @@ export default function Services(props) {
         item
         style={{
           marginLeft: matchesSM ? 0 : "5em",
-          marginTop: matchesSM ? "10em" : "12em"
+          marginTop: matchesSM ? "10em" : "12em",
+          maxWidth: matchesSM ? undefined : '60vw'
         }}
       >
         <Typography
+          className={classes.mainHeading}
           align={matchesSM ? "center" : undefined}
           variant="h1"
+          component="h1"
           gutterBottom
         >
-          Kattava palveluvalikoima josta saat kotisivuillesi kaiken asiantuntevasta sivuston
-          suunnittelusta ja kehittämisestä sekä sen tehokkaaseen mainostamiseen.
+          Kattava palveluvalikoima josta saat kotisivuillesi kompleksisen
+          kokonaisuuden asiantuntevasta sivuston
+          suunnittelusta ja kehittämisestä sen tehokkaaseen mainostamiseen.
         </Typography>
       </Grid>
 
@@ -169,7 +178,7 @@ export default function Services(props) {
 
             <Button
               component={Link}
-              to="/customsoftware"
+              to="/palvelut/hakukoneOptimointi"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -177,7 +186,7 @@ export default function Services(props) {
                 props.setSelectedIndex(1);
               }}
             >
-              <span style={{ marginRight: 10 }}>Learn More</span>
+              <span style={{ marginRight: 10 }}>Lue Lisää</span>
               <ButtonArrow
                 width={10}
                 height={10}
@@ -223,7 +232,7 @@ export default function Services(props) {
             </Typography>
             <Button
               component={Link}
-              to="/websites"
+              to="/palvelut/hakukoneMarkkinointi"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -231,7 +240,7 @@ export default function Services(props) {
                 props.setSelectedIndex(3);
               }}
             >
-              <span style={{ marginRight: 10 }}>Learn More</span>
+              <span style={{ marginRight: 10 }}>Lue Lisää</span>
               <ButtonArrow
                 width={10}
                 height={10}

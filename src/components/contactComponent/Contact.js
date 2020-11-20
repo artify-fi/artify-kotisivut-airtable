@@ -501,7 +501,7 @@ export default function Contact(props) {
                   src={Art}
                   alt="headless wordpress workflow"
                   style={{
-                    width: '18em',
+                    width: '10em',
                     maxWidth: matchesSM ? 300 : "16em",
                     marginRight: matchesMD ? 0 : "5em",
                     marginBottom: matchesMD ? "5em" : 0

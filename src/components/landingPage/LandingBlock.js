@@ -1,5 +1,8 @@
 import React from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { Link } from 'gatsby'
+
+import Hidden from '@material-ui/core/Hidden';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -84,21 +87,21 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
-      height: '220vh',
+      height: '240vh',
     },
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      height: '210vh',
+      height: '240vh',
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      height: '198vh'
+      height: '226vh'
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      height: '190vh',
+      height: '204vh',
     },
 
     // 0 upt to 600
@@ -107,34 +110,31 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
+  // CARD CONTAINER
 
   cardContainer: {
     // larger than 1920
-    [theme.breakpoints.down('xl')]: {
-      width: '52vw',
-      height: '164vh',
-      marginLeft: '2em',
-    },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      width: '58em',
-      height: '186vh',
-      marginLeft: '2em',
+      width: '62vw',
+      height: '210vh',
+      marginLeft: '4em',
+
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      width: '50em',
-      height: '172vh',
+      width: '78vw',
+      height: '200vh',
       marginLeft: '2em',
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
 
-      width: '40em',
-      height: '166vh',
+      width: '78vw',
+      height: '178vh',
     },
 
     // 0 upt to 600
@@ -154,11 +154,12 @@ const useStyles = makeStyles(theme => ({
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
       height: '64vh',
+      paddingRight: '2em'
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      height: '46vh'
+      height: '52vh'
     },
 
     // 600 up to 960
@@ -168,89 +169,74 @@ const useStyles = makeStyles(theme => ({
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      height: '28vh',
+      height: '36vh',
     },
   },
-  cardText: {
-    paddingLeft: '2em',
-    paddingRight: '2em',
-    paddingTop: '1em',
-    fontFamily: 'Roboto',
-    fontWeight: 400,
-    color: '#443f3f'
-  },
+
+  // CARD HEADING
 
   cardHeading: {
-
+    ...theme.typography.h1,
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
       marginTop: '2.6em',
-      fontSize: '1.8rem',
-      fontWeight: '500',
-      marginTop: '1.6em',
-      marginBottom: '-2em',
+      marginBottom: '1em',
       paddingLeft: '3em',
       paddingRight: '3em',
     },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
+      fontSize: '2.2rem',
       marginTop: '2.6em',
-      fontSize: '1.8rem',
-      fontWeight: '500',
-      marginTop: '1.6em',
-      marginBottom: '-2em',
-      paddingLeft: '3em',
-      paddingRight: '3em',
+      marginBottom: '1em',
+      paddingLeft: '2.3em',
+      paddingRight: '2.3em',
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
       marginTop: '2.6em',
-      fontSize: '1.8rem',
-      fontWeight: '500',
-      marginTop: '1.6em',
-      marginBottom: '-2em',
-      paddingLeft: '3em',
-      paddingRight: '3em',
+      fontSize: '1.9rem',
+      paddingLeft: '2em',
+      paddingRight: '2em',
     },
 
-    // 600 up to 960
-    fontFamily: 'Roboto',
-    fontWeight: '500',
+    // 600 up to 960        
     [theme.breakpoints.down('sm')]: {
-      marginTop: '2.4em',
-      fontSize: '1.2rem',
-      marginBottom: '-2em',
+      marginTop: '2em',
+      fontSize: '1.5rem',
       paddingLeft: '0.8em',
       paddingRight: '0.8em',
     },
 
     // 0 upt to 600
-    fontFamily: 'Roboto',
+    fontFamily: 'Open Sans Condensed',
     fontWeight: '500',
     [theme.breakpoints.down('xs')]: {
       marginTop: '2.2em',
-      fontSize: '1.2rem',
-      marginBottom: '-2em',
+      fontSize: '1.4rem',
+      marginBottom: '1em',
       paddingLeft: '0.8em',
       paddingRight: '0.8em',
     },
 
   },
 
-  cardTextHeading: {
+  // CARD TEXT HEADING
 
+  cardTextHeading: {
     // larger than 1920
+    ...theme.typography.h2,
     [theme.breakpoints.down('xl')]: {
-      fontSize: '1.8rem',
-      fontFamily: 'Roboto',
+      fontSize: '2rem',
       marginBottom: '2em',
     },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '1.5rem',
+      fontSize: '1.8rem',
       marginTop: '2em',
       paddingLeft: '3em',
       paddingRight: '3em'
@@ -259,23 +245,49 @@ const useStyles = makeStyles(theme => ({
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      fontSize: '1.3rem',
+      fontSize: '1.6rem',
       paddingLeft: '2em',
       paddingRight: '2em'
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '1.4em',
+      paddingRight: '1.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+      marginBottom: '0.4em'
+
+    },
+  },
+
+
+  // CARD TEXT
+  cardText: {
+    paddingLeft: '2em',
+    paddingRight: '2em',
+    paddingTop: '1em',
+    fontFamily: 'Roboto',
+    fontWeight: 400,
+    color: '#443f3f',
+
+    [theme.breakpoints.down('sm')]: {
       fontSize: '1.1rem',
-      paddingLeft: '2em',
-      paddingRight: '2em'
+      paddingLeft: '0.6em',
+      paddingRight: '0.6em'
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
       fontSize: '1rem',
-      paddingLeft: '1.6em',
-      paddingRight: '1.6em'
+      paddingLeft: '0.6em',
+      paddingRight: '0.6em'
     },
   },
 
@@ -333,10 +345,11 @@ const LandingBlock = () => {
                 title="Responsive devices"
               />
               <CardContent>
-                <Typography
+                <Typography variant={matchesSM ? "h4" : 'h2'}
+                  component="h2"
                   align='center'
                   className={classes.cardTextHeading}>
-                  Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla rakennettu
+                  Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla kehitetty
                   kotisivut parantaa näkyvyyttä  ja lisää huomattavasti kävijöiden määrää.
                 </Typography>
 
@@ -351,7 +364,8 @@ const LandingBlock = () => {
 
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        #Ensiluokkainen konversio (etukäteen asetettu tavoite tai päämäärä ??  ) saavutetaan perusteellisella suunnittelulla,
+                        #Hyvin toimiva verkkosivusto mikä tekee sinusta näkyvän sekä nykyisille että
+                        uusille asiakkaille saavutetaan perusteellisella suunnittelulla,
                         kaikenkattavalla testaamisella ja jatkuvalla parantamisella.
                       </Typography>
                     </ListItemText>
@@ -361,16 +375,20 @@ const LandingBlock = () => {
                   <Divider variant="inset" component="li" />
 
                   <ListItem className={classes.ListItemText2}>
-                    <ListItemAvatar>
-                      <Avatar className={classes.Avatar}>
-                        <WebIcon className={classes.ImageIcon} />
-                      </Avatar>
-                    </ListItemAvatar>
+
+                    <Hidden xsDown>
+                      <ListItemAvatar>
+                        <Avatar className={classes.Avatar}>
+                          <WebIcon className={classes.ImageIcon} />
+                        </Avatar>
+                      </ListItemAvatar>
+                    </Hidden>
+
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        # Päättömällä Wordpressillä (Headless Wordpress) luodu sisältö on yrityksen digitaalisen sisällön koti
-                        missä sama ainestoa saa käyttää esimerkiksi mobillisovelluksissa, kotisivuilla, yrityksen
-                        sisäisessä wikissa...	Yksi sisällönhallintajärjestelmä = erityyppiset käyttötiittymät.
+                        #Verkkosivustojemme luomispalvelumme on optimoitu saavuttamaan parhaat
+                        liiketoiminnan tulokset ja lisäämään yhteydenotto. Teemme paitsi hyvälaatuisia
+                        kotisivustoja myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää ja myyntiä.
 
                 </Typography>
                     </ListItemText>
@@ -394,13 +412,16 @@ const LandingBlock = () => {
                 </List>
                 <Typography variant="body1" component="p" className={classes.cardText}>
                   * Progressiivinen verkkosovellus (englanniksi Progressive Web Application eli PWA) on mobiilin sekä pöytäkonen verkkoselaimessa
-                  toimiva verkkosivu tai sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja responsiivisen verkkosivun parhaat puolet.
+                  toimiva verkkosivu tai -sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja
+                  responsiivisen verkkosivun parhaat puolet.
                 </Typography>
                 <Button
+                  component={Link}
+                  to="/palvelut/kotisivut"
                   variant='outlined'
                   className={classes.learnButtonHero}
                 >
-                  <span style={{ marginRight: 10 }}>Learn More</span>
+                  <span style={{ marginRight: 10 }}>Lue Lisää</span>
                   <ButtonArrow
                     width={15}
                     height={15}
