@@ -29,12 +29,8 @@ const SEO = ({ title, description, image, article, url }) => {
       <html lang="fi" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-<<<<<<< HEAD
-      <meta name="google-site-verification" content="VpCeubXdgJVpUYXuL5HoCwo8Gng5NTZ5ICRivleTaGc" />
-=======
       <meta name="google-site-verification" content="dGWvZ6ZCxhKj45R9O328ZUu9SleAunima6EmT3Z3rqg" />
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
->>>>>>> develop
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
