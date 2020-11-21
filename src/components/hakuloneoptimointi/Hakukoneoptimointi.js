@@ -23,21 +23,12 @@ const useStyles = makeStyles(theme => ({
     lineHeight: 1.4
   },
   rowContainer: {
-    paddingLeft: "10vw",
-    paddingRight: "10vw",
+    paddingLeft: "5em",
+    paddingRight: "5em",
     [theme.breakpoints.down("sm")]: {
       paddingLeft: "1.5em",
       paddingRight: "1.5em"
     }
-  },
-  background: {
-    backgroundColor: '#f2f7f5',
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    height: '100%',
-    width: '100%',
-    marginTop: '2em'
   },
   avatar: {
     height: "25em",
@@ -71,7 +62,7 @@ export default function About(props) {
   const preventDefault = (event) => event.preventDefault();
 
   return (
-    <Grid container direction="column" className={classes.background}>
+    <Grid container direction="column">
       <Grid
         item
         className={classes.rowContainer}
@@ -205,7 +196,7 @@ export default function About(props) {
             lg
             style={{
               maxWidth: "35em",
-              // marginLeft: matchesMD ? undefined : '7em'
+              marginLeft: matchesMD ? undefined : '7em'
             }} >
 
             <Grid item>
@@ -234,7 +225,7 @@ export default function About(props) {
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Parempi liidien luominen ja asiakkaiden sitoutuminen. </span>
+                <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Parempi liidien luominen ja asiakkaiden sitoutuminen. </span>
                 Sivuston nopeudella ja suorituskyvyllä on valtava
                 vaikutus myyntiin ja asiakkaiden sitoutumiseen.
               Äskettäinen&nbsp; <span><Link className={classes.link} to="https://blogs.akamai.com/2020/09/metrics-that-matter-continuous-performance-optimization.html">Akamai-tutkimus</Link></span>
@@ -242,15 +233,15 @@ export default function About(props) {
               viive sivuston latausajassa vahingoitti tulosprosentteja 7%, ja 53%
               mobiilikäyttäjistä jättää sivuja joiden lataaminen kestää yli 3 sekuntia.
               Gatsby-sivustot ovat jatkuvasti 2-3x nopeammat kuin vastaavat sivustot,
-              jotka on rakennettu eri työkaluilla ja sivustojen omistajat
-              ovat huomannut liidien määrän kasvavan jopa 60% Gatsbyyn siirtymisen jälkeen.
+              jotka on ralyijysukupolvensakennettu eri työkaluilla, ja sivustojen omistajat
+               ovat nähneet liidien määrän kasvavan jopa 60% Gatsbyyn siirtymisen jälkeen.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Parannettu hakuliikenne. </span>&nbsp;<br />
+                <span style={{ diplay: 'inlineBlock', fontSize: '1.2rem', fontWeight: 600, padding: '3em' }}>Parannettu hakuliikenne. </span>&nbsp;<br />
               Sivuston nopeus on yksi tekijöistä, joita Google käyttää hakusijoitusalgoritmissaan,
               ja hitailla sivuston nopeuksilla voi olla negatiivinen lumipallo vaikutus hakukoneoptimoijaasi.
                Hitaammat sivustot indeksoivat hakukoneet kauemmin, niiden välitön poistumisprosentti ja
@@ -264,7 +255,7 @@ export default function About(props) {
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Turvallisuus</span>&nbsp;<br />
+                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '2em' }}>Turvallisuus</span>&nbsp;<br />
                 Gatsby on moderni sivustogeneraattori, joka tuottaa staattisia HTML-sivuja rakennuksen aikana. 
                 Tämä tarkoittaa, että et tarvitse tietokantaa tai sisällönhallintajärjestelmää, 
                 joka toimii julkisilla palvelimillasi, jotka molemmat ovat yleisiä tietoturvaloukkausten lähteitä. 

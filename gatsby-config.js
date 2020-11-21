@@ -8,7 +8,7 @@ module.exports = {
     description: `Laadukkaat ja luotettavat responsiiviset kotisivut ja mobiilisovellukset 
     jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.`,
     titleTemplate: `%s | Hakukonenoptimointi ja kotisivut`,
-    siteUrl: `https://artifykotisivutairtabledevelop.gtsb.io/`,
+    siteUrl: `https://www.artify.fi/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,
   },
@@ -42,40 +42,21 @@ module.exports = {
         createLinkInHead: true,
       }
     },
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://www.artify.fi/`,
+      },
+    },
 
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://artifykotisivutairtabledevelop.gtsb.io/',
-        sitemap: 'https://artifykotisivutairtabledevelop.gtsb.io/sitemap.xml',
+        host: 'https://www.artify.fi/',
+        sitemap: 'https://www.artify.fi/sitemap.xml',
         policy: [{ userAgent: '*', allow: ['/'] }]
       },
     },
-
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://artifykotisivutairtabledevelop.gtsb.io/`,
-      },
-    },
-
-    // {
-    //   resolve: 'gatsby-source-apiserver',
-    //   options: {
-    //     url: 'https://swapi.co/api/people/',
-    //     method: 'get',
-    //     entityLevel: `results`,
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     typePrefix: 'internal__',
-    //     name: `posts`,
-    //     params: {
-    //       results: 10
-    //     },
-    //     verboseOutput: true,
-    //   }
-    // },
 
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -83,30 +64,6 @@ module.exports = {
         trackingId: 'UA-180499768-1'
       }
     },
-
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: "Roboto",
-    //         variants: ["300", "400", "500", "600"],
-    //       },
-    //       {
-    //         family: "Merriweather Sans",
-    //         variants: ['400', '500', '600', '700'],
-    //       },
-    //       {
-    //         family: "Open Sans Condensed",
-    //         variants: ['300', '400', '500', '600', '700'],
-    //       },
-    //       {
-    //         family: "Montserrat",
-    //         variants: [`400`, `500`, `600`, `700`],
-    //       },
-    //     ],
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
