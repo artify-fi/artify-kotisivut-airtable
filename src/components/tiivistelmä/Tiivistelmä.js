@@ -8,15 +8,14 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 
 import ButtonArrow from "../original";
 import infoBackground from '../../assets/images/3d-background.jpg'
-import customSoftwareIcon from "../../assets/Custom Software Icon.svg";
-import mobileAppsIcon from "../../assets/mobileIcon.svg";
-import websitesIcon from "../../assets/websiteIcon.svg";
+import sem from '../../assets/images/sem.webp'
+import seo from "../../assets/images/seo.webp";
+import digitalMarketing from "../../assets/images/digitalMarketing.webp";
+import frontendDevelopment from "../../assets/images/frontendDevelopment.webp";
+
 
 const useStyles = makeStyles(theme => ({
-  // specialText: {
-  //   fontFamily: "Pacifico",
-  //   color: theme.palette.common.orange
-  // },
+
   subtitle: {
     marginBottom: "1em",
     maxWidth: '40vw',
@@ -50,6 +49,9 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       backgroundColor: theme.palette.common.grey3,
       color: 'white'
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: 0,
     }
   },
   infoBackground: {
@@ -61,29 +63,67 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
   },
   mainHeading: {
-    [theme.breakpoints.down("sm")]: {
-      fontSize: '1.2rem',
-    }
+    // larger than 1920
+
+    // 1280  and  up to 1920
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2.2rem',
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.6rem',
+      paddingLeft: '2.6em',
+      paddingRight: '2.6em',
+      marginBottom: '2em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em'
+    },
+
+    item1: {
+      order: 2,
+      [theme.breakpoints.down('md')]: {
+        order: 1,
+      },
+    },
+    item2: {
+      order: 1,
+      [theme.breakpoints.down('md')]: {
+        order: 2,
+      },
+    },
   }
+
 }));
 
 export default function Services(props) {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"))
 
   return (
     <Grid
       container
       direction="column"
-      className={classes.infoBackground}>
+      className={classes.infoBackground}
+      style={{ margin: '5px' }}>
 
       <Grid
         item
         style={{
           marginLeft: matchesSM ? 0 : "5em",
           marginTop: matchesSM ? "10em" : "12em",
-          maxWidth: matchesSM ? undefined : '60vw'
+          maxWidth: matchesSM ? undefined : '60vw',
+          alignItems: matchesSM ? 'center' : undefined,
+          marginBottom: '2em',
         }}
       >
         <Typography
@@ -106,20 +146,26 @@ export default function Services(props) {
         <Grid
           container
           direction="row"
-          justify={matchesSM ? "center" : undefined}
-          className={classes.serviceContainer}   >
+          justify={matchesMD ? "center" : undefined}
+          className={classes.serviceContainer} >
 
           <Grid
             item
+            className={classes.item1}
             style={{
-              marginLeft: matchesSM ? 0 : "5em",
+              marginLeft: matchesMD ? 0 : "5em",
               textAlign: matchesSM ? "center" : undefined
             }} >
 
-
-            <Typography paragraph variant="h4">Progressiiviset GatsbyJS-kotisivut</Typography>
-            <Typography variant="subtitle1" style={{ marginRight: matchesSM ? 0 : '8em' }} className={classes.subtitle}>
-              Progressiiviset verkkosovellukset ovat verkkosivustoja, jotka toimivat kuin natiivisovellukset, mutta ne näkyvät mobiilin tai tietokonen selaimessasi.
+            <Typography
+              paragraph
+              style={{ marginRight: matchesSM ? 0 : '4em' }}
+              variant="h4">Progressiiviset GatsbyJS-kotisivut</Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ marginRight: matchesSM ? 0 : '4em' }}
+              className={classes.subtitle}>
+              Progressiiviset kotisivut ovat verkkosivustoja, jotka toimivat kuin natiivisovellukset, mutta ne näkyvät mobiilin tai tietokonen selaimessasi.
               Ne latautuvat ilman verkkoa, synkronoituvat taustalla ja lähettävät push-ilmoituksia.
               Mobiilaitteilla hyvin toimivat kotisivut nostavat sivujesi sijoitusta Googlen hauissa ja antavat parempia hakukonetuloksia.
             </Typography>
@@ -138,16 +184,16 @@ export default function Services(props) {
                 width={10}
                 height={10}
                 fill={theme.palette.common.blue} />
-
             </Button>
           </Grid>
-          <Grid item>
-            <img
-              className={classes.icon}
-              alt="mobile phone icon"
-              src={mobileAppsIcon}
-            />
 
+          <Grid item className={classes.item2}>
+            <img
+              style={{ marginRight: '2em' }}
+              className={classes.icon}
+              alt="kotisivun tekeminen pienelle yritykselle"
+              src={frontendDevelopment}
+            />
           </Grid>
         </Grid>
       </Grid>
@@ -163,9 +209,20 @@ export default function Services(props) {
           className={classes.serviceContainer}
           style={{ marginTop: matchesSM ? "1em" : "5em" }} >
 
+          <Grid item
+            className={classes.item1}
+            style={{ marginRight: matchesSM ? 0 : "12em" }}>
+            <img
+              className={classes.icon}
+              alt="hakunonen optimointi seo"
+              src={seo}
+            />
+          </Grid>
+
           <Grid
             item
             style={{
+              marginRight: '6em',
               textAlign: matchesSM ? "center" : undefined,
               width: matchesSM ? undefined : "35em"
             }} >
@@ -194,14 +251,6 @@ export default function Services(props) {
               />
             </Button>
           </Grid>
-          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
-            <img
-              className={classes.icon}
-              alt="custom software icon"
-              src={customSoftwareIcon}
-              width="250em"
-            />
-          </Grid>
         </Grid>
       </Grid>
 
@@ -219,15 +268,22 @@ export default function Services(props) {
             style={{
               marginLeft: matchesSM ? 0 : "5em",
               textAlign: matchesSM ? "center" : undefined
-            }}
-          >
-            <Typography variant="h4">Hakukonemarkkinointi (SEM)</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
+            }} >
+
+            <Typography
+              paragraph
+              variant="h4">Hakukonemarkkinointi (SEM)</Typography>
+            <Typography
+              variant="subtitle1"
+              style={{ marginRight: matchesSM ? 0 : '8em' }}
+              className={classes.subtitle}>
               SEM (Search Engine Marketing) on maksullisten strategioiden käyttö hakujen näkyvyyden lisäämiseksi.
               Tuotemerkit* maksavat siitä,
               että mainokset näkyvät hakutuloksina hakukoneiden tulossivuilla.
             </Typography>
-            <Typography variant="subtitle1">
+            <Typography
+              variant="subtitle1"
+              className={classes.subtitle}>
               *tuotemerkki määritellään "henkilön käsitykseksi tuotteesta, palvelusta, kokemuksesta tai organisaatiosta".
             </Typography>
             <Button
@@ -244,17 +300,67 @@ export default function Services(props) {
               <ButtonArrow
                 width={10}
                 height={10}
-                fill={theme.palette.common.blue}
-              />
+                fill={theme.palette.common.blue} />
             </Button>
+
           </Grid>
+          <Grid item>
+            <img
+              className={classes.icon}
+              alt="hakukonen markkinointi"
+              src={sem}
+            />
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid item>
+        {" "}
+        {/*--  4.  ---Digimarkkinointi & Google Analytics-----*/}
+        <Grid
+          container
+          direction="row"
+          justify={matchesSM ? "center" : "flex-end"}
+          className={classes.serviceContainer}
+          style={{ marginTop: matchesSM ? "1em" : "5em" }} >
           <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
             <img
               className={classes.icon}
-              alt="website icon"
-              src={websitesIcon}
-              width="250em"
+              alt="digital marketing google analytics"
+              src={digitalMarketing}
             />
+          </Grid>
+
+          <Grid
+            item
+            style={{
+              textAlign: matchesSM ? "center" : undefined,
+              width: matchesSM ? undefined : "35em"
+            }} >
+
+            <Typography paragraph variant="h4">Digimarkkinointi & Google Analytics</Typography>
+            <Typography variant="subtitle1" className={classes.subtitle}>
+              SEO (Search Engine Optimization) on hakukoneoptimointi, mikä tarkoittaa, että luomamme kotisivut ovat helposti löydettävissä Googlelta,
+              Yahoolta ja muilta, ja siksi sivustoosi saapuu enemmän vierailuja ihmisiltä, ​​jotka etsivät tarjoamaasi palvelua tai tuotetta.
+            </Typography>
+
+            <Button
+              component={Link}
+              to="/palvelut/hakukoneMarkkinointi"
+              variant="outlined"
+              className={classes.learnButton}
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(1);
+              }}
+            >
+              <span style={{ marginRight: 10 }}>Lue Lisää</span>
+              <ButtonArrow
+                width={10}
+                height={10}
+                fill={theme.palette.common.blue}
+              />
+            </Button>
           </Grid>
         </Grid>
       </Grid>

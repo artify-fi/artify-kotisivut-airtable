@@ -163,6 +163,7 @@ const Services = () => {
           direction='row'
           className={classes.serviceContainer}
           justify={matchesSM ? 'center' : undefined}>
+
           <Grid item md
             className={classes.item1}
             style={{
@@ -186,6 +187,7 @@ const Services = () => {
               Siten se johtaa lopulta tyylikkään, nopeaan ja reagoivaan sisällön toimittamiseen.
             </Typography>
           </Grid>
+
           <Grid item container
             className={classes.item2}
             justify='center'
@@ -195,6 +197,7 @@ const Services = () => {
               style={{ fontSize: 320, color: '#a5c0ad' }}
             />
           </Grid>
+
         </Grid>
 
         {/* Erittäin nopea suorituskyky */}

@@ -127,7 +127,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       width: '78vw',
       height: '200vh',
-      marginLeft: '2em',
+      marginLeft: '4em',
     },
 
     // 600 up to 960
@@ -322,8 +322,9 @@ const LandingBlock = () => {
 
       <Grid item
         container
+        direction='column'
         direction={matchesMD ? "column" : "row"}
-        alignItems="center"
+        alignItems={matchesMD ? "center" : undefined}
         style={{ marginTop: "12em", }}>
 
         <Grid item md>
@@ -353,7 +354,7 @@ const LandingBlock = () => {
                   kotisivut parantaa näkyvyyttä  ja lisää huomattavasti kävijöiden määrää.
                 </Typography>
 
-                <List>
+                <List style={{ maxHeight: '100vh', overflow: 'auto' }}>
                   <ListItem className={classes.ListItemText1}>
 
                     <ListItemAvatar>
@@ -390,7 +391,7 @@ const LandingBlock = () => {
                         liiketoiminnan tulokset ja lisäämään yhteydenotto. Teemme paitsi hyvälaatuisia
                         kotisivustoja myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää ja myyntiä.
 
-                </Typography>
+                  </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
@@ -409,7 +410,21 @@ const LandingBlock = () => {
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
+                  <ListItem className={classes.ListItemText1}>
+                    <ListItemAvatar>
+                      <Avatar className={classes.Avatar}>
+                        <OpenInBrowserIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText>
+                      <Typography className={classes.cardText}>
+                        # Yritykset taistelevat asiakkaista ja valtaosa kotisivsivustojen vierailijoista tulee hakukoneista,
+                        joten hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohta.
+                </Typography>
+                    </ListItemText>
+                  </ListItem>
                 </List>
+
                 <Typography variant="body1" component="p" className={classes.cardText}>
                   * Progressiivinen verkkosovellus (englanniksi Progressive Web Application eli PWA) on mobiilin sekä pöytäkonen verkkoselaimessa
                   toimiva verkkosivu tai -sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja
