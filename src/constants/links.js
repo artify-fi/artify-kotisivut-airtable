@@ -45,7 +45,7 @@ export default [
   },
   {
     page: "ratkaisut",
-    label: "Päätön WordPress",
+    label: "Headless WordPress",
     url: `/ratkaisut/headlessCMS`,
     icon: <FaAlipay className="icon" />,
   },

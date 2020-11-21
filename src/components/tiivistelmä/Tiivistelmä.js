@@ -229,8 +229,10 @@ export default function Services(props) {
 
             <Typography paragraph variant="h4">Hakukoneoptimointi (SEO)</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              SEO (Search Engine Optimization) on hakukoneoptimointi, mikä tarkoittaa, että luomamme kotisivut ovat helposti löydettävissä Googlelta,
-              Yahoolta ja muilta, ja siksi sivustoosi saapuu enemmän vierailuja ihmisiltä, ​​jotka etsivät tarjoamaasi palvelua tai tuotetta.
+              SEO (Search Engine Optimization) on hakukoneoptimointi, mikä tarkoittaa,
+              että luomamme kotisivut ovat helposti löydettävissä Googlelta,
+              Yahoolta ja muilta, ja siksi sivustoosi saapuu enemmän vierailuja ihmisiltä,
+              jotka etsivät tarjoamaasi palvelua tai tuotetta.
             </Typography>
 
             <Button
@@ -277,14 +279,16 @@ export default function Services(props) {
               variant="subtitle1"
               style={{ marginRight: matchesSM ? 0 : '8em' }}
               className={classes.subtitle}>
-              SEM (Search Engine Marketing) on maksullisten strategioiden käyttö hakujen näkyvyyden lisäämiseksi.
+              SEM (Search Engine Marketing) on maksullisten strategioiden käyttö hakujen
+              näkyvyyden lisäämiseksi.
               Tuotemerkit* maksavat siitä,
               että mainokset näkyvät hakutuloksina hakukoneiden tulossivuilla.
             </Typography>
             <Typography
               variant="subtitle1"
               className={classes.subtitle}>
-              *tuotemerkki määritellään "henkilön käsitykseksi tuotteesta, palvelusta, kokemuksesta tai organisaatiosta".
+              *tuotemerkki määritellään "henkilön käsitykseksi tuotteesta, palvelusta,
+              kokemuksesta tai organisaatiosta".
             </Typography>
             <Button
               component={Link}
@@ -340,8 +344,13 @@ export default function Services(props) {
 
             <Typography paragraph variant="h4">Digimarkkinointi & Google Analytics</Typography>
             <Typography variant="subtitle1" className={classes.subtitle}>
-              SEO (Search Engine Optimization) on hakukoneoptimointi, mikä tarkoittaa, että luomamme kotisivut ovat helposti löydettävissä Googlelta,
-              Yahoolta ja muilta, ja siksi sivustoosi saapuu enemmän vierailuja ihmisiltä, ​​jotka etsivät tarjoamaasi palvelua tai tuotetta.
+              Olellinen osa tämän päivän verkkosivustoa on analysoida sen vierailioita.
+              Kuinka kauan he ovat sivulla, missä he napsauttavat sekä miten he tulivat sivulle.
+              Google Analytics vastaa lisäksi moniin muihin kysymyksiin.
+              Nämä tiedot voivat auttaa sinua selvittämään, kuka kohderyhmäsi on ja
+              toimiiko Internet-markkinointisi. Näiden tietojen perusteella voit luoda
+              Internet-markkinointistrategian ja todellisen mediasuunnitelman tulevaa
+              toimintaa varten - mitä pitäisi tehdä ja miten se tulisi tehdä.
             </Typography>
 
             <Button

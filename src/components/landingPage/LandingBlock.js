@@ -387,7 +387,7 @@ const LandingBlock = () => {
 
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        #Verkkosivustojemme luomispalvelumme on optimoitu saavuttamaan parhaat
+                        #Verkkosivustojemme kehityspalvelumme on optimoitu saavuttamaan parhaat
                         liiketoiminnan tulokset ja lisäämään yhteydenotto. Teemme paitsi hyvälaatuisia
                         kotisivustoja myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää ja myyntiä.
 

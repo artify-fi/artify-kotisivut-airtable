@@ -224,7 +224,7 @@ const Services = () => {
               textAlign: matchesSM ? 'center' : undefined
             }}>
 
-            <Typography variant='h4'>
+            <Typography variant='h4' id="nopea_suorituskyky">
               # Erittäin nopea suorituskyky
               </Typography>
             <Typography variant='subtitle1' className={classes.subtitle}>
@@ -373,7 +373,8 @@ const Services = () => {
               marginLeft: matchesSM ? 0 : '5em',
               marginRight: matchesSM ? 0 : '5em',
               maxWidth: matchesSM ? undefined : '35em',
-              textAlign: matchesSM ? 'center' : undefined
+              textAlign: matchesSM ? 'center' : undefined,
+              marginBottom: '8em'
             }}>
 
             <Typography variant='h4'>

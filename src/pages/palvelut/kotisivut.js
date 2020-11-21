@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from "../../components/layout"
-import UC from '../../components/UnderConstruction'
+import Kotisivut from '../../components/kotisivut/Kotisivut'
 import SEO from "../../components/SEO"
 
 const kotisivut = () => {
   return (
     <Layout>
       <SEO title='Kotisivujen kehittäminen pienyrittäjille' />
-      <UC />
+      <Kotisivut />
     </Layout>
   )
 }
