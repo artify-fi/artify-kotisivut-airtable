@@ -133,14 +133,18 @@ const useStyles = makeStyles(theme => ({
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
 
-      width: '78vw',
+      width: '94vw',
       height: '178vh',
+      marginRight: '1.4em',
+      marginLeft: '1.4em',
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      width: '90vw',
+      maxWidth: '94vw',
       height: '192vh',
+      marginRight: '0.4em',
+      marginLeft: '0.4em',
     },
   },
 
@@ -165,11 +169,15 @@ const useStyles = makeStyles(theme => ({
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
       height: '42vh',
+      marginRight: '0.6em',
+      marginLeft: '0.6em',
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
       height: '36vh',
+      marginRight: '0.6em',
+      marginLeft: '0.6em',
     },
   },
 
@@ -285,7 +293,7 @@ const useStyles = makeStyles(theme => ({
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      fontSize: '1rem',
+      fontSize: '0.9rem',
       paddingLeft: '0.6em',
       paddingRight: '0.6em'
     },
@@ -295,12 +303,23 @@ const useStyles = makeStyles(theme => ({
   Avatar: {
     backgroundColor: '#d4f1f4',
     height: '55px',
-    width: '55px'
+    width: '55px',
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      height: '35px',
+      width: '35px',
+    },
   },
   ImageIcon: {
     color: '#213b4f',
     height: '45px',
-    width: '45px'
+    width: '45px',
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      height: '25px',
+      width: '25px',
+    },
+
   }
 }))
 
@@ -317,17 +336,13 @@ const LandingBlock = () => {
     <Grid container
       direction='column'
       className={classes.infoBackground}>
-
-
-
       <Grid item
         container
         direction='column'
         direction={matchesMD ? "column" : "row"}
         alignItems={matchesMD ? "center" : undefined}
-        style={{ marginTop: "12em", }}>
-
-        <Grid item md>
+        style={{ marginTop: "12em" }}>
+        <Grid item>
           <Card className={classes.cardContainer}>
             <CardActionArea style={{ cursor: 'default' }}>
               <CardContent>
@@ -353,16 +368,13 @@ const LandingBlock = () => {
                   Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla kehitetty
                   kotisivut parantaa näkyvyyttä  ja lisää huomattavasti kävijöiden määrää.
                 </Typography>
-
-                <List style={{ maxHeight: '100vh', overflow: 'auto' }}>
+                <List>
                   <ListItem className={classes.ListItemText1}>
-
                     <ListItemAvatar>
                       <Avatar className={classes.Avatar}>
                         <GroupAddIcon className={classes.ImageIcon} />
                       </Avatar>
                     </ListItemAvatar>
-
                     <ListItemText>
                       <Typography className={classes.cardText}>
                         #Hyvin toimiva verkkosivusto mikä tekee sinusta näkyvän sekä nykyisille että
@@ -370,32 +382,23 @@ const LandingBlock = () => {
                         kaikenkattavalla testaamisella ja jatkuvalla parantamisella.
                       </Typography>
                     </ListItemText>
-
                   </ListItem>
-
                   <Divider variant="inset" component="li" />
-
                   <ListItem className={classes.ListItemText2}>
-
-                    <Hidden xsDown>
-                      <ListItemAvatar>
-                        <Avatar className={classes.Avatar}>
-                          <WebIcon className={classes.ImageIcon} />
-                        </Avatar>
-                      </ListItemAvatar>
-                    </Hidden>
-
+                    <ListItemAvatar>
+                      <Avatar className={classes.Avatar}>
+                        <WebIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
                         #Verkkosivustojemme kehityspalvelumme on optimoitu saavuttamaan parhaat
                         liiketoiminnan tulokset ja lisäämään yhteydenotto. Teemme paitsi hyvälaatuisia
                         kotisivustoja myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää ja myyntiä.
-
                   </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
-
                   <ListItem className={classes.ListItemText1}>
                     <ListItemAvatar>
                       <Avatar className={classes.Avatar}>
@@ -410,21 +413,7 @@ const LandingBlock = () => {
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
-                  <ListItem className={classes.ListItemText1}>
-                    <ListItemAvatar>
-                      <Avatar className={classes.Avatar}>
-                        <OpenInBrowserIcon className={classes.ImageIcon} />
-                      </Avatar>
-                    </ListItemAvatar>
-                    <ListItemText>
-                      <Typography className={classes.cardText}>
-                        # Yritykset taistelevat asiakkaista ja valtaosa kotisivsivustojen vierailijoista tulee hakukoneista,
-                        joten hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohta.
-                </Typography>
-                    </ListItemText>
-                  </ListItem>
                 </List>
-
                 <Typography variant="body1" component="p" className={classes.cardText}>
                   * Progressiivinen verkkosovellus (englanniksi Progressive Web Application eli PWA) on mobiilin sekä pöytäkonen verkkoselaimessa
                   toimiva verkkosivu tai -sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja
@@ -449,7 +438,7 @@ const LandingBlock = () => {
         </Grid>
 
         {/* Empty container at the right */}
-        <Grid item md
+        <Grid item
           style={{
             maxWidth: matchesSM ? 300 : '48vw',
             paddingTop: matchesSM ? '4em' : '10em'
