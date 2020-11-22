@@ -67,13 +67,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Artify progressiiviset GatsbyJS kotisivut`,
+        short_name: `Artify kotisivut`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#c9cfd4`,
         display: `standalone`,
         lang: `fi`,
+        icon: "src/images/icon.png",
       },
     },
     `gatsby-plugin-offline`,
