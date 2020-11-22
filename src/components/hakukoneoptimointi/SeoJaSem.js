@@ -3,17 +3,13 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { Link } from 'gatsby'
-//import Avatar from "@material-ui/core/Avatar";
+
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-//import Hidden from "@material-ui/core/Hidden";
+import Divider from '@material-ui/core/Divider';
 import ArtifyfSEO from "../../assets/images/ArtifySEO.webp";
 import ArtifySEM from '../../assets/images/ArtifySEM.webp'
 import { Underline } from "@styled-icons/fa-solid";
-//import CallToAction from "./ui/CallToAction";
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import QR from '../../assets/images/artbachmann.eu.png'
-import CafeteriaGatsbyFrontpage from '../../assets/images/cafeteria_gatsby_thumbnail.webp'
+
 
 const useStyles = makeStyles(theme => ({
   missionStatement: {
@@ -211,6 +207,7 @@ export default function About(props) {
           ja hakukonemarkkinointi voivat auttaa sinua pääsemään selvästi havaittavaksi Googlessa?
         </Typography>
       </Grid>
+      <Divider />
       <Grid
         item
         container
