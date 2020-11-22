@@ -25,24 +25,13 @@ export default [
     url: `/palvelut/hakukoneOptimointi`,
     icon: <FaCreditCard className="icon" />,
   },
-  // {
-  //   page: "palvelut",
-  //   label: "hakukonemarkkinointi",
-  //   url: `/palvelut/hakukoneMarkkinointi`,
-  //   icon: <FaCreditCard className="icon" />,
-  // },
   {
     page: "palvelut",
     label: "digimarkkinointi googleAnalytics",
     url: `/palvelut/googleAnalytics`,
     icon: <FaCreditCard className="icon" />,
   },
-  {
-    page: "ratkaisut",
-    label: "GatsbyJS",
-    url: `/ratkaisut/gatsby`,
-    icon: <FaAlipay className="icon" />,
-  },
+
   {
     page: "ratkaisut",
     label: "Headless WordPress",

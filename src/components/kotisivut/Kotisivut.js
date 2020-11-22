@@ -110,7 +110,7 @@ export default function About(props) {
            tai muista tällä hetkellä käyttämistäsi lähteistä.
           Yritykset, jotka ovat siirtäneet sivustonsa Gatsby:n alustalle,
           ovat kokeneet merkittäviä parannuksia liidien hankinnassa,
-          Googlen orgaanisen haun liikenteessä ja ...
+          Googlen orgaanisen haun liikenteessä ja turvallisuudessa.
         </Typography>
       </Grid>
       <Grid item>
@@ -183,7 +183,8 @@ export default function About(props) {
               align="center"   
               style={{ width: matchesSM ? '16em' : '20em' }}      
             >
-              Skannaa QR-koodi ja tutustuu  poikkeukselliseen hyvään suorituskykyyn  vaikka sivustolla
+              Skannaa QR-koodi tai napsuttaa kuvalla ja tutustuu  poikkeukselliseen 
+              hyvään suorituskykyyn  vaikka sivustolla
               on paljon laadukkaita valokuvia.
               Gatsbyn käyttäminen kotisivujen kehittämisessä  on loistava 
               tapa lisätä nykyaikaista tehokkuutta,

@@ -3,6 +3,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { Link } from 'gatsby'
 
 import Hidden from '@material-ui/core/Hidden';
+import Paper from '@material-ui/core/Paper';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -21,6 +22,8 @@ import Avatar from '@material-ui/core/Avatar';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import OpenInBrowserIcon from '@material-ui/icons/OpenInBrowser';
 import WebIcon from '@material-ui/icons/Web';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import CreateIcon from '@material-ui/icons/Create';
 import Divider from '@material-ui/core/Divider';
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
@@ -116,6 +119,11 @@ const useStyles = makeStyles(theme => ({
     // larger than 1920
 
     // 1280  and  up to 1920
+    // position: 'absolute',
+    overflow: 'scroll',
+    height: '100%',
+    display: 'block',
+
     [theme.breakpoints.down('lg')]: {
       width: '62vw',
       height: '210vh',
@@ -342,7 +350,7 @@ const LandingBlock = () => {
         direction={matchesMD ? "column" : "row"}
         alignItems={matchesMD ? "center" : undefined}
         style={{ marginTop: "12em" }}>
-        <Grid item>
+        <Grid item md>
           <Card className={classes.cardContainer}>
             <CardActionArea style={{ cursor: 'default' }}>
               <CardContent>
@@ -393,7 +401,7 @@ const LandingBlock = () => {
                     <ListItemText>
                       <Typography className={classes.cardText}>
                         #Verkkosivustojemme kehityspalvelumme on optimoitu saavuttamaan parhaat
-                        liiketoiminnan tulokset ja lisäämään yhteydenotto. Teemme paitsi hyvälaatuisia
+                        liiketoiminnan tulokset ja lisäämään yhteydenottoja. Teemme paitsi hyvälaatuisia
                         kotisivustoja myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää ja myyntiä.
                   </Typography>
                     </ListItemText>
@@ -413,25 +421,58 @@ const LandingBlock = () => {
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
+                  <ListItem className={classes.ListItemText1}>
+                    <ListItemAvatar>
+                      <Avatar className={classes.Avatar}>
+                        <CreateIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText>
+                      <Typography className={classes.cardText}>
+                        # Hyvä verkkosivujen sisältö on helposti ymmärrettävää, hyödyllinen ja ajanmukainen .
+                        Tilaa kotisivuillesi sisällöntuotannon ammattilaisten luodut selkeät, myyvät ja
+                        yrityksesi tarpeisiin räätälöidyt tekstit.
+                </Typography>
+                    </ListItemText>
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
+                  <ListItem className={classes.ListItemText1}>
+                    <ListItemAvatar>
+                      <Avatar className={classes.Avatar}>
+                        <VisibilityIcon className={classes.ImageIcon} />
+                      </Avatar>
+                    </ListItemAvatar>
+                    <ListItemText>
+                      <Typography className={classes.cardText}>
+                        # Visuaalisella osalla on erittäin tärkeä rooli verkossa, kuten muuallakin elämässä.
+                        Oikein valitut värit ja grafiikat auttavat asiakkaita liikkumaan verkkosivustolla paremmin
+                        ja luomaan sopivan tunnelman.Luomamme ratkaisut ovat käytännöllisiä ja hyvin harkittuja,
+                        perustuvat ideaasi, tarpeisiisi ja kohderyhmäsi.
+                </Typography>
+                    </ListItemText>
+                  </ListItem>
+                  <Divider variant="inset" component="li" />
                 </List>
                 <Typography variant="body1" component="p" className={classes.cardText}>
                   * Progressiivinen verkkosovellus (englanniksi Progressive Web Application eli PWA) on mobiilin sekä pöytäkonen verkkoselaimessa
                   toimiva verkkosivu tai -sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja
                   responsiivisen verkkosivun parhaat puolet.
                 </Typography>
-                <Button
-                  component={Link}
-                  to="/palvelut/kotisivut"
-                  variant='outlined'
-                  className={classes.learnButtonHero}
-                >
-                  <span style={{ marginRight: 10 }}>Lue Lisää</span>
-                  <ButtonArrow
-                    width={15}
-                    height={15}
-                    fill={theme.palette.common.Grey4}
-                  />
-                </Button>
+                <CardActions>
+                  <Button
+                    component={Link}
+                    to="/palvelut/kotisivut"
+                    variant='outlined'
+                    className={classes.learnButtonHero}
+                  >
+                    <span style={{ marginRight: 10 }}>Lue Lisää</span>
+                    <ButtonArrow
+                      width={15}
+                      height={15}
+                      fill={theme.palette.common.Grey4}
+                    />
+                  </Button>
+                </CardActions>
               </CardContent>
             </CardActionArea>
           </Card>
@@ -439,6 +480,7 @@ const LandingBlock = () => {
 
         {/* Empty container at the right */}
         <Grid item
+          md
           style={{
             maxWidth: matchesSM ? 300 : '48vw',
             paddingTop: matchesSM ? '4em' : '10em'

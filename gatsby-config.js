@@ -65,6 +65,19 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#c9cfd4`,
+        display: `standalone`,
+        lang: `fi`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [

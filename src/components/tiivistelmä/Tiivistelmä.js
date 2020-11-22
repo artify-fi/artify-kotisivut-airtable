@@ -292,7 +292,7 @@ export default function Services(props) {
             </Typography>
             <Button
               component={Link}
-              to="/palvelut/hakukoneMarkkinointi"
+              to="/palvelut/hakukoneOptimointi"
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
