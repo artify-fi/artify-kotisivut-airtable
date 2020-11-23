@@ -85,7 +85,7 @@ export default function About(props) {
           }}
           variant="h1">
           Gatsby JS kotisivut ja mobiilisovellukset. Sivuston nopeudella ja
-          suorituskyvyllä on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen.
+          suorituskyvyllä on valtava vaikutus asiakkaiden sitoutumiseen ja myyntiin.
         </Typography>
       </Grid>
       <Grid

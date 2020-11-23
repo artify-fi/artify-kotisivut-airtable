@@ -263,9 +263,6 @@ const Services = () => {
             <Typography variant='subtitle1'>
               Koska luotat sovellusliittymäpuheluihin sisällön toimittamiseksi, voit skaalata kaiken nopeasti ilman, että käyttäjilläsi on merkittäviä seisokkeja.
             </Typography>
-            <Typography variant='subtitle1'>
-              Sisältötietokannasi voi kasvaa edelleen, ja koska olet nyt API-ensisijainen, voit integroitua helposti mihin tahansa muuhun tekniikkaan vastaamaan uusia yritystarpeitasi.
-            </Typography>
           </Grid>
 
           <Grid item container
@@ -353,44 +350,44 @@ const Services = () => {
 
         </Grid>
 
-        {/* #Future-Proof Tech Stack */}
-        <Grid container
-          direction='row'
-          className={classes.serviceContainer}
-          justify={matchesSM ? 'center' : 'flex-end'}>
+        {/* #Future-Proof Tech Stack
+          <Grid container
+            direction='row'
+            className={classes.serviceContainer}
+            justify={matchesSM ? 'center' : 'flex-end'}>
 
-          <Grid item container
-            justify='center'
-            alignItems='center'
-            md>
-            <CloudDoneIcon
-              style={{ fontSize: 320, color: '#a5c0ad' }}
-            />
-          </Grid>
+            <Grid item container
+              justify='center'
+              alignItems='center'
+              md>
+              <CloudDoneIcon
+                style={{ fontSize: 320, color: '#a5c0ad' }}
+              />
+            </Grid>
 
-          <Grid item md
-            style={{
-              marginLeft: matchesSM ? 0 : '5em',
-              marginRight: matchesSM ? 0 : '5em',
-              maxWidth: matchesSM ? undefined : '35em',
-              textAlign: matchesSM ? 'center' : undefined,
-              marginBottom: '8em'
-            }}>
+            <Grid item md
+              style={{
+                marginLeft: matchesSM ? 0 : '5em',
+                marginRight: matchesSM ? 0 : '5em',
+                maxWidth: matchesSM ? undefined : '35em',
+                textAlign: matchesSM ? 'center' : undefined,
+                marginBottom: '8em'
+              }}>
 
-            <Typography variant='h4'>
-              # Tulevaisuuden todistava tekninen pino
+              <Typography variant='h4'>
+                # Tulevaisuuden todistava tekninen pino
+                </Typography>
+              <Typography variant='subtitle1' className={classes.subtitle}>
+                Koska sovellusliittymäpohjainen Headless WordPress voi integroitua useimpiin alustoihin, sinun ei tarvitse huolehtia siitä, että tietty tekniikka vanhenee tai vanhenee.
               </Typography>
-            <Typography variant='subtitle1' className={classes.subtitle}>
-              Koska sovellusliittymäpohjainen Headless WordPress voi integroitua useimpiin alustoihin, sinun ei tarvitse huolehtia siitä, että tietty tekniikka vanhenee tai vanhenee.
-            </Typography>
-            <Typography variant='subtitle1'>
-              Voit helposti päivittää uusimpaan tekniikkaan käyttäjien tarpeiden perusteella varmistaaksesi, että tekninen pino on tulevaisuudenkestävä niin kauan kuin mahdollista.
-            </Typography>
-            <Typography variant='subtitle1'>
-              Lisäksi, koska Static WordPress on API-ensisijainen, se voi tukea suosittuja huipputeknologioita ja laitteita, kuten AR, VR ja IoT, mikä antaa sinulle merkittävän etulyöntiaseman kilpailijoihisi nähden.
-            </Typography>
-          </Grid>
-        </Grid>
+              <Typography variant='subtitle1'>
+                Voit helposti päivittää uusimpaan tekniikkaan käyttäjien tarpeiden perusteella varmistaaksesi, että tekninen pino on tulevaisuudenkestävä niin kauan kuin mahdollista.
+              </Typography>
+              <Typography variant='subtitle1'>
+                Lisäksi, koska Static WordPress on API-ensisijainen, se voi tukea suosittuja huipputeknologioita ja laitteita, kuten AR, VR ja IoT, mikä antaa sinulle merkittävän etulyöntiaseman kilpailijoihisi nähden.
+              </Typography>
+            </Grid>
+          </Grid> */}
       </Grid>
     </Grid>
   )

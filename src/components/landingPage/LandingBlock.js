@@ -373,7 +373,7 @@ const LandingBlock = () => {
                   component="h2"
                   align='center'
                   className={classes.cardTextHeading}>
-                  Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla kehitetty
+                  Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla luodut
                   kotisivut parantaa näkyvyyttä  ja lisää huomattavasti kävijöiden määrää.
                 </Typography>
                 <List>

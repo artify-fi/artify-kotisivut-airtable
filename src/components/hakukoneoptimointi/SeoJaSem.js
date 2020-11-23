@@ -172,6 +172,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: '1.6em',
       fontWeight: 600
     }
+  },
+  divider: {
+    color: 'red',
   }
 }));
 
@@ -207,7 +210,7 @@ export default function About(props) {
           ja hakukonemarkkinointi voivat auttaa sinua pääsemään selvästi havaittavaksi Googlessa?
         </Typography>
       </Grid>
-      <Divider />
+      <Divider className={classes.divider} />
       <Grid
         item
         container
@@ -280,7 +283,7 @@ export default function About(props) {
                 style={{ fontWeight: 700, fontStyle: "italic", }}
               >
                 Hakukoneoptimoinnista on hyötyä, jos tarjoamasi tuotteet tai palvelut  haetaan Googlesta ja haluat,
-                että Internet-hausta saapuu enemmän juuri ostavia asiakkaita sivullesi. ?? Vierailijat, jotka tulevat
+                että Internet-hausta saapuu enemmän juuri ostavia asiakkaita sivullesi. Vierailijat, jotka tulevat
                 verkkosivustollesi Internet-haun kautta, ovat painonsa kullan arvoisia, koska he ovat
                 kiinnostuneita siitä, mitä sinulla on tarjottavana verkkoympäristössäsi.
               </Typography>
@@ -311,7 +314,7 @@ export default function About(props) {
                 paragraph
               >
                 Avainsanojen lisäksi SEO:n tekniset näkökohdat, SEO-tuloksia tukevan verkkoympäristön suunnittelu,
-                sisällön suunnittelu, oikein täytetyt Google- ja sosiaalisen median profiilit sekä maininta-linkit
+                sisällön suunnittelu, oikein täytetyt Google- ja sosiaalisen median profiilit sekä linkit
                 oman verkkosi ulkopuolella ovat yhtä tärkeitä.
               </Typography>
               <Typography
@@ -331,33 +334,7 @@ export default function About(props) {
         </Grid>
       </Grid>
 
-      <Grid
-        item
-        className={classes.rowContainer}
-        style={{ marginTop: matchesMD ? "12em" : "14em" }}
-      >
-
-      </Grid>
-      <Grid
-        item
-        container
-        justify="center"
-        className={classes.rowContainer}
-        style={{ marginTop: "3em" }}
-      >
-        <Typography
-          variant="h4"
-          align="center"
-          className={classes.missionStatement}
-        >
-          Gatsby on kehys nykyaikaisten verkkosivustojen ja sovellusten rakentamiseen.
-          Se voi vetää tietoja sivustoosi mistä tahansa
-          tai muista tällä hetkellä käyttämistäsi lähteistä.
-          Yritykset, jotka ovat siirtäneet sivustonsa Gatsby:n alustalle,
-          ovat kokeneet merkittäviä parannuksia liidien hankinnassa,
-          Googlen orgaanisen haun liikenteessä ja ...
-        </Typography>
-      </Grid>
+      {/* SEM block starts from here */}
       <Grid item>
         <Grid item container justify="center" lg>
           <img
@@ -405,52 +382,67 @@ export default function About(props) {
                 paragraph
                 style={{ fontWeight: 700, fontStyle: "italic", }}
               >
-                Gatsby on  React-pohjainen kehys
-                nopeiden verkkosivustojen ja sovellusten rakentamiseen.
-                Gatsby-sivustoille on rakennettu hämmästyttävä suorituskyky ,
-                lisätty tietoturva ja nykyiset parhaat verkkokäytännöt.
+                {/* Lyhyesti hakukonemarkkinoinnista  */}
+                Hakukonemarkkinointi on käytäntö markkinoida yritystä käyttämällä maksettuja
+                mainoksia, jotka näkyvät hakukoneiden tulossivuilla (SERP:issä).
+                Mainostajat tekevät hintatarjouksia avainsanoista, jotka Googlen ja Bingin
+                kaltaisten palvelujen käyttäjät voivat syöttää etsittäessään tiettyjä tuotteita
+                tai palveluita, mikä antaa mainostajalle mahdollisuuden näyttää mainoksensa näiden
+                hakutulosten rinnalla.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Parempi liidien luominen ja asiakkaiden sitoutuminen. </span>
-                Sivuston nopeudella ja suorituskyvyllä on valtava
-                vaikutus myyntiin ja asiakkaiden sitoutumiseen.
-              Äskettäinen&nbsp; <span><Link className={classes.link} to="https://blogs.akamai.com/2020/09/metrics-that-matter-continuous-performance-optimization.html">Akamai-tutkimus</Link></span>
-              &nbsp;osoitti, että 100 millisekunnin
-              viive sivuston latausajassa vahingoitti tulosprosentteja 7%, ja 53%
-              mobiilikäyttäjistä jättää sivuja joiden lataaminen kestää yli 3 sekuntia.
-              Gatsby-sivustot ovat jatkuvasti 2-3x nopeammat kuin vastaavat sivustot,
-              jotka on ralyijysukupolvensakennettu eri työkaluilla, ja sivustojen omistajat
-               ovat nähneet liidien määrän kasvavan jopa 60% Gatsbyyn siirtymisen jälkeen.
+                <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Avainsanat: hakukoneen markkinoinnin kantava voima.</span>
+               Kun käyttäjät kirjoittavat hakukoneisiin avainsanoja (osana hakulausekkeita) löytääkseen etsimänsä,
+               ei pitäisi olla yllätys, että avainsanat muodostavat hakukoneiden markkinoinnin perustan mainontastrategiana.
+               Ennen kuin voit valita hakukoneiden markkinointikampanjoissa käytettäviä avainsanoja,
+               sinun on suoritettava kattava tutkimus osana avainsanojen hallintastrategiaa.Ensinnäkin sinun on
+               tunnistettava avainsanat, jotka ovat merkityksellisiä yrityksellesi ja joita mahdolliset asiakkaat
+               todennäköisesti käyttävät etsiessään tuotteitasi ja palveluitasi.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ diplay: 'inlineBlock', fontSize: '1.2rem', fontWeight: 600, padding: '3em' }}>Parannettu hakuliikenne. </span>&nbsp;<br />
-              Sivuston nopeus on yksi tekijöistä, joita Google käyttää hakusijoitusalgoritmissaan,
-              ja hitailla sivuston nopeuksilla voi olla negatiivinen lumipallo vaikutus hakukoneoptimoijaasi.
-               Hitaammat sivustot indeksoivat hakukoneet kauemmin, niiden välitön poistumisprosentti ja
-               alhaisemmat tulosprosentit vahingoittavat sijoitustasi. Gatsby-sivustoissa on sisäänrakennettu
-               web- ja mobiililaitteiden suorituskyvyn optimointi. Gatsby pysty hakemaan tietoja parhaista
-               sisällönhallintatyökaluista, parhaista verkkokauppatyökaluista,
-               käyttämistäsi tietokannoista ja muusta.
+                <span style={{ diplay: 'inlineBlock', fontSize: '1.2rem', fontWeight: 600, padding: '3em' }}>Hakukonemarkkinoinnin mainoshuutokauppa.</span>&nbsp;<br />
+                Yksi kestävimmistä väärinkäsityksistä hakukonemarkkinoinnissa on, että voittaa se,
+                jolla on suurin mainosbudjetti. Vaikka suurempi mainontabudjetti voi olla varmasti edullista,
+                varsinkin kun kohdistetaan erittäin kilpailukykyisiin avainsanoihin, mutta se on kaukana
+                vaatimuksesta menestyä hakukoneiden markkinoinnissa. Tämä johtuu siitä, että kaikki mainokset käyvät
+                läpi mainoshuutokaupan, ennen kuin ne näkyvät hakutulosten vieressä. Tässä selityksessä keskityn Google AdWordsin
+                mainoshuutokauppaan.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '2em' }}>Turvallisuus</span>&nbsp;<br />
-                Gatsby on moderni sivustogeneraattori, joka tuottaa staattisia HTML-sivuja rakennuksen aikana.
-                Tämä tarkoittaa, että et tarvitse tietokantaa tai sisällönhallintajärjestelmää,
-                joka toimii julkisilla palvelimillasi, jotka molemmat ovat yleisiä tietoturvaloukkausten lähteitä.
-                Staattinen sisältö on paljon helpompi suojata. Tämä ei missään tapauksessa poista kaikkia
-                Gatsby-sivustojen tietoturva-aukkoja, mutta ne vähenevät merkittävästi.
+                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '2em' }}>Millä lailla mainoshuutokauppa toimii</span>&nbsp;<br />
+                Mainoshuutokauppaprosessi tapahtuu joka kerta, kun joku kirjoittaa hakulausekkeen Googleen.
+                Ilmoittaakseen mainoshuutokauppaan mainostajat tunnistavat avainsanat, joilta he haluavat tehdä tarjouksen,
+                ja ilmoittavat, kuinka paljon he ovat halukkaita kuluttamaan (napsautusta kohden) mainostensa näyttämiseksi
+                kyseisiin avainsanoihin liittyvien tulosten rinnalla. Jos Google katsoo, että tarjoamasi avainsanat sisältyvät
+                käyttäjän hakulausekkeesssa, mainoksesi osallistuvat mainoshuutokauppaan.
+                </Typography>
+              <Typography
+                variant="body1"
+                align={matchesMD ? "center" : undefined}
+                paragraph
+              >
+                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '2em' }}>Miten mainokset voittavat mainoshuutokaupan</span>&nbsp;<br />
+                Jokaisia yksittäisiä mainoksia ei näytetä kaikissa hakuissa. Tämä johtuu siitä,
+                että mainoshuutokaupassa otetaan huomioon useat tekijät määritettäessä mainosten sijoittelua
+                SERP:lle(hakukoneen tulossivulle), ja koska kaikilla avainsanoilla ei ole riittävää kaupallista
+                tarkoitusta perustella mainosten näyttämistä tulosten vieressä. Kaksi tärkeintä tekijää,
+                jotka Google arvioi osana mainoshuutokauppaprosessia, ovat korkein hintatarjouksesi ja mainostesi laatupisteet.
+                Korkein tarjous on suurin määrittämäsi summa, jonka olet valmis maksamaan napsautuksesta.
+                Laatupisteet ovat mittari, joka perustuu mainoksesi yleiseen laatuun.
+                Google laskee nämä tiedot mainoshuutokaupan aikana mainosten sijoittelun määrittämiseksi. Tämän laskelman tulos
+                tunnetaan mainoksen sijoituksena.
                 </Typography>
             </Grid>
           </Grid>
