@@ -6,7 +6,11 @@ import SEO from "../../components/SEO"
 const kotisivut = () => {
   return (
     <Layout>
-      <SEO title='Kotisivujen kehittäminen pienyrittäjille' />
+      <SEO
+        title='Kotisivujen kehittäminen pienyrittäjille'
+        description='Gatsby JS kotisivut ja mobiilisovellukset. 
+      Sivuston nopeudella ja suorituskyvyllä on valtava vaikutus asiakkaiden sitoutumiseen ja myyntiin. '
+      />
       <Kotisivut />
     </Layout>
   )

@@ -4,10 +4,10 @@ require("dotenv").config({
 // const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
-    title: `Hakukonenoptimoidut verkkosivut ja mobiilisovellukset`,
-    description: `Laadukkaat ja luotettavat responsiiviset kotisivut ja mobiilisovellukset 
+    title: `Hakukonenoptimoidut Gatsby JS verkkosivut ja mobiilisovellukset`,
+    description: `Responsiiviset Gatsby JS kotisivut ja mobiilisovellukset 
     jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.`,
-    titleTemplate: `%s | Hakukonenoptimointi ja kotisivut`,
+    titleTemplate: `%s | Gatsby JS kotisivut ja hakukonenoptimointi`,
     siteUrl: `https://www.artify.fi/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,
