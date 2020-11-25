@@ -19,12 +19,12 @@ export default [
     url: `/palvelut/gatsby_kotisivut`,
     icon: <FaCreditCard className="icon" />,
   },
-  {
-    page: "palvelut",
-    label: "headless Wordpress kotisivut",
-    url: `/palvelut/wp_kotisivut`,
-    icon: <FaCreditCard className="icon" />,
-  },
+  // {
+  //   page: "palvelut",
+  //   label: "headless Wordpress kotisivut",
+  //   url: `/palvelut/wp_kotisivut`,
+  //   icon: <FaCreditCard className="icon" />,
+  // },
   {
     page: "palvelut",
     label: "hakukoneoptimointi- ja markkinointi",
