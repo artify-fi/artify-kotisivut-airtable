@@ -359,8 +359,8 @@ const LandingBlock = () => {
                   component="h1"
                   align='center'
                   className={classes.cardHeading}>
-                  Nykyaikaiset  progressiiviset* kotisivut ja  mobiilisovellukset
-                  pienyrittäjille mikä tukevat uusien asiakkaiden tavoittamista.
+                  Nykyaikaiset ja progressiiviset* kotisivut sekä  mobiilisovellukset
+                  pienyrittäjille jotka tukevat uusien asiakkaiden tavoittamista.
                 </Typography>
               </CardContent>
               <CardMedia
@@ -373,8 +373,8 @@ const LandingBlock = () => {
                   component="h2"
                   align='center'
                   className={classes.cardTextHeading}>
-                  Teknisesti laadukaat ja mobiili- sekä hakukoneoptimoidut Gatsby.js kehitystyökalulla luodut
-                  kotisivut parantaa näkyvyyttä  ja lisää huomattavasti kävijöiden määrää.
+                  Teknisesti laadukaat sekä mobiili- että hakukoneoptimoidut GatsbyJS kehitystyökalulla luodut
+                  kotisivut parantavat näkyvyyttä  ja lisäävät huomattavasti kävijöiden määrää.
                 </Typography>
                 <List>
                   <ListItem className={classes.ListItemText1}>
@@ -385,9 +385,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        #Hyvin toimiva verkkosivusto mikä tekee sinusta näkyvän sekä nykyisille että
+                        Hyvin toimiva sivusto mikä lisää näkyvyyttä sekä nykyisille että
                         uusille asiakkaille saavutetaan perusteellisella suunnittelulla,
-                        kaikenkattavalla testaamisella ja jatkuvalla parantamisella.
+                        kaikenkattavalla testaamisella ja jatkuvalla parantelulla.
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -400,9 +400,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        #Verkkosivustojemme kehityspalvelumme on optimoitu saavuttamaan parhaat
-                        liiketoiminnan tulokset ja lisäämään yhteydenottoja. Teemme paitsi hyvälaatuisia
-                        kotisivustoja myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää ja myyntiä.
+                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
+                        liiketoiminnan tulokset ja lisäämään näkyvyyttä. Teemme hyvälaatuisten
+                        kotisivujen lisäksi myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
                   </Typography>
                     </ListItemText>
                   </ListItem>
@@ -415,8 +415,8 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        # Yritykset taistelevat asiakkaista ja valtaosa kotisivsivustojen vierailijoista tulee hakukoneista,
-                        joten hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohta.
+                        Yritykset taistelevat jatkuvasti asiakkaista ja valtaosa kotisivujen vierailijoista tulee hakukoneiden kautta.,
+                        Siispä hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohdista.
                 </Typography>
                     </ListItemText>
                   </ListItem>
@@ -429,7 +429,7 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        # Hyvä verkkosivujen sisältö on helposti ymmärrettävää, hyödyllinen ja ajanmukainen .
+                        Hyvän verkkosivun sisältö on helposti ymmärrettävää, hyödyllinen ja moderni .
                         Tilaa kotisivuillesi sisällöntuotannon ammattilaisten luodut selkeät, myyvät ja
                         yrityksesi tarpeisiin räätälöidyt tekstit.
                 </Typography>
@@ -444,24 +444,24 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        # Visuaalisella osalla on erittäin tärkeä rooli verkossa, kuten muuallakin elämässä.
-                        Oikein valitut värit ja grafiikat auttavat asiakkaita liikkumaan verkkosivustolla paremmin
-                        ja luomaan sopivan tunnelman.Luomamme ratkaisut ovat käytännöllisiä ja hyvin harkittuja,
-                        perustuvat ideaasi, tarpeisiisi ja kohderyhmäsi.
+                        Kuten muuallakin elämässä, visuaalisella osuudella on tärkeä rooli verkossa
+                        Oikein valitut värit ja grafiikat auttavat asiakkaita selaamaan sivustoja sujuvammin
+                        ja luomaan sopivan tunnelman.Luomamme ratkaisut ovat käytännöllisiä, harkittuja ja
+                        perustuvat juuri sinun ideohin, tarpeisiin sekä kohderyhmään.
                 </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
                 </List>
                 <Typography variant="body1" component="p" className={classes.cardText}>
-                  * Progressiivinen verkkosovellus (englanniksi Progressive Web Application eli PWA) on mobiilin sekä pöytäkonen verkkoselaimessa
-                  toimiva verkkosivu tai -sovellus, joka pyrkii yhdistelemään natiivin mobiilisovelluksen ja
+                  * Progressiivinen verkkosovellus <span style={{ fontWeight: 'bolder', fontStyle: 'italic' }}>(englanniksi Progressive Web Application eli PWA)</span> on mobiililla sekä tietokoneella
+                  verkkoselaimessa toimiva verkkosovellus, joka pyrkii yhdistämään natiivin mobiilisovelluksen ja
                   responsiivisen verkkosivun parhaat puolet.
                 </Typography>
                 <CardActions>
                   <Button
                     component={Link}
-                    to="/palvelut/kotisivut"
+                    to="/palvelut/yhteenveto"
                     variant='outlined'
                     className={classes.learnButtonHero}
                   >

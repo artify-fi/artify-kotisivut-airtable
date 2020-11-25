@@ -3,17 +3,17 @@ import Layout from "../../components/layout"
 import Kotisivut from '../../components/kotisivut/Kotisivut'
 import SEO from "../../components/SEO"
 
-const kotisivut = () => {
+const gatsby_kotisivut = () => {
   return (
     <Layout>
       <SEO
-        title='Kotisivujen kehittäminen pienyrittäjille'
+        title='GatsbyJS kotisivut pienyrittäjille'
         description='Gatsby JS kotisivut ja mobiilisovellukset. 
-      Sivuston nopeudella ja suorituskyvyllä on valtava vaikutus asiakkaiden sitoutumiseen ja myyntiin. '
+         Sivuston nopeudella ja suorituskyvyllä on valtava vaikutus asiakkaiden sitoutumiseen ja myyntiin. '
       />
       <Kotisivut />
     </Layout>
   )
 }
 
-export default kotisivut
+export default gatsby_kotisivut
