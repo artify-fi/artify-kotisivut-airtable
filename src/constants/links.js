@@ -10,7 +10,7 @@ export default [
   {
     page: "palvelut",
     label: "yhteenveto",
-    url: `/palvelut/tiivistelmä`,
+    url: `/palvelut/yhteenveto`,
     icon: <FaCreditCard className="icon" />,
   },
   {
@@ -64,6 +64,12 @@ export default [
     page: "yritys",
     label: "yhteystiedot",
     url: `/yritys/yhteystiedot`,
+    icon: <FaAlipay className="icon" />,
+  },
+  {
+    page: "hinnasto",
+    label: "ilmainen arviointi",
+    url: `/hinnasto/arviointi`,
     icon: <FaAlipay className="icon" />,
   },
   // {

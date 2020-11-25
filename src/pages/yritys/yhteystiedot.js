@@ -14,19 +14,19 @@ const contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="nimi"
+                placeholder="Nimi"
                 className="form-control"
               />
               <input
                 type="email"
-                placeholder="email"
+                placeholder="Email"
                 name="email"
                 className="form-control"
               />
               <textarea
                 name="message"
                 rows="5"
-                placeholder="viesti"
+                placeholder="Viesti"
                 className="form-control"
               ></textarea>
             </div>
