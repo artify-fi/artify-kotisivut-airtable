@@ -4,10 +4,10 @@ require("dotenv").config({
 // const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
-    title: `Hakukonenoptimoidut Gatsby JS verkkosivut ja mobiilisovellukset`,
+    title: `Hakukonenoptimoidut GatsbyJS verkkosivut ja mobiilisovellukset`,
     description: `Responsiiviset Gatsby JS kotisivut ja mobiilisovellukset 
     jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.`,
-    titleTemplate: `%s | Gatsby JS kotisivut ja hakukonenoptimointi`,
+    titleTemplate: `%s | GatsbyJS kotisivut ja hakukonenoptimointi`,
     siteUrl: `https://www.artify.fi/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,
@@ -63,6 +63,14 @@ module.exports = {
       options: {
         trackingId: 'UA-180499768-1'
       }
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: 2120624,
+        sv: 6,
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
