@@ -7,7 +7,7 @@ import { Link } from 'gatsby'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import GatsbyJSWordPress from '../../assets/images/gatsbyjsPic4.jpg'
-import ACF from '../../assets/images/acf-screenshot.png'
+//import ACF from '../../assets/images/acf-screenshot.png'
 import CPT from '../../assets/images/SEO_frontpage.webp'
 
 import Icon from '@mdi/react'
@@ -212,7 +212,7 @@ const Revolution = () => {
               </Typography>
           </Grid>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           container
           justify='space-around'
@@ -233,7 +233,7 @@ const Revolution = () => {
               Katso iso kuva
             </Typography>
           </Link>
-        </Grid>
+        </Grid> */}
       </Grid>
 
 
