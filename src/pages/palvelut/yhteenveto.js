@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from "../../components/layout"
-import UC from '../../components/UnderConstruction'
 import SEO from "../../components/SEO"
 import Tiivistelmä from '../../components/tiivistelmä/Tiivistelmä'
 

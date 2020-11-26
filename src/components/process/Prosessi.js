@@ -6,35 +6,13 @@ import Typography from '@material-ui/core/Typography'
 import { Link } from 'gatsby'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import GatsbyJSWordPress from '../../assets/images/gatsbyjsPic4.jpg'
-//import ACF from '../../assets/images/acf-screenshot.png'
-import CPT from '../../assets/images/SEO_frontpage.webp'
+import GatsbyJSWordPress from '../../assets/images/kehitysprosessi/Gatsbyjs.jpg'
+import ACF from '../../assets/images/kehitysprosessi/AdvancedCustomFields.webp'
+import CPT from '../../assets/images/kehitysprosessi/CustomPostTypes.webp'
+import Koodi from '../../assets/images/kehitysprosessi/CleanCode.jpg'
 
-import Icon from '@mdi/react'
-// Konsultointi
-import { mdiAccountGroupOutline } from '@mdi/js';
-// Launch
-import { mdiApplicationExport } from '@mdi/js';
-// Mockup
-import { mdiBallotOutline } from '@mdi/js'
+// https://www.templatemonster.com/help/cherryframework-4-how-to-change-custom-post-type-labels-in-the-admin-panel.html
 
-// Design
-import { mdiContentSaveEditOutline } from '@mdi/js';
-
-// Review
-import { mdiCertificateOutline } from '@mdi/js';
-
-// Build 
-import { mdiCogSyncOutline } from '@mdi/js';
-
-// Maintain
-import { mdiCodeTagsCheck } from '@mdi/js';
-
-// Iterate
-import { mdiCalendarSyncOutline } from '@mdi/js';
-
-// Office Icons
-import { PeopleSittingAroundTable } from '../../assets/images/oi-people-sitting.png'
 
 
 const useStyles = makeStyles(theme => ({
@@ -115,6 +93,7 @@ const Revolution = () => {
             alt="gatsby wordpress graphql react techniques used"
             style={{
               width: '26em',
+              maxHeight: '334px',
               maxWidth: matchesSM ? 300 : "24em",
               marginRight: matchesMD ? 0 : "5em",
               marginBottom: matchesMD ? "5em" : 0
@@ -210,18 +189,19 @@ const Revolution = () => {
               </Typography>
           </Grid>
         </Grid>
-        {/* <Grid
+        <Grid
           item
           container
           justify='space-around'
           lg>
           <img
             src={ACF}
-            alt="advanced custom fields explanation"
+            alt="advanced custom fields  eli ACF esimerkki screenshot"
             style={{
-              width: '32em',
-              maxWidth: matchesSM ? 300 : "32em",
-              marginLeft: matchesMD ? 0 : "5em",
+              width: '26em',
+              maxHeight: '334px',
+              maxWidth: matchesSM ? 300 : "24em",
+              marginRight: matchesMD ? 0 : "5em",
               marginBottom: matchesMD ? "5em" : 0
             }}
           />
@@ -231,7 +211,7 @@ const Revolution = () => {
               Katso iso kuva
             </Typography>
           </Link>
-        </Grid> */}
+        </Grid>
       </Grid>
 
 
@@ -247,14 +227,16 @@ const Revolution = () => {
         <Grid item lg>
           <img
             src={CPT}
-            alt="mountain through binoculars"
+            alt="Custom Post Types esimerkki screenshot"
             style={{
               width: '26em',
+              maxHeight: '334px',
               maxWidth: matchesSM ? 300 : "24em",
               marginRight: matchesMD ? 0 : "5em",
               marginBottom: matchesMD ? "5em" : 0
             }}
           />
+          <Link to='https://www.templatemonster.com/help/cherryframework-4-how-to-change-custom-post-type-labels-in-the-admin-panel.html'>Kiitos templatemonster</Link>
         </Grid>
 
         <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
@@ -302,10 +284,11 @@ const Revolution = () => {
       >
         <Grid item lg>
           <img
-            src={CPT}
-            alt="mountain through binoculars"
+            src={Koodi}
+            alt="puhtan koodin esimerkki screenshot"
             style={{
               width: '26em',
+              maxHeight: '334px',
               maxWidth: matchesSM ? 300 : "24em",
               marginRight: matchesMD ? 0 : "5em",
               marginBottom: matchesMD ? "5em" : 0

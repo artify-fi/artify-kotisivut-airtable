@@ -13,13 +13,13 @@ export default [
     icon: <FaSketch className="service-icon" />,
     title: "Hakukoneoptimointi ja -markkinointi",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
-    link: `/palvelut/hakukoneOptimointi`,
+    link: `/palvelut/hakukoneoptimointi`,
   },
   {
     id: 3,
     icon: <FaChartLine className="service-icon" />,
     title: "Digitaalininen markkinointi ja Google Analytics",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
-    link: `/palvelut/googleAnalytics`,
+    link: `/palvelut/digimarkkinointi`,
   },
 ]

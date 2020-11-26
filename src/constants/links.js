@@ -16,15 +16,9 @@ export default [
   {
     page: "palvelut",
     label: "gatsbyJS kotisivut",
-    url: `/palvelut/gatsby_kotisivut`,
+    url: `/palvelut/kotisivut`,
     icon: <FaCreditCard className="icon" />,
   },
-  // {
-  //   page: "palvelut",
-  //   label: "headless Wordpress kotisivut",
-  //   url: `/palvelut/wp_kotisivut`,
-  //   icon: <FaCreditCard className="icon" />,
-  // },
   {
     page: "palvelut",
     label: "hakukoneoptimointi- ja markkinointi",
@@ -39,27 +33,10 @@ export default [
   },
   {
     page: "ratkaisut",
-    label: "prosessi",
-    url: `/ratkaisut/prosessi`,
+    label: "kehitysprosessi",
+    url: `/ratkaisut/kehitysprosessi`,
     icon: <FaAlipay className="icon" />,
   },
-  {
-    page: "ratkaisut",
-    label: "www-sisällönhallinta",
-    url: `/ratkaisut/sisällönhallinta`,
-    icon: <FaAlipay className="icon" />,
-  },
-  // {
-  //   page: "blogi",
-  //   label: "JAMstack",
-  //   url: `/blogi/jamStack`,
-  //   icon: <FaAlipay className="icon" />,
-  // }, {
-  //   page: "blogi",
-  //   label: "Kestävä kehitys",
-  //   url: `/blogi/kestäväKehitys`,
-  //   icon: <FaAlipay className="icon" />,
-  // },
   {
     page: "yritys",
     label: "yhteystiedot",
@@ -72,22 +49,4 @@ export default [
     url: `/hinnasto/arviointi`,
     icon: <FaAlipay className="icon" />,
   },
-  // {
-  //   page: "yritys",
-  //   label: "Meistä",
-  //   url: `/yritys/yhteystiedot`,
-  //   icon: <FaAlipay className="icon" />,
-  // },
-  // {
-  //   page: "projektit",
-  //   label: "headless-cms",
-  //   url: `/products/payments`,
-  //   icon: <FaCcStripe className="icon" />,
-  // },
-  // {
-  //   page: "projektit",
-  //   label: "customers",
-  //   url: `/products/payments`,
-  //   icon: <FaCcStripe className="icon" />,
-  // },
 ]
