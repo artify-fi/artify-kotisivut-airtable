@@ -64,13 +64,13 @@ const Revolution = () => {
         container
         item
         justify='center'
-        style={{ marginTop: matchesMD ? "4em" : "8em" }}
-      >
+        style={{ marginTop: matchesMD ? "4em" : "8em" }}>
+
         <Typography
           align='center'
           style={{ maxWidth: '80%', marginTop: '3em' }}
-          variant="h1"
-        >
+          variant="h1">
+
           Luotaessamme verkkosivustoa varmistamme, että se on  käyttäjäystävällinen ja täyttää modernit
           verkkostandardit.Nykyään kysymys ei ole enää siitä, onko sinulla verkkosivusto vai ei, vaan kuinka tehokkaasti se toimii.
         </Typography>
@@ -101,15 +101,20 @@ const Revolution = () => {
           />
         </Grid>
 
-        <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
-          <Grid item lg>
+        <Grid
+          item
+          container
+          direction="column"
+          lg
+          style={{ maxWidth: "40em" }}>
+          <Grid item>
             <Typography
               align={matchesMD ? "center" : "left"}
               variant="h2"
               gutterBottom
             >
               Kotisivujen kehitysprosessi ja käytetty teknologia.
-              </Typography>
+                </Typography>
           </Grid>
           <Grid item>
             <Typography
@@ -121,7 +126,7 @@ const Revolution = () => {
               ja GatsbyJS hoitaa käyttöliittymän. Gatsbyn lisääminen on loistava tapa tehostaa modernia
               suorituskykyä, skaalautuvuutta, tietoturvaa ja kehitysnopeuden etuja säilyttäen samalla
               WordPressin tutun sisällönhallintajärjestelmän.
-              </Typography>
+                </Typography>
 
             <Typography
               align={matchesMD ? "center" : "left"}
@@ -131,7 +136,7 @@ const Revolution = () => {
               Gatsbyn käyttö yhdessä WordPressin kanssa on hyödyllinen siirtymisreitti
               yrityksille, kuka jo omistavat WordPress kotisivuja ja jotka etsivät parempaa tietoturvaa,
               sivuston suorituskykyä tai haluavat julkaista sisältöä automaattisesti useilla kanavilla samanaikaisesti..
-              </Typography>
+                </Typography>
 
             <Typography
               align={matchesMD ? "center" : "left"}
@@ -142,7 +147,7 @@ const Revolution = () => {
               että yritettäisiin vakuuttaa heidät käyttämään kokonaan uutta pinoa,
               Gatsbyn käyttäminen WordPressin rinnalla on tapa tuottaa etuja muuttamatta heidän
               sisällönmuokkauskokemustaan.
-              </Typography>
+                </Typography>
           </Grid>
         </Grid>
       </Grid>
@@ -158,15 +163,15 @@ const Revolution = () => {
         style={{ marginTop: "5em" }}>
 
 
-        <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
-          <Grid item lg>
+        <Grid item container direction="column" className={classes.item1} lg style={{ maxWidth: "40em" }}>
+          <Grid item>
             <Typography
               align={matchesMD ? "center" : "left"}
               variant="h4"
               gutterBottom
             >
               Advanced Custom Fields
-              </Typography>
+                </Typography>
           </Grid>
           <Grid item>
             <Typography
@@ -177,7 +182,7 @@ const Revolution = () => {
               "Advanced Custom Fields" on WordPress-laajennus, jonka avulla voit lisätä
               kustomoituja sisältökenttiä.  Näitä kutsutaan yleisemmin muokatuiksi kentiksi,
               ja niiden avulla voi rakentaa verkkosivustoja nopeammin ja kouluttaa asiakkaita helposti.
-              </Typography>
+                </Typography>
             <Typography
               align={matchesMD ? "center" : "left"}
               variant="body1"
@@ -186,13 +191,15 @@ const Revolution = () => {
               Artify käyttää ACF-tekniikkaa laajalti erinomaisista ominaisuuksistaan ​​johtuen
               ja Gatsby on erityisen hyvä myös hakemaan tietoja niistä ja esittämään
               asianmukaisesti vierailioille.
-              </Typography>
+                </Typography>
           </Grid>
         </Grid>
+
         <Grid
           item
           container
           justify='space-around'
+          className={classes.item2}
           lg>
           <img
             src={ACF}
@@ -205,12 +212,6 @@ const Revolution = () => {
               marginBottom: matchesMD ? "5em" : 0
             }}
           />
-
-          <Link to='/'>
-            <Typography variant='h6'>
-              Katso iso kuva
-            </Typography>
-          </Link>
         </Grid>
       </Grid>
 
@@ -222,8 +223,8 @@ const Revolution = () => {
         direction={matchesMD ? "column" : "row"}
         alignItems="center"
         className={classes.rowContainer}
-        style={{ marginTop: "5em" }}
-      >
+        style={{ marginTop: "5em" }} >
+
         <Grid item lg>
           <img
             src={CPT}
@@ -236,14 +237,18 @@ const Revolution = () => {
               marginBottom: matchesMD ? "5em" : 0
             }}
           />
-          <Link to='https://www.templatemonster.com/help/cherryframework-4-how-to-change-custom-post-type-labels-in-the-admin-panel.html'>Kiitos templatemonster</Link>
         </Grid>
 
-        <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
+        <Grid
+          item
+          container
+          direction="column"
+          lg
+          style={{ maxWidth: "40em" }}>
           <Grid item>
             <Typography
               align={matchesMD ? "center" : "left"}
-              variant="h4"
+              variant="h2"
               gutterBottom
             >
               Custom Post Types
@@ -258,7 +263,7 @@ const Revolution = () => {
               Custom Post Type:s muuttavat WordPress-sivuston blogiympäristöstä tehokkaaksi
               sisällönhallintajärjestelmäksi (CMS).Pohjimmiltaan niiden avulla voi luoda
               erilaisia kustomoituja sisältötyyppejä verkkosivustolle.
-            </Typography>
+              </Typography>
             <Typography
               align={matchesMD ? "center" : "left"}
               variant="body1"
@@ -268,21 +273,58 @@ const Revolution = () => {
               ACF-tekniikan kanssa. Kun niitä käytetään yhdessä, asiakkaalle
               on erityisen kätevää ja turvallista lisätä ja vaihtaa sisältöä itsenäisesti verkkosivustollaan
               pelkäämättä pilata mitään sivustolla.
-            </Typography>
+              </Typography>
           </Grid>
         </Grid>
       </Grid>
 
-      {/* 3 osa Custom Post Types */}
+
+
+
+      {/* Pure Code from Artify */}
       <Grid
         item
         container
         direction={matchesMD ? "column" : "row"}
         alignItems="center"
         className={classes.rowContainer}
-        style={{ marginTop: "5em" }}
-      >
-        <Grid item lg>
+        style={{ marginTop: "5em" }} >
+
+        <Grid
+          item
+          container
+          direction="column"
+          className={classes.item1}
+          lg style={{ maxWidth: "40em" }}>
+          <Grid item>
+            <Typography
+              align={matchesMD ? "center" : "left"}
+              variant="h4"
+              gutterBottom
+            >
+              Puhdas ja selkeä koodi
+              </Typography>
+          </Grid>
+          <Grid item>
+            <Typography
+              align={matchesMD ? "center" : "left"}
+              variant="body1"
+              paragraph
+            >
+              Emme käytä minkäänlaisia sivujen rakentajia verkkosivustojemme luomiseen,
+              vaan käytämme vain puhdasta koodia mikä mahdollistaa verkkosivustojen maksimaalisen
+              turvallisuuden ja luotettavuuden.
+              </Typography>
+          </Grid>
+        </Grid>
+
+
+        <Grid
+          item
+          container
+          justify='space-around'
+          className={classes.item2}
+          lg>
           <img
             src={Koodi}
             alt="puhtan koodin esimerkki screenshot"
@@ -295,32 +337,12 @@ const Revolution = () => {
             }}
           />
         </Grid>
-
-        {/* Pure Code from Artify */}
-        <Grid item container direction="column" lg style={{ maxWidth: "40em" }}>
-          <Grid item>
-            <Typography
-              align={matchesMD ? "center" : "left"}
-              variant="h4"
-              gutterBottom
-            >
-              Puhdas ja selkeä koodi
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              align={matchesMD ? "center" : "left"}
-              variant="body1"
-              paragraph
-            >
-              Emme käytä minkäänlaisia sivujen rakentajia verkkosivustojemme luomiseen,
-              vaan käytämme vain puhdasta koodia mikä mahdollistaa verkkosivustojen maksimaalisen
-              turvallisuuden ja luotettavuuden.
-            </Typography>
-          </Grid>
-        </Grid>
       </Grid>
     </Grid>
+
+
+
+
   );
 }
 

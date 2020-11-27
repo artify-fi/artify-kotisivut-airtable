@@ -75,13 +75,13 @@ const useStyles = makeStyles(theme => ({
   },
   item1: {
     order: 1,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       order: 2,
     },
   },
   item2: {
     order: 2,
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
       order: 1,
     },
   },

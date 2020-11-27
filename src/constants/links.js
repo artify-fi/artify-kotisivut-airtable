@@ -46,7 +46,7 @@ export default [
   {
     page: "hinnasto",
     label: "ilmainen arviointi",
-    url: `/hinnasto/arviointi`,
+    url: `/hinnasto/hinta_arviointi`,
     icon: <FaAlipay className="icon" />,
   },
 ]

@@ -3,7 +3,7 @@ import Layout from "../../components/layout"
 import SeoJaSem from '../../components/hakukoneoptimointi/SeoJaSem'
 import SEO from "../../components/SEO"
 
-const hakukoneOptimointi = () => {
+const hakukoneoptimointi = () => {
   return (
     <Layout>
       <SEO title='SEO - Hakukoneoptimointi' />
@@ -12,4 +12,4 @@ const hakukoneOptimointi = () => {
   )
 }
 
-export default hakukoneOptimointi
+export default hakukoneoptimointi
