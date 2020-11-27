@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import Lottie from "react-lottie";
+
 import { cloneDeep } from "lodash";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
@@ -18,28 +18,31 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import check from "../../assets/images/arviointi-react/check.svg";
 import send from "../../assets/images/arviointi-react/send.svg";
-import software from "../../assets/images/arviointi-react/software.svg";
-import mobile from "../../assets/images/arviointi-react/mobile.svg";
-import website from "../../assets/images/arviointi-react/website.svg";
+import responsiveApp from "../../assets/images/arviointi/appDevelopment.jpg";
+import verkkokauppa from "../../assets/images/arviointi/verkkokauppa.jpg";
+import digiMarkkinointi from "../../assets/images/arviointi/digitalMarketing.jpg";
 import backArrow from "../../assets/images/arviointi-react/backArrow.svg";
 import backArrowDisabled from "../../assets/images/arviointi-react/backArrowDisabled.svg";
 import forwardArrow from "../../assets/images/arviointi-react/forwardArrow.svg";
 import forwardArrowDisabled from "../../assets/images/arviointi-react/forwardArrowDisabled.svg";
-import camera from "../../assets/images/arviointi-react/camera.svg";
-import upload from "../../assets/images/arviointi-react/upload.svg";
+
 import person from "../../assets/images/arviointi-react/person.svg";
 import persons from "../../assets/images/arviointi-react/persons.svg";
 import info from "../../assets/images/arviointi-react/info.svg";
 import bell from "../../assets/images/arviointi-react/bell.svg";
 import people from "../../assets/images/arviointi-react/people.svg";
-import usersIcon from "../../assets/images/arviointi-react/users.svg";
-import iPhone from "../../assets/images/arviointi-react/iphone.svg";
-import gps from "../../assets/images/arviointi-react/gps.svg";
 import customized from "../../assets/images/arviointi-react/customized.svg";
 import data from "../../assets/images/arviointi-react/data.svg";
-import android from "../../assets/images/arviointi-react/android.svg";
 import globe from "../../assets/images/arviointi-react/globe.svg";
 import biometrics from "../../assets/images/arviointi-react/biometrics.svg";
+import landingPage from '../../assets/images/arviointi/landingPage.jpg'
+import basicApp from '../../assets/images/arviointi/basicApp.jpg'
+import headlessApp from '../../assets/images/arviointi/headlessApp.jpg'
+import sisallonhallinta from '../../assets/images/arviointi/sisallonhallinta.jpg'
+import chatBot from '../../assets/images/arviointi/chatBot.jpg'
+import search from '../../assets/images/arviointi/search.jpg'
+import login from '../../assets/images/arviointi/login.jpg'
+
 import estimateAnimation from "../../animations/estimateAnimation/data.json";
 
 const useStyles = makeStyles(theme => ({
@@ -76,33 +79,33 @@ const useStyles = makeStyles(theme => ({
 const defaultQuestions = [
   {
     id: 1,
-    title: "Which service are you interested in?",
+    title: "Millaisesta palvelusta olet kiinnostunut?",
     active: true,
     options: [
       {
         id: 1,
-        title: "Custom Software Development",
+        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
         subtitle: null,
-        icon: software,
-        iconAlt: "three floating screens",
+        icon: responsiveApp,
+        iconAlt: "progressiivinen kotisivu desktop tablet mobile",
         selected: false,
         cost: 0
       },
       {
         id: 2,
-        title: "iOS/Android App Development",
+        title: "GatsbyJS verkkokauppa Shopyfy pohjalle.",
         subtitle: null,
-        icon: mobile,
-        iconAlt: "outlines of phones and tablets",
+        icon: verkkokauppa,
+        iconAlt: "headlessCMS sisällönhallinta",
         selected: false,
         cost: 0
       },
       {
         id: 3,
-        title: "Website Development",
+        title: "Digitaalinen markkinointi",
         subtitle: null,
-        icon: website,
-        iconAlt: "computer outline",
+        icon: digiMarkkinointi,
+        iconAlt: "digitaalisen marketingin työvälinet",
         selected: false,
         cost: 0
       }
@@ -110,35 +113,35 @@ const defaultQuestions = [
   }
 ];
 
-const softwareQuestions = [
+const kotisivutQuestions = [
   {
     id: 1,
-    title: "Which service are you interested in?",
+    title: "Millaisesta palvelusta olet kiinnostunut?",
     active: false,
     options: [
       {
         id: 1,
-        title: "Custom Software Development",
+        title: "Moderni GatsbyJS kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
         subtitle: null,
-        icon: software,
+        icon: responsiveApp,
         iconAlt: "three floating screens",
         selected: false,
         cost: 0
       },
       {
         id: 2,
-        title: "iOS/Android App Development",
+        title: "Moderni GatsbyJS kotisivu HeadlessCMS sisällönhallintajärjestelmällä ja progressiivinen mobiilisovellus kaupan päälle",
         subtitle: null,
-        icon: mobile,
+        icon: verkkokauppa,
         iconAlt: "outlines of phones and tablets",
         selected: false,
         cost: 0
       },
       {
         id: 3,
-        title: "Website Development",
+        title: "Digitaalinen markkinointi",
         subtitle: null,
-        icon: website,
+        icon: digiMarkkinointi,
         iconAlt: "computer outline",
         selected: false,
         cost: 0
@@ -147,33 +150,33 @@ const softwareQuestions = [
   },
   {
     id: 2,
-    title: "Which platforms do you need supported?",
-    subtitle: "Select all that apply.",
+    title: "Minkä tyyyppista kotisivua sina tarvit?",
+    subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
     options: [
       {
         id: 1,
-        title: "Web Application",
+        title: "Gatsby landingpage missä selitys mitä yritys on ja yhteydenotto",
         subtitle: null,
-        icon: website,
+        icon: landingPage,
         iconAlt: "computer outline",
         selected: false,
         cost: 1000
       },
       {
         id: 2,
-        title: "iOS Application",
+        title: "Tyyppilinen keskisuuri missä kaikki olellinen Yrityksesta Gatsby responsiivinen kotisivu",
         subtitle: null,
-        icon: iPhone,
+        icon: basicApp,
         iconAlt: "outline of iphone",
         selected: false,
         cost: 1000
       },
       {
         id: 3,
-        title: "Android Application",
+        title: "Räätäloity ja iso kotisivu ",
         subtitle: null,
-        icon: android,
-        iconAlt: "outlines of android phone",
+        icon: headlessApp,
+        iconAlt: "Jo paljon vakavampi räätälöity kotisivu useilla sivuilla",
         selected: false,
         cost: 1000
       }
@@ -182,32 +185,32 @@ const softwareQuestions = [
   },
   {
     id: 3,
-    title: "Which features do you expect to use?",
-    subtitle: "Select all that apply.",
+    title: "Minkälaäisiä lisäpalvelutia tarvitset?",
+    subtitle: "Valitse useampi jos näet tarvetta.",
     options: [
       {
         id: 1,
-        title: "Photo/Video",
+        title: "Siällöntuotanto",
         subtitle: null,
-        icon: camera,
+        icon: sisallonhallinta,
         iconAlt: "camera outline",
         selected: false,
         cost: 250
       },
       {
         id: 2,
-        title: "GPS",
+        title: "Chatbot",
         subtitle: null,
-        icon: gps,
-        iconAlt: "gps pin",
+        icon: chatBot,
+        iconAlt: "chatBot",
         selected: false,
         cost: 250
       },
       {
         id: 3,
-        title: "File Transfer",
+        title: "Algolia etsinta",
         subtitle: null,
-        icon: upload,
+        icon: search,
         iconAlt: "outline of cloud with arrow pointing up",
         selected: false,
         cost: 250
@@ -217,21 +220,21 @@ const softwareQuestions = [
   },
   {
     id: 4,
-    title: "Which features do you expect to use?",
+    title: "Minkälaäisiä lisäpalvelutia tarvitset?",
     subtitle: "Select all that apply.",
     options: [
       {
         id: 1,
-        title: "Users/Authentication",
+        title: "Käyttäjat- sisäänkirjoitus",
         subtitle: null,
-        icon: usersIcon,
+        icon: login,
         iconAlt: "outline of a person with a plus sign",
         selected: false,
         cost: 250
       },
       {
         id: 2,
-        title: "Biometrics",
+        title: "Videot ja Podcast playerit",
         subtitle: null,
         icon: biometrics,
         iconAlt: "fingerprint",
@@ -252,13 +255,13 @@ const softwareQuestions = [
   },
   {
     id: 5,
-    title: "What type of custom features do you expect to need?",
+    title: "Kas vajad veel lisasid mida ei esine just sageli?",
     subtitle: "Select one.",
     options: [
       {
         id: 1,
-        title: "Low Complexity",
-        subtitle: "(Informational)",
+        title: "Yksinkertaiset",
+        subtitle: "(tiedotus)",
         icon: info,
         iconAlt: "'i' inside a circle",
         selected: false,
@@ -266,7 +269,7 @@ const softwareQuestions = [
       },
       {
         id: 2,
-        title: "Medium Complexity",
+        title: "Keskivertainen vaikeusaste",
         subtitle: "(Interactive, Customizable, Realtime)",
         icon: customized,
         iconAlt: "two toggle switches",
@@ -275,7 +278,7 @@ const softwareQuestions = [
       },
       {
         id: 3,
-        title: "High Complexity",
+        title: "Todella vaidkeat",
         subtitle: "(Data Modeling and Computation)",
         icon: data,
         iconAlt: "outline of line graph",
@@ -287,7 +290,7 @@ const softwareQuestions = [
   },
   {
     id: 6,
-    title: "How many users do you expect?",
+    title: "Paljon uskot että saa olemaan kävijöitä kuukaudessa?",
     subtitle: "Select one.",
     options: [
       {
@@ -322,35 +325,35 @@ const softwareQuestions = [
   }
 ];
 
-const websiteQuestions = [
+const digiQuestions = [
   {
     id: 1,
-    title: "Which service are you interested in?",
+    title: "Millaisesta palvelusta olet kiinnostunut?",
     active: false,
     options: [
       {
         id: 1,
-        title: "Custom Software Development",
+        title: "Moderni GatsbyJS kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
         subtitle: null,
-        icon: software,
+        icon: responsiveApp,
         iconAlt: "three floating screens",
         selected: false,
         cost: 0
       },
       {
         id: 2,
-        title: "iOS/Android App Development",
+        title: "GatsbyJS verkkokauppa Shopyfy pohjalle.",
         subtitle: null,
-        icon: mobile,
+        icon: verkkokauppa,
         iconAlt: "outlines of phones and tablets",
         selected: false,
         cost: 0
       },
       {
         id: 3,
-        title: "Website Development",
+        title: "Digitaalinen markkinointi.",
         subtitle: null,
-        icon: website,
+        icon: digiMarkkinointi,
         iconAlt: "computer outline",
         selected: false,
         cost: 0
@@ -359,12 +362,12 @@ const websiteQuestions = [
   },
   {
     id: 2,
-    title: "Which type of website are you wanting?",
+    title: "Mitä pitäisi digimarketing sisältää?",
     subtitle: "Select one.",
     options: [
       {
         id: 1,
-        title: "Basic",
+        title: "Perus",
         subtitle: "(Informational)",
         icon: info,
         iconAlt: "person outline",
@@ -373,7 +376,7 @@ const websiteQuestions = [
       },
       {
         id: 2,
-        title: "Interactive",
+        title: "Keskivertoinen",
         subtitle: "(Users, API's, Messaging)",
         icon: customized,
         iconAlt: "outline of two people",
@@ -382,7 +385,7 @@ const websiteQuestions = [
       },
       {
         id: 3,
-        title: "E-Commerce",
+        title: "Kattava",
         subtitle: "(Sales)",
         icon: globe,
         iconAlt: "outline of three people",
@@ -426,14 +429,6 @@ export default function Estimate() {
 
   const [loading, setLoading] = useState(false);
 
-  const defaultOptions = {
-    loop: true,
-    autoplay: false,
-    animationData: estimateAnimation,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
 
   const nextQuestion = () => {
     const newQuestions = cloneDeep(questions);
@@ -535,8 +530,8 @@ export default function Estimate() {
     }
 
     switch (newSelected.title) {
-      case "Custom Software Development":
-        setQuestions(softwareQuestions);
+      case "Moderni GatsbyJS kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.":
+        setQuestions(kotisivutQuestions);
         setService(newSelected.title);
         setPlatforms([]);
         setFeatures([]);
@@ -544,8 +539,8 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-      case "iOS/Android App Development":
-        setQuestions(softwareQuestions);
+      case "GatsbyJS verkkokauppa Shopyfy pohjalle.":
+        setQuestions(kotisivutQuestions);
         setService(newSelected.title);
         setPlatforms([]);
         setFeatures([]);
@@ -553,8 +548,8 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-      case "Website Development":
-        setQuestions(websiteQuestions);
+      case "Digitaalinen markkinointi":
+        setQuestions(digiQuestions);
         setService(newSelected.title);
         setPlatforms([]);
         setFeatures([]);
@@ -845,39 +840,23 @@ export default function Estimate() {
         item
         container
         direction="column"
-        lg
         alignItems={matchesMD ? "center" : undefined}
       >
         <Grid
           item
-          style={{ marginTop: "2em", marginLeft: matchesMD ? 0 : "5em" }}
+          style={{ marginTop: "12em", marginLeft: matchesMD ? 0 : "5em" }}
         >
-          <Typography variant="h2" align={matchesMD ? "center" : undefined}>
-            Estimate
+          <Typography variant="h1" align={matchesMD ? "center" : undefined}>
+            Arviointi kotisivujen hinnasta.
           </Typography>
         </Grid>
-        <Grid
-          item
-          style={{
-            marginRight: matchesMD ? 0 : "10em",
-            maxWidth: "50em",
-            marginTop: "7.5em"
-          }}
-        >
-          <Lottie
-            options={defaultOptions}
-            isStopped
-            height="100%"
-            width="100%"
-          />
-        </Grid>
       </Grid>
+
       <Grid
         item
         container
         direction="column"
         alignItems="center"
-        lg
         style={{ marginRight: matchesMD ? 0 : "2em", marginBottom: "25em" }}
       >
         {questions
@@ -890,8 +869,8 @@ export default function Estimate() {
                   variant="h2"
                   style={{
                     fontWeight: 500,
-                    fontSize: "2.25rem",
-                    marginTop: "5em",
+                    // fontSize: "2.25rem",
+                    marginTop: "1em",
                     lineHeight: 1.25,
                     marginLeft: matchesSM ? "1em" : 0,
                     marginRight: matchesSM ? "1em" : 0
@@ -921,7 +900,7 @@ export default function Estimate() {
                       borderRadius: 0,
                       marginBottom: matchesSM ? "1.5em" : 0,
                       backgroundColor: option.selected
-                        ? theme.palette.common.orange
+                        ? theme.palette.common.grey0
                         : undefined
                     }}
                     direction="column"
@@ -945,6 +924,7 @@ export default function Estimate() {
                     </Grid>
                     <Grid item>
                       <img
+                        style={{ zIndex: '10' }}
                         src={option.icon}
                         alt={option.iconAlt}
                         className={classes.icon}

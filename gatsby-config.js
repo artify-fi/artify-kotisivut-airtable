@@ -59,6 +59,13 @@ module.exports = {
     },
 
     {
+      resolve: 'gatsby-plugin-drift',
+      options: {
+        appId: '2i4exv35dtby',
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-180499768-1'

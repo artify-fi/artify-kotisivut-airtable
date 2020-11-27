@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 
 const white = '#FFFFFF'
-const grey0 = '#e0e0e0'
+const grey0 = '#d7eaf9'
 const grey1 = '#dae1e2'
 const grey2 = '#f3f3f3'
 const grey3 = '#6c8084'
