@@ -59,26 +59,19 @@ module.exports = {
     },
 
     {
-      resolve: 'gatsby-plugin-drift',
-      options: {
-        appId: '2i4exv35dtby',
-      },
-    },
-
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-180499768-1'
       }
     },
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        includeInDevelopment: true, // optional parameter to include script in development
-        id: 2120624,
-        sv: 6,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-hotjar`,
+    //   options: {
+    //     includeInDevelopment: true, // optional parameter to include script in development
+    //     id: 2120624,
+    //     sv: 6,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
