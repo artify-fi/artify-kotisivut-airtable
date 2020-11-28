@@ -18,7 +18,6 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import check from "../../assets/images/arviointi-react/check.svg";
 import send from "../../assets/images/arviointi-react/send.svg";
-import responsiveApp from "../../assets/images/arviointi/appDevelopment.jpg";
 import verkkokauppa from "../../assets/images/arviointi/verkkokauppa.jpg";
 import digiMarkkinointi from "../../assets/images/arviointi/digitalMarketing.jpg";
 import backArrow from "../../assets/images/arviointi-react/backArrow.svg";
@@ -34,6 +33,7 @@ import customized from "../../assets/images/arviointi-react/customized.svg";
 import data from "../../assets/images/arviointi-react/data.svg";
 import globe from "../../assets/images/arviointi-react/globe.svg";
 
+import responsiveApp from '../../assets/images/arviointi/appDevelopmentTr.webp'
 import landingPage from '../../assets/images/arviointi/landingPage.jpg'
 import basicApp from '../../assets/images/arviointi/basicApp.jpg'
 import headlessApp from '../../assets/images/arviointi/headlessApp.jpg'
