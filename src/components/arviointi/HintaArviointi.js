@@ -150,7 +150,7 @@ const landingPageQuestions = [
   },
   {
     id: 2,
-    title: "Mitä tuot omalta puolelta mukaan",
+    title: "Mitä tuot omalta puolelta mukaan?",
     subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
     options: [
       {
@@ -221,7 +221,7 @@ const landingPageQuestions = [
   {
     id: 4,
     title: "Minkälaäisiä lisäpalvelutia tarvitset?",
-    subtitle: "Select all that apply.",
+    subtitle: "Valitse mielytt'v't",
     options: [
       {
         id: 1,
@@ -362,12 +362,12 @@ const kotisivutQuestions = [
   },
   {
     id: 2,
-    title: "Minkä tyyyppista kotisivua sina tarvit?",
+    title: "Mitä tuot omalta puolelta mukaan?",
     subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
     options: [
       {
         id: 1,
-        title: "",
+        title: "Minullö on omat kiinnostavat tekstit ja kuvamateriaali.",
         subtitle: null,
         icon: landingPage,
         iconAlt: "computer outline",
@@ -376,7 +376,7 @@ const kotisivutQuestions = [
       },
       {
         id: 2,
-        title: "",
+        title: "Haluan että tuotatte itse hakukoneystävällisen silällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "outline of iphone",
@@ -385,7 +385,7 @@ const kotisivutQuestions = [
       },
       {
         id: 3,
-        title: "Räätäloity ja iso kotisivu ",
+        title: "Pyydän ensimmäiset puoli vuotta että täydennätte aktiivisesti sisältöä.",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "",
@@ -393,7 +393,7 @@ const kotisivutQuestions = [
         cost: 1000
       }
     ],
-    active: false
+    active: true
   },
   {
     id: 3,
@@ -574,12 +574,12 @@ const headlessWPQuestions = [
   },
   {
     id: 2,
-    title: "Minkä tyyyppista kotisivua sina tarvit?",
+    title: "Mitä tuot omalta puolelta mukaan?",
     subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
     options: [
       {
         id: 1,
-        title: "",
+        title: "Minullö on omat kiinnostavat tekstit ja kuvamateriaali.",
         subtitle: null,
         icon: landingPage,
         iconAlt: "computer outline",
@@ -588,7 +588,7 @@ const headlessWPQuestions = [
       },
       {
         id: 2,
-        title: "",
+        title: "Haluan että tuotatte itse hakukoneystävällisen silällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "outline of iphone",
@@ -597,7 +597,7 @@ const headlessWPQuestions = [
       },
       {
         id: 3,
-        title: "Räätäloity ja iso kotisivu ",
+        title: "Pyydän ensimmäiset puoli vuotta että täydennätte aktiivisesti sisältöä.",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "",
@@ -605,7 +605,7 @@ const headlessWPQuestions = [
         cost: 1000
       }
     ],
-    active: false
+    active: true
   },
   {
     id: 3,
@@ -960,7 +960,7 @@ export default function Estimate() {
 
     if (questions.length > 2) {
       const userCost = questions
-        .filter(question => question.title === "How many users do you expect?")
+        .filter(question => question.title === "Paljon uskot että saa olemaan kävijöitä kuukaudessa?")
         .map(question =>
           question.options.filter(option => option.selected)
         )[0][0];
@@ -981,7 +981,7 @@ export default function Estimate() {
       questions
         .filter(
           question =>
-            question.title === "Which platforms do you need supported?"
+            question.title === "Mitä tuot omalta puolelta mukaan?"
         )
         .map(question => question.options.filter(option => option.selected))[0]
         .map(option => newPlatforms.push(option.title));
@@ -996,7 +996,7 @@ export default function Estimate() {
 
       questions
         .filter(
-          question => question.title === "Which features do you expect to use?"
+          question => question.title === "Minkälaäisiä lisäpalvelutia tarvitset?"
         )
         .map(question => question.options.filter(option => option.selected))
         .map(option =>
@@ -1013,7 +1013,7 @@ export default function Estimate() {
         .filter(
           question =>
             question.title ===
-            "What type of custom features do you expect to need?"
+            "Minkälaäisiä lisäpalvelutia tarvitset?"
         )
         .map(question =>
           question.options.filter(option => option.selected)
@@ -1028,7 +1028,7 @@ export default function Estimate() {
       const newCategory = questions
         .filter(
           question =>
-            question.title === "Which type of website are you wanting?"
+            question.title === "Kas vajad veel lisasid mida ei esine just sageli?"
         )[0]
         .options.filter(option => option.selected)[0].title;
 
