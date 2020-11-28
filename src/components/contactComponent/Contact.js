@@ -14,7 +14,7 @@ import Snackbar from '@material-ui/core/Snackbar'
 
 import background from '../../assets/svg/Pattern-Randomized.svg'
 import mobileBackground from '../../assets/svg/Pattern-Randomized.svg'
-import phoneIcon from '../../assets/svg/phone.svg'
+// import phoneIcon from '../../assets/svg/phone.svg'
 import emailIcon from '../../assets/svg/email.svg'
 import airplane from '../../assets/svg/send.svg'
 import Art from '../../assets/images/art_bachmann_oval_small.webp'
@@ -108,8 +108,8 @@ export default function Contact(props) {
   const [email, setEmail] = useState("");
   const [emailHelper, setEmailHelper] = useState("");
 
-  const [phone, setPhone] = useState("");
-  const [phoneHelper, setPhoneHelper] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [phoneHelper, setPhoneHelper] = useState("");
 
   const [message, setMessage] = useState("");
 
@@ -135,18 +135,18 @@ export default function Contact(props) {
           setEmailHelper("");
         }
         break;
-      case "phone":
-        setPhone(event.target.value);
-        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
-          event.target.value
-        );
+      // case "phone":
+      //   setPhone(event.target.value);
+      //   valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+      //     event.target.value
+      //   );
 
-        if (!valid) {
-          setPhoneHelper("Invalid phone");
-        } else {
-          setPhoneHelper("");
-        }
-        break;
+      //   if (!valid) {
+      //     setPhoneHelper("Invalid phone");
+      //   } else {
+      //     setPhoneHelper("");
+      //   }
+      //   break;
       default:
         break;
     }
@@ -168,7 +168,7 @@ export default function Contact(props) {
           params: {
             email: email,
             name: name,
-            phone: phone,
+            // phone: phone,
             message: message
           }
         }
@@ -178,7 +178,7 @@ export default function Contact(props) {
         setOpen(false);
         setName("");
         setEmail("");
-        setPhone("");
+        // setPhone("");
         setMessage("");
         setAlert({ open: true, color: "#4BB543" });
         setAlertMesssage("Message sent successfully!");
@@ -233,7 +233,7 @@ export default function Contact(props) {
                 seuraavana arkipäivänä.
               </Typography>
             </Grid>
-            <Grid item container style={{ marginTop: "2em" }}>
+            {/* <Grid item container style={{ marginTop: "2em" }}>
               <Grid item>
                 <img
                   src={phoneIcon}
@@ -254,7 +254,7 @@ export default function Contact(props) {
                   </a>
                 </Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
             <Grid item container style={{ marginBottom: "2em" }}>
               <Grid item>
                 <img
@@ -298,7 +298,7 @@ export default function Contact(props) {
                   onChange={onChange}
                 />
               </Grid>
-              <Grid item style={{ marginBottom: "0.5em" }}>
+              {/* <Grid item style={{ marginBottom: "0.5em" }}>
                 <TextField
                   label="Puhelinnumerosi"
                   helperText={phoneHelper}
@@ -308,7 +308,7 @@ export default function Contact(props) {
                   value={phone}
                   onChange={onChange}
                 />
-              </Grid>
+              </Grid> */}
             </Grid>
             <Grid item style={{ width: "20em" }}>
               <TextField
@@ -395,7 +395,7 @@ export default function Contact(props) {
                 onChange={onChange}
               />
             </Grid>
-            <Grid item style={{ marginBottom: "0.5em" }}>
+            {/* <Grid item style={{ marginBottom: "0.5em" }}>
               <TextField
                 label="Puhelinnumerosi"
                 helperText={phoneHelper}
@@ -405,7 +405,7 @@ export default function Contact(props) {
                 value={phone}
                 onChange={onChange}
               />
-            </Grid>
+            </Grid> */}
           </Grid>
           <Grid item style={{ width: matchesSM ? "100%" : "20em" }}>
             <TextField
