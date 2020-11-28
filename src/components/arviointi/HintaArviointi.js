@@ -932,18 +932,18 @@ export default function Estimate() {
           setEmailHelper("");
         }
         break;
-      case "phone":
-        setPhone(event.target.value);
-        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
-          event.target.value
-        );
+      // case "phone":
+      //   setPhone(event.target.value);
+      //   valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+      //     event.target.value
+      //   );
 
-        if (!valid) {
-          setPhoneHelper("Invalid phone");
-        } else {
-          setPhoneHelper("");
-        }
-        break;
+      //   if (!valid) {
+      //     setPhoneHelper("Invalid phone");
+      //   } else {
+      //     setPhoneHelper("");
+      //   }
+      //   break;
       default:
         break;
     }
