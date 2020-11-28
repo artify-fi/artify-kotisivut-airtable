@@ -18,8 +18,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 
 import check from "../../assets/images/arviointi-react/check.svg";
 import send from "../../assets/images/arviointi-react/send.svg";
-import verkkokauppa from "../../assets/images/arviointi/verkkokauppa.jpg";
-import digiMarkkinointi from "../../assets/images/arviointi/digitalMarketing.jpg";
+
 import backArrow from "../../assets/images/arviointi-react/backArrow.svg";
 import backArrowDisabled from "../../assets/images/arviointi-react/backArrowDisabled.svg";
 import forwardArrow from "../../assets/images/arviointi-react/forwardArrow.svg";
@@ -34,15 +33,17 @@ import data from "../../assets/images/arviointi-react/data.svg";
 import globe from "../../assets/images/arviointi-react/globe.svg";
 
 import responsiveApp from '../../assets/images/arviointi/appDevelopmentTr.webp'
-import landingPage from '../../assets/images/arviointi/landingPage.jpg'
-import basicApp from '../../assets/images/arviointi/basicApp.jpg'
-import headlessApp from '../../assets/images/arviointi/headlessApp.jpg'
+import digiMarkkinointi from "../../assets/images/arviointi/digitalMarketingW.webp";
+import landingPage from '../../assets/images/arviointi/landingPageW.webp'
+import basicApp from '../../assets/images/arviointi/basicAppW.webp'
+import headlessApp from '../../assets/images/arviointi/headlessAppW.webp'
 import sisallonhallinta from '../../assets/images/arviointi/sisallonhallinta.jpg'
-import chatBot from '../../assets/images/arviointi/chatBot.jpg'
-import search from '../../assets/images/arviointi/search.jpg'
-import login from '../../assets/images/arviointi/login.jpg'
+import chatBot from '../../assets/images/arviointi/chatBotW.webp'
+import search from '../../assets/images/arviointi/searchW.webp'
+import login from '../../assets/images/arviointi/loginW.webp'
 import videoPlayer from '../../assets/images/arviointi/videoPlayer.jpg'
-import pushNotification from '../../assets/images/arviointi/pushNotification.jpg'
+import pushNotification from '../../assets/images/arviointi/pushNotificationW.webp'
+import verkkokauppa from '../../assets/images/arviointi/verkkokauppa.webp'
 
 
 const useStyles = makeStyles(theme => ({
