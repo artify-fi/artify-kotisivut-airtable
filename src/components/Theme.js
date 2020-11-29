@@ -3,7 +3,7 @@ import { createMuiTheme } from '@material-ui/core/styles'
 const white = '#FFFFFF'
 const grey0 = '#d7eaf9'
 const grey1 = '#dae1e2'
-const grey2 = '#f3f3f3'
+const grey2 = '#3a5166'
 const grey3 = '#6c8084'
 const grey4 = '#607D8B'
 const grey5 = '#344d63'
@@ -51,7 +51,7 @@ export default createMuiTheme({
   },
   typography: {
     tab: {
-      fontFamily: 'Montserrat',
+      fontFamily: 'Open Sans Condensed ',
       textTransform: 'none',
       fontWeight: '600',
       fontSize: '1.2rem',
@@ -60,9 +60,9 @@ export default createMuiTheme({
       fontSize: '1.3rem',
       textTransform: 'none',
       textDecoration: 'none',
-      fontFamily: 'Montserrat',
+      fontFamily: 'Merriweather',
       color: 'white',
-      backgroundColor: grey4
+      backgroundColor: grey2
     },
     h1: {
       fontFamily: 'Open Sans Condensed',

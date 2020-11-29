@@ -35,13 +35,14 @@ const Wrapper = styled.li`
     color: var(--clr-white);
     background: transparent;
     border: transparent;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     font-weight: 500;
     padding: 10px 20px;
     width: 100%;
     text-transform: capitalize;
     position: relative;
+    font-family: 'Merriweather';
   }
   .links {
     position: absolute;
@@ -64,7 +65,9 @@ const Wrapper = styled.li`
       align-items: center;
       color: #0a2540;
       text-transform: capitalize;
-      font-weight: 700;
+      font-family: 'Merriweather';
+      font-weight: 500;
+      font-size: '1.1rem';
       .icon {
         color: #88add2;
       }

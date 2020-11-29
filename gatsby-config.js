@@ -58,12 +58,12 @@ module.exports = {
       },
     },
 
-    {
-      resolve: 'gatsby-plugin-drift',
-      options: {
-        appId: '2i4exv35dtby',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-drift',
+    //   options: {
+    //     appId: '2i4exv35dtby',
+    //   },
+    // },
 
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -98,7 +98,8 @@ module.exports = {
       options: {
         fonts: [
           `Open Sans Condensed`,
-          `source \:300,400,500,400i,600` // you can also specify font weights and styles
+          `Merriweather`,
+
         ],
         display: 'swap'
       }
