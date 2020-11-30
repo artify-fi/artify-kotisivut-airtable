@@ -3,12 +3,9 @@ import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { Link } from 'gatsby'
-//import Avatar from "@material-ui/core/Avatar";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
-//import Hidden from "@material-ui/core/Hidden";
 import gatsbyLogo from "../../assets/images/Gatsby_Logo.webp";
 import { Underline } from "@styled-icons/fa-solid";
-//import CallToAction from "./ui/CallToAction";
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import QR from '../../assets/images/artbachmann.eu.png'
@@ -84,8 +81,8 @@ export default function About(props) {
 
           }}
           variant="h1">
-          Gatsby JS kotisivut ja mobiilisovellukset. Sivuston nopeudella ja
-          suorituskyvyllä on valtava vaikutus asiakkaiden sitoutumiseen ja myyntiin.
+         GatsbyJS kotisivut ja mobiilisovellukset. Sivuston helppoudella ja suorituskyvyllä 
+         on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen. 
         </Typography>
       </Grid>
       <Grid
@@ -100,17 +97,16 @@ export default function About(props) {
           align="center"
           className={classes.missionStatement}
         >
-          Gatsby on kehys nykyaikaisten verkkosivustojen ja sovellusten rakentamiseen.
-          Se voi vetää tietoja sivustoosi mistä tahansa
+          Gatsby on kehys nykyaikaisten verkkosivujen ja sovellusten rakentamiseen.
+          Se voi siirtää tietoja sivustolle mistä tahansa
            <Link
             // style={{ marginTop: '2em' }}
             href="/ratkaisut/headlessCMS"
             className={classes.link}
             onClick={preventDefault}>&nbsp;sisällönhallintajärjestelmästä&nbsp;</Link>
-           tai muista tällä hetkellä käyttämistäsi lähteistä.
-          Yritykset, jotka ovat siirtäneet sivustonsa Gatsby:n alustalle,
-          ovat kokeneet merkittäviä parannuksia liidien hankinnassa,
-          Googlen orgaanisen haun liikenteessä ja turvallisuudessa.
+           tai muista tällä hetkellä käyttämistäsi lähteistä. Yritykset  jotka ovat siirtäneet 
+           sivustonsa Gatsby:n alustalle, ovat kokeneet merkittävää nousua liideissä, 
+           Googlen orgaanisen haun liikenteessä ja turvallisuudessa.
         </Typography>
       </Grid>
       <Grid item>
@@ -183,14 +179,11 @@ export default function About(props) {
               align="center"   
               style={{ width: matchesSM ? '16em' : '20em' }}      
             >
-              Skannaa QR-koodi tai napsuttaa kuvalla ja tutustuu  poikkeukselliseen 
-              hyvään suorituskykyyn  vaikka sivustolla
-              on paljon laadukkaita valokuvia.
-              Gatsbyn käyttäminen kotisivujen kehittämisessä  on loistava 
-              tapa lisätä nykyaikaista tehokkuutta,
-              skaalautuvuutta, turvallisuutta ja kehityksen nopeuden etuja.
-              Älä tilaa verkkosivustoa, jolla on edellisen vuosikymmenen tekniikkaa.
-              Gatsby.js rakentaa nopeimman mahdollisen verkkosivuston. 
+              Skannaa QR-koodi tai napsauta kuvaa ja koe itse poikkeuksellisen hyvä suorituskysy 
+              useammasta laadukkaasta valokuvasta huolimatta. Gatsby:n käyttäminen kotisivujen 
+              kehittämisessä on loistava tapa lisätä sivustojen tehokkuutta, skaalautuvuutta ja 
+              turvallisuutta. Älä tilaa verkkosivua joka käyttää edellisen vuosikymmenen tekniikkaa. 
+              Gatsby:n avulla rakennetaan mahdollisimman tehokas verkkosivusto. 
               
             </Typography>
       </Grid>
@@ -215,7 +208,7 @@ export default function About(props) {
                 variant="h3"
                 gutterBottom
               >
-                Perustiedot GatsbyJS:stä
+              Perustietoa GatsbyJS:stä
               </Typography>
             </Grid>
             <Grid item>
@@ -224,41 +217,34 @@ export default function About(props) {
                 align={matchesMD ? "center" : undefined}
                 paragraph
                 style={{ fontWeight: 700, fontStyle: "italic", }}
-              >
-                Gatsby on  React-pohjainen kehys
-                nopeiden verkkosivustojen ja sovellusten rakentamiseen.
-                Gatsby-sivustoille on rakennettu hämmästyttävä suorituskyky ,
-                lisätty tietoturva ja nykyiset parhaat verkkokäytännöt.
+              >Gatsby on React-pohjainen kehys tehokkaiden verkkosivujen ja sovellusten rakentamiseen. 
+              Gatsby-sivustoilla on hämmästyttävä suorituskyky, tavallista parempi tietoturva 
+              ja parhaat verkkokäytännöt.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Parempi liidien luominen ja asiakkaiden sitoutuminen. </span>
-                Sivuston nopeudella ja suorituskyvyllä on valtava
-                vaikutus myyntiin ja asiakkaiden sitoutumiseen.
-              Äskettäinen&nbsp; <span><Link className={classes.link} to="https://blogs.akamai.com/2020/09/metrics-that-matter-continuous-performance-optimization.html">Akamai-tutkimus</Link></span>
-              &nbsp;osoitti, että 100 millisekunnin
-              viive sivuston latausajassa vahingoitti tulosprosentteja 7%, ja 53%
-              mobiilikäyttäjistä jättää sivuja joiden lataaminen kestää yli 3 sekuntia.
-              Gatsby-sivustot ovat jatkuvasti 2-3x nopeammat kuin vastaavat sivustot,
-              jotka on rakennettu eri työkaluilla ja sivustojen omistajat
-              ovat huomannut liidien määrän kasvavan jopa 60% Gatsbyyn siirtymisen jälkeen.
+                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Tehokkaampi liidien luominen ja asiakkaiden sitoutuminen. </span>
+                Sivuston tehokkuudella ja suorituskyvyllä on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen. 
+                Äskettäinen&nbsp; <span><Link className={classes.link} to="https://blogs.akamai.com/2020/09/metrics-that-matter-continuous-performance-optimization.html">Akamai-tutkimus</Link></span>
+              &nbsp;
+              osoitti, että 100 millisekunnin viive sivuston latausajassa laskee tulosprosentteja jopa seitsemällä prosentilla 
+              ja jopa 53% mobiilikäyttäjistä luovuttaa sivujen suhteen joilla kestää lataamisessa  yli 3 sekunttia. 
+              Gatsby -sivustot ovat 2-3 kertaa nopeampia kuin eri työkaluilla rakennetut sivustot. 
+              Sivustojen omistajat ovat huomanneet myös liidien määrän kasvaneen jopa 60% Gatsbyyn vaihtamisen jälkeen.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
-                paragraph
-              >
+                paragraph >             
                 <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Parannettu hakuliikenne. </span>&nbsp;<br />
-              Sivuston nopeus on yksi tekijöistä, joita Google käyttää hakusijoitusalgoritmissaan,
-              ja hitailla sivuston nopeuksilla voi olla negatiivinen lumipallo vaikutus hakukoneoptimoijaasi.
-               Hitaammat sivustot indeksoivat hakukoneet kauemmin, niiden välitön poistumisprosentti ja
-               alhaisemmat tulosprosentit vahingoittavat sijoitustasi. Gatsby-sivustoissa on sisäänrakennettu
-               web- ja mobiililaitteiden suorituskyvyn optimointi. Gatsby pysty hakemaan tietoja parhaista 
-               sisällönhallintatyökaluista, parhaista verkkokauppatyökaluista, 
-               käyttämistäsi tietokannoista ja muusta.
+                Sivuston tehokkuus on yksi vaikuttavimmista tekijöistä Googlen hakusijoitusalgoritmissa. 
+                Hitaalla sivustolla voi olla negatiivinen lumipallovaikutus hakukoneoptimointiin. 
+                Google siis indeksoi hitaita sivustoja kauemmin, eli niiden välitön poistumisprosentti on suurempi 
+                ja alhaisemmat tulosprosentit laskevat sijoitustasi. Gatsby -sivustoissa on automaattinen suorituskyvyn optimointi. 
+                Gatsby hakee  parhailla sisällönhallinta- ja verkkokauppatyökaluilla tietoja käyttämistäsi sekä muista tietokannoista.
               </Typography>
               <Typography
                 variant="body1"
@@ -266,11 +252,10 @@ export default function About(props) {
                 paragraph
               >
                 <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Turvallisuus</span>&nbsp;<br />
-                Gatsby on moderni sivustogeneraattori, joka tuottaa staattisia HTML-sivuja rakennuksen aikana. 
-                Tämä tarkoittaa, että et tarvitse tietokantaa tai sisällönhallintajärjestelmää, 
-                joka toimii julkisilla palvelimillasi, jotka molemmat ovat yleisiä tietoturvaloukkausten lähteitä. 
-                Staattinen sisältö on paljon helpompi suojata. Tämä ei missään tapauksessa poista kaikkia 
-                Gatsby-sivustojen tietoturva-aukkoja, mutta ne vähenevät merkittävästi.              
+                Gatsby on staattisia HTML-sivuja tuottava sivustogeneraattori. Tämä tarkoittaa sitä, että et tarvitse 
+                julkisilla palvelimilla toimivaa tietokantaa tai sisällönhallintajärjestelmää, 
+                joissa on useimmiten uhka tietoturvaloukkaukseen. Staattista sisältöä on paljon helpompi suojata. 
+                Tämä ei kuitenkaan poista kaikkia Gatsby -sivustojen tietoturva-aukkoja, mutta vähentää niitä merkittävästi.              
                 </Typography>
             </Grid>
           </Grid>

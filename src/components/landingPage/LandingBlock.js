@@ -2,9 +2,6 @@ import React from 'react'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import { Link } from 'gatsby'
 
-import Hidden from '@material-ui/core/Hidden';
-import Paper from '@material-ui/core/Paper';
-
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -73,13 +70,24 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 500,
     height: 45,
     width: 160,
-    marginTop: '2em',
-    marginLeft: '4em',
+    marginTop: '-4em',
+    marginLeft: '2em',
     backgroundColor: theme.palette.common.grey1,
     '&:hover': {
       backgroundColor: theme.palette.common.grey3,
       color: 'white'
     }
+  },
+  estimateButton: {
+    ...theme.typography.estimate,
+    borderRadius: 50,
+    height: 56,
+    width: 210,
+    backgroundColor: theme.palette.common.grey2,
+    fontSize: "1.1rem",
+    "&:hover": {
+      backgroundColor: theme.palette.secondary.light
+    },
   },
   infoBackground: {
     backgroundImage: `url(${infoBackground})`,
@@ -289,7 +297,8 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: '2em',
     paddingRight: '2em',
     paddingTop: '1em',
-    fontFamily: 'Roboto',
+    fontFamily: 'Open Sans Condensed',
+    fontSize: '1.2rem',
     fontWeight: 400,
     color: '#443f3f',
 
@@ -360,7 +369,7 @@ const LandingBlock = () => {
                   align='center'
                   className={classes.cardHeading}>
                   Nykyaikaiset ja progressiiviset* kotisivut sekä  mobiilisovellukset
-                  pienyrittäjille jotka tukevat uusien asiakkaiden tavoittamista.
+                  pienyrittäjille, jotka tukevat uusien asiakkaiden tavoittamista.
                 </Typography>
               </CardContent>
               <CardMedia
@@ -385,10 +394,10 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Hyvin toimiva sivusto mikä lisää näkyvyyttä sekä nykyisille että
-                        uusille asiakkaille saavutetaan perusteellisella suunnittelulla,
-                        kaikenkattavalla testaamisella ja jatkuvalla parantelulla.
-                      </Typography>
+                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
+                        liiketoiminnalliset tulokset ja lisäämään näkyvyyttä. Teemme hyvälaatuisten
+                        kotisivujen lisäksi verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
+                    </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
@@ -400,10 +409,10 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
-                        liiketoiminnan tulokset ja lisäämään näkyvyyttä. Teemme hyvälaatuisten
-                        kotisivujen lisäksi myös verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
-                  </Typography>
+                        Hyvin toimiva sivusto, mikä lisää näkyvyyttä sekä nykyisille että
+                        uusille asiakkaille toteutetaan perusteellisella suunnittelulla,
+                        kaiken kattavalla testaamisella ja jatkuvalla optimoinilla.
+                      </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
@@ -415,9 +424,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Yritykset taistelevat jatkuvasti asiakkaista ja valtaosa kotisivujen vierailijoista tulee hakukoneiden kautta.,
+                        Yritykset taistelevat jatkuvasti asiakkaista ja valtaosa kotisivujen vierailijoista tulee hakukoneiden kautta.
                         Siispä hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohdista.
-                </Typography>
+                      </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
@@ -429,8 +438,8 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Hyvän verkkosivun sisältö on helposti ymmärrettävää, hyödyllinen ja moderni .
-                        Tilaa kotisivuillesi sisällöntuotannon ammattilaisten luodut selkeät, myyvät ja
+                        Hyvän verkkosivun sisältö on helposti ymmärrettävää, hyödyllinen ja moderni.
+                        Tilaa kotisivullesi sisällöntuotannon ammattilaisten luodut selkeät, myyvät ja
                         yrityksesi tarpeisiin räätälöidyt tekstit.
                 </Typography>
                     </ListItemText>
@@ -444,9 +453,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Kuten muuallakin elämässä, visuaalisella osuudella on tärkeä rooli verkossa
+                        Kuten muuallakin elämässä, visuaalisella osuudella on tärkeä rooli verkossa.
                         Oikein valitut värit ja grafiikat auttavat asiakkaita selaamaan sivustoja sujuvammin
-                        ja luomaan sopivan tunnelman.Luomamme ratkaisut ovat käytännöllisiä, harkittuja ja
+                        ja luomaan sopivan tunnelman. Luomamme ratkaisut ovat käytännöllisiä, harkittuja ja
                         perustuvat juuri sinun ideohin, tarpeisiin sekä kohderyhmään.
                 </Typography>
                     </ListItemText>
@@ -470,6 +479,22 @@ const LandingBlock = () => {
                       width={15}
                       height={15}
                       fill={theme.palette.common.Grey4}
+                    />
+                  </Button>
+                  <Button
+                    component={Link}
+                    to="/hinnasto/hinta_arviointi"
+                    className={classes.estimateButton}
+                    variant='outlined'
+                    style={{ marginTop: '8em', marginBottom: '2em' }}
+                    className={classes.estimateButton}>
+                    <span>
+                      Hinta-arviointi
+                  </span>
+                    <ButtonArrow
+                      width={15}
+                      height={15}
+                      fill={'white'}
                     />
                   </Button>
                 </CardActions>

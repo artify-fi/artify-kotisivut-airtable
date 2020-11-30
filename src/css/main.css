@@ -3,13 +3,7 @@
 Fonts
 ===============
 */
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap"); */
 
-/*
-=============== 
-Variables
-===============
-*/
 
 :root {
   /* dark shades of primary color*/
@@ -64,11 +58,7 @@ Global Styles
 }
 
 body {
-  /* font-family: var(--ff-secondary); */
-  /* color: var(--clr-primary-1); */
-  line-height: 1.5;
-  /* font-size: 0.875rem; */
-  /* margin-top: 5rem; */
+  line-height: 1.5; 
 }
 
 ul {
@@ -181,7 +171,6 @@ p {
   background: var(--clr-grey-10);
 }
 
-/* page links */
 
 /* social links */
 .social-links {
@@ -200,93 +189,6 @@ p {
 .social-link:hover {
   color: var(--clr-primary-5);
 }
-
-/*
-=============== 
-Navbar
-===============
-*/
-/* 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  z-index: 200;
-  background-image: url(../assets/mobile_screen_background.webp);
-}
-
-.nav-center {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-header .nav-img {
-  width: 110px;
-  height: 60px;
-  padding: 0.2rem;
-}
-
-.toggle-btn {
-  font-size: 2rem;
-  background: transparent;
-  border-color: transparent;
-  color: var(--clr-primary-5);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.toggle-btn:hover {
-  color: var(--clr-primary-2);
-}
-
-.nav-links {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .toggle-btn {
-    display: none;
-  }
-
-  .nav-links {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav-links li {
-    margin-right: 2rem;
-  }
-
-  .nav-links a {
-    text-transform: capitalize;
-    color: var(--clr-grey-1);
-    font-weight: bold;
-    letter-spacing: var(--spacing);
-    transition: var(--transition);
-    padding: 0.5rem 0;
-  }
-
-  .nav-links a:hover {
-    color: var(--clr-primary-5);
-    box-shadow: 0px 2px var(--clr-primary-5);
-  }
-
-  .nav-center {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-  }
-} */
 
 /*
 =============== 
@@ -702,8 +604,7 @@ Services
     grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 2rem;
     -moz-column-gap: 2rem;
-    column-gap: 2rem;
-    /* padding-right: 3em; */
+    column-gap: 2rem;    
   }
 }
 
@@ -753,10 +654,6 @@ Jobs
 .active-btn {
   color: var(--clr-primary-5);
   box-shadow: 0 2px var(--clr-primary-5);
-}
-
-.job-info {
-  /* min-height: 420px; */
 }
 
 .job-info h3 {
