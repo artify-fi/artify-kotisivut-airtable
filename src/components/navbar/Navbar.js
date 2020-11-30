@@ -60,7 +60,7 @@ const Wrapper = styled.nav`
     align-items: center;
     justify-content: space-around;
 
-    img {
+    img {     
       width: 120px;      
     }
     ul, li {list-style-type: none;}
@@ -121,7 +121,7 @@ const Wrapper = styled.nav`
     a > img {
       display: inline-block;
       margin-top: 1.4rem;     
-      margin-left: 2rem;      
+      margin-left: 4rem;      
     }
     button {
       color: var(--clr-primary-2);

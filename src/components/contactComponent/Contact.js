@@ -176,6 +176,9 @@ export default function Contact(props) {
               <Grid container item
                 justify={'center'}>
                 <Button
+                  component={Link}
+                  to="/hinnasto/hinta_arviointi"
+                  className={classes.estimateButton}
                   variant='outlined'
                   style={{ marginTop: '4em', marginBottom: '4em' }}
                   className={classes.estimateButton}>

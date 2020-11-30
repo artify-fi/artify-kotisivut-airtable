@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
+import Box from '@material-ui/core/Box'
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -17,10 +18,10 @@ import frontendDevelopment from "../../assets/images/frontendDevelopment.webp";
 const useStyles = makeStyles(theme => ({
 
   subtitle: {
-    marginBottom: "1em",
-    maxWidth: '40vw',
+    marginBottom: "3em",
+    maxWidth: '36vw',
     [theme.breakpoints.down("sm")]: {
-      maxWidth: '860vw',
+      maxWidth: '86vw',
       textAlign: 'center'
     }
   },
@@ -87,21 +88,24 @@ const useStyles = makeStyles(theme => ({
       paddingRight: '1.2em'
     },
 
-    item1: {
-      order: 2,
-      [theme.breakpoints.down('md')]: {
-        order: 1,
-      },
-    },
-    item2: {
-      order: 1,
-      [theme.breakpoints.down('md')]: {
-        order: 2,
-      },
-    },
   }
 
 }));
+
+const styles = theme => ({
+  item2: {
+    order: 2,
+    [theme.breakpoints.up('sm')]: {
+      order: 1,
+    },
+  },
+  item3: {
+    order: 1,
+    [theme.breakpoints.up('sm')]: {
+      order: 2,
+    },
+  },
+});
 
 export default function Services(props) {
   const classes = useStyles();
@@ -119,23 +123,23 @@ export default function Services(props) {
       <Grid
         item
         style={{
-          marginLeft: matchesSM ? 0 : "5em",
-          marginTop: matchesSM ? "10em" : "12em",
-          maxWidth: matchesSM ? undefined : '60vw',
-          alignItems: matchesSM ? 'center' : undefined,
+          marginLeft: matchesMD ? 0 : "5em",
+          marginTop: matchesMD ? "10em" : "12em",
+          maxWidth: matchesMD ? undefined : '60vw',
+          alignItems: matchesMD ? 'center' : undefined,
           marginBottom: '2em',
         }}
       >
         <Typography
           className={classes.mainHeading}
-          align={matchesSM ? "center" : undefined}
+          align={matchesMD ? "center" : undefined}
           variant="h1"
           component="h1"
           gutterBottom
         >
-          Kattava palveluvalikoima josta saat kotisivuillesi kompleksisen
+          Kattava palveluvalikoima josta saat kotisivullesi kompaktin
           kokonaisuuden asiantuntevasta sivuston
-          suunnittelusta ja kehittämisestä sen tehokkaaseen mainostamiseen.
+          suunnittelusta ja kehittämisestä sen tehokkaaseen mainostamiseen asti.
         </Typography>
       </Grid>
 
@@ -145,30 +149,53 @@ export default function Services(props) {
         {/*-- 1.  ---Verkkosivut Block-----*/}
         <Grid
           container
-          direction="row"
-          justify={matchesMD ? "center" : undefined}
-          className={classes.serviceContainer} >
+          direction={matchesMD ? "column" : "row"}
+          justify={matchesMD ? "center" : "flex-stert"}
+          className={classes.serviceContainer}
+          style={{ marginTop: matchesMD ? "1em" : "5em" }} >
 
           <Grid
             item
-            className={classes.item1}
+            style={{
+              marginLeft: matchesMD ? 0 : "6em",
+              textAlign: matchesMD ? "center" : undefined,
+              marginBottom: '4em'
+            }}
+            md>
+            <img
+              style={{ marginRight: '2em' }}
+              className={classes.icon}
+              alt="kotisivun tekeminen pienelle yritykselle"
+              src={frontendDevelopment}
+            />
+          </Grid>
+
+          <Grid
+            md
+            item
             style={{
               marginLeft: matchesMD ? 0 : "5em",
-              textAlign: matchesSM ? "center" : undefined
+              textAlign: matchesMD ? "center" : undefined
             }} >
 
             <Typography
               paragraph
-              style={{ marginRight: matchesSM ? 0 : '4em' }}
-              variant="h4">Progressiiviset GatsbyJS-kotisivut</Typography>
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              variant="h4">
+              Progressiiviset GatsbyJS kotisivut
+            </Typography>
+
             <Typography
               variant="subtitle1"
-              style={{ marginRight: matchesSM ? 0 : '4em' }}
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
               className={classes.subtitle}>
-              Progressiiviset kotisivut ovat verkkosivustoja, jotka toimivat kuin natiivisovellukset, mutta ne näkyvät mobiilin tai tietokonen selaimessasi.
-              Ne latautuvat ilman verkkoa, synkronoituvat taustalla ja lähettävät push-ilmoituksia.
-              Mobiilaitteilla hyvin toimivat kotisivut nostavat sivujesi sijoitusta Googlen hauissa ja antavat parempia hakukonetuloksia.
+              Progressiivinen kotisivu on verkkosivusto, joka muistuttaa natiivisovellusta,
+              mutta toimii mobiilin ja tietokoneen selaimessa. Ne toimivat ilman lataamista,
+              synkronoituvat taustalla ja lähettävät push-ilmoituksia.
+              Mobiililaitteilla hyvin toimiva kotisivu nostaa sivusi sijoitusta Google-haussa
+              ja antaa parempia hakukonetuloksia.
             </Typography>
+
             <Button
               component={Link}
               to="/palvelut/kotisivut"
@@ -186,15 +213,6 @@ export default function Services(props) {
                 fill={theme.palette.common.blue} />
             </Button>
           </Grid>
-
-          <Grid item className={classes.item2}>
-            <img
-              style={{ marginRight: '2em' }}
-              className={classes.icon}
-              alt="kotisivun tekeminen pienelle yritykselle"
-              src={frontendDevelopment}
-            />
-          </Grid>
         </Grid>
       </Grid>
 
@@ -204,14 +222,20 @@ export default function Services(props) {
         {/*--  2.  ---Custom Software Block-----*/}
         <Grid
           container
-          direction="row"
-          justify={matchesSM ? "center" : "flex-end"}
+          direction={matchesMD ? "column" : "row"}
+          justify={matchesMD ? "center" : "flex-end"}
           className={classes.serviceContainer}
-          style={{ marginTop: matchesSM ? "1em" : "5em" }} >
+          style={{ marginTop: matchesMD ? "1em" : "5em" }} >
 
-          <Grid item
-            className={classes.item1}
-            style={{ marginRight: matchesSM ? 0 : "12em" }}>
+          <Grid
+            item
+            style={{
+              marginLeft: matchesMD ? 0 : "6em",
+              textAlign: matchesMD ? "center" : undefined,
+              marginBottom: '4em'
+            }}
+            md>
+
             <img
               className={classes.icon}
               alt="hakunonen optimointi seo"
@@ -221,18 +245,27 @@ export default function Services(props) {
 
           <Grid
             item
+            md
             style={{
-              marginRight: '6em',
-              textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em"
+              marginLeft: matchesMD ? 0 : "5em",
+              textAlign: matchesMD ? "center" : undefined
             }} >
 
-            <Typography paragraph variant="h4">Hakukoneoptimointi (SEO)</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              SEO (Search Engine Optimization) on hakukoneoptimointi, mikä tarkoittaa,
-              että luomamme kotisivut ovat helposti löydettävissä Googlelta,
-              Yahoolta ja muilta, ja siksi sivustoosi saapuu enemmän vierailuja ihmisiltä,
-              jotka etsivät tarjoamaasi palvelua tai tuotetta.
+            <Typography
+              paragraph
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              variant="h4">
+              Hakukoneoptimointi (SEO)
+            </Typography>
+
+            <Typography
+              variant="subtitle1"
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              className={classes.subtitle}>
+              SEO <span style={{ fontWeight: 'bolder' }} >(Search Engine Optimization)</span>
+              eli hakukoneoptimointi, mikä tarkoittaa sitä, että luomamme kotisivut ovat
+              helposti löydettävissä esim. Googlessa tai Yahoossa ja siksi houkuttelevat
+              sivustollesi saapuu enemmän tarjoamistasi palveluista tai tavaroista kiinnostuneita ihmisiä.
             </Typography>
 
             <Button
@@ -261,35 +294,42 @@ export default function Services(props) {
         {/*-- 3.  ---Websites Block-----*/}
         <Grid
           container
-          direction="row"
-          justify={matchesSM ? "center" : undefined}
+          direction={matchesMD ? "column" : "row"}
+          justify={matchesSM ? "center" : "flex-start"}
           className={classes.serviceContainer}
-        >
+          style={{ marginTop: matchesSM ? "1em" : "5em" }} >
+
           <Grid
             item
             style={{
-              marginLeft: matchesSM ? 0 : "5em",
-              textAlign: matchesSM ? "center" : undefined
+              marginLeft: matchesMD ? 0 : "8em",
+              textAlign: matchesMD ? "center" : undefined
             }} >
 
             <Typography
               paragraph
-              variant="h4">Hakukonemarkkinointi (SEM)</Typography>
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              variant="h4">
+              Hakukonemarkkinointi (SEM)
+            </Typography>
+
             <Typography
               variant="subtitle1"
-              style={{ marginRight: matchesSM ? 0 : '8em' }}
+              style={{ marginRight: matchesMD ? 0 : '8em' }}
               className={classes.subtitle}>
-              SEM (Search Engine Marketing) on maksullisten strategioiden käyttö hakujen
-              näkyvyyden lisäämiseksi.
-              Tuotemerkit* maksavat siitä,
-              että mainokset näkyvät hakutuloksina hakukoneiden tulossivuilla.
+              SEM <span style={{ fontWeight: 'bolder' }}>(Search Engine Marketing)</span> on
+              näkyvyyden lisäämistä maksullisten strategioiden avulla.
+              *Tuotemerkit maksavat siitä, että heidän mainokset näkyvät hakukoneiden
+              tulossivuilla.
             </Typography>
+
             <Typography
               variant="subtitle1"
               className={classes.subtitle}>
               *tuotemerkki määritellään "henkilön käsitykseksi tuotteesta, palvelusta,
               kokemuksesta tai organisaatiosta".
             </Typography>
+
             <Button
               component={Link}
               to="/palvelut/hakukoneOptimointi"
@@ -308,7 +348,13 @@ export default function Services(props) {
             </Button>
 
           </Grid>
-          <Grid item>
+          <Grid
+            style={{
+              marginRight: matchesMD ? 0 : "6em",
+              textAlign: matchesMD ? "center" : undefined,
+              marginBottom: '4em'
+            }}
+            item>
             <img
               className={classes.icon}
               alt="hakukonen markkinointi"
@@ -323,12 +369,21 @@ export default function Services(props) {
         {/*--  4.  ---Digimarkkinointi & Google Analytics-----*/}
         <Grid
           container
-          direction="row"
-          justify={matchesSM ? "center" : "flex-end"}
+          direction={matchesMD ? "column" : "row"}
+          justify={matchesMD ? "center" : "flex-stert"}
           className={classes.serviceContainer}
-          style={{ marginTop: matchesSM ? "1em" : "5em" }} >
-          <Grid item style={{ marginRight: matchesSM ? 0 : "5em" }}>
+          style={{ marginTop: matchesMD ? "1em" : "5em" }} >
+
+          <Grid
+            item
+            style={{
+              marginLeft: matchesMD ? 0 : "6em",
+              textAlign: matchesMD ? "center" : undefined,
+              marginBottom: '4em'
+            }}
+            md>
             <img
+              style={{ marginRight: '2em' }}
               className={classes.icon}
               alt="digital marketing google analytics"
               src={digitalMarketing}
@@ -336,21 +391,31 @@ export default function Services(props) {
           </Grid>
 
           <Grid
+            md
             item
             style={{
-              textAlign: matchesSM ? "center" : undefined,
-              width: matchesSM ? undefined : "35em"
+              marginLeft: matchesMD ? 0 : "5em",
+              textAlign: matchesMD ? "center" : undefined
             }} >
 
-            <Typography paragraph variant="h4">Digimarkkinointi & Google Analytics</Typography>
-            <Typography variant="subtitle1" className={classes.subtitle}>
-              Olellinen osa tämän päivän verkkosivustoa on analysoida sen vierailioita.
-              Kuinka kauan he ovat sivulla, missä he napsauttavat sekä miten he tulivat sivulle.
-              Google Analytics vastaa lisäksi moniin muihin kysymyksiin.
-              Nämä tiedot voivat auttaa sinua selvittämään, kuka kohderyhmäsi on ja
-              toimiiko Internet-markkinointisi. Näiden tietojen perusteella voit luoda
-              Internet-markkinointistrategian ja todellisen mediasuunnitelman tulevaa
-              toimintaa varten - mitä pitäisi tehdä ja miten se tulisi tehdä.
+            <Typography
+              paragraph
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              variant="h4"
+            >Digimarkkinointi & Google Analytics
+            </Typography>
+
+            <Typography
+              variant="subtitle1"
+              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              className={classes.subtitle}>
+              Vierailijoiden analysoiminen on nykyään oleellinen osa verkkosivuja kehittämisessä.
+              Esimerkiksi kuinka kauan he ovat sivulla ja missä sekä miten he ovat tulleet sivulle.
+              Google Analytics vastaa näiden lisäksi moniin muihin kysymyksiin.
+              Nämä tiedot voivat auttaa selvittämään, että millainen kohderyhmä on kyseessä
+              ja toimiiko kyseinen Internet-markkinointi. Näiden tietojen perusteella voi luoda
+              Internet-markkinointistrategian ja hyvän mediasuunnitelman tulevaa toimintaa varten -
+              mitä pitäisi tehdä ja miten se tulisi tehdä?
             </Typography>
 
             <Button
