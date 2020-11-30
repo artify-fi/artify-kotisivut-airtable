@@ -103,7 +103,7 @@ const defaultQuestions = [
       },
       {
         id: 3,
-        title: "Turvallinen ja täysin Sinun muokkattava sisällönhallinta Headless WordPressin ja GatsbyJS kokonaisuudella.",
+        title: "Turvallinen ja täysin Sinun käsissä oleva sisällönhallinta Headless WordPressin ja GatsbyJS kokonaisuudella.",
         subtitle: null,
         icon: digiMarkkinointi,
         iconAlt: "digitaalisen marketingin työvälinet",
@@ -122,7 +122,7 @@ const landingPageQuestions = [
     options: [
       {
         id: 1,
-        title: "Moderni GatsbyJS LandingPage, tarkoitettu tukeman digimarkkinointia.",
+        title: "Moderni GatsbyJS LandingPage, tarkoitettu esittelemään yrityksen vahvuuksia ja ainutlaatuisuutta sekä tukemaan digimarkkinointia.",
         subtitle: null,
         icon: responsiveApp,
         iconAlt: "progressiivinen kotisivu desktop tablet mobile",
@@ -363,43 +363,109 @@ const landingPageQuestions = [
 
 const kotisivutQuestions = [
   {
-    id: 4,
-    title: "Minkälaäisiä kompponenttejä ja lisäpalveluita tarvitsette vielä sivustolle??",
-    subtitle: "Valitse mielytt'v't",
+    id: 1,
+    title: "Millaisesta kotisivusta olet kiinnostunut?",
+    active: false,
     options: [
       {
         id: 1,
-        title: "Sisäänkirjoitus",
+        title: "Moderni GatsbyJS LandingPage, tarkoitettu esittelemään yrityksen vahvuuksia ja ainutlaatuisuutta sekä tukemaan digimarkkinointia.",
         subtitle: null,
-        icon: login,
-        iconAlt: "outline of a person with a plus sign",
+        icon: responsiveApp,
+        iconAlt: "progressiivinen kotisivu desktop tablet mobile",
+        selected: false,
+        cost: 0
+      },
+      {
+        id: 2,
+        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
+        subtitle: null,
+        icon: verkkokauppa,
+        iconAlt: "headlessCMS sisällönhallinta",
+        selected: false,
+        cost: 0
+      },
+      {
+        id: 3,
+        title: "Turvallinen ja täysin Sinun käsissä oleva sisällönhallinta Headless WordPressin ja GatsbyJS kokonaisuudella.",
+        subtitle: null,
+        icon: digiMarkkinointi,
+        iconAlt: "digitaalisen marketingin työvälinet",
+        selected: false,
+        cost: 0
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Miten haluat että toteutamme laadukkaan ja Sinun tarpeittesi mukaan olevan sisällön?",
+    subtitle: "Valitse sopiva vaihtoehto ja likkuu nuolella seuraavaan valikoimaan.",
+    options: [
+      {
+        id: 1,
+        title: "Minullö on omat tekstit ja kuvat valmiina, tarvitsen pieniä muutoksia sopivien anainsanojen lisäämisellä.",
+        subtitle: null,
+        icon: landingPage,
+        iconAlt: "computer outline",
+        selected: false,
+        cost: 1000
+      },
+      {
+        id: 2,
+        title: "Haluan että tuotatte yhteystyössä minun kanssa mielenkiintoisen ja hakukoneystävällisen silällön.",
+        subtitle: null,
+        icon: basicApp,
+        iconAlt: "outline of iphone",
+        selected: false,
+        cost: 1000
+      },
+      {
+        id: 3,
+        title: "Haluan että tuotatte yhteystyössä minun kanssa mielenkiintoisen ja hakukoneystävällisen silällön sekä täydännette sitä säännöllisesti ensimmäisen vuoden.",
+        subtitle: null,
+        icon: headlessApp,
+        iconAlt: "",
+        selected: false,
+        cost: 1000
+      }
+    ],
+    active: false
+  },
+  {
+    id: 3,
+    title: "Minkälaäisiä kompponenttejä  tarvitsette sivustolle?",
+    subtitle: "Valitse useampi jos näet että on Sinulle hyötyä ja liikkuu nuolella seuraavaan valikkoon.",
+    options: [
+      {
+        id: 1,
+        title: "Analyyttiset työvälinet",
+        subtitle: null,
+        icon: sisallonhallinta,
+        iconAlt: "camera outline",
         selected: false,
         cost: 250
       },
       {
         id: 2,
-        title: "Videon tai Podcastin esittäjät",
+        title: "Chatbot",
         subtitle: null,
-        icon: videoPlayer,
-        iconAlt: "fingerprint",
+        icon: chatBot,
+        iconAlt: "chatBot",
         selected: false,
         cost: 250
       },
       {
         id: 3,
-        title: "Push-ilmoitukset",
+        title: "Etsintä sisällöstä",
         subtitle: null,
-        icon: pushNotification,
-        iconAlt: "outline of a bell",
+        icon: search,
+        iconAlt: "outline of cloud with arrow pointing up",
         selected: false,
         cost: 250
       }
     ],
     active: false
   },
-];
-
-const headlessWPQuestions = [
   {
     id: 4,
     title: "Minkälaäisiä kompponenttejä ja lisäpalveluita tarvitsette vielä sivustolle??",
@@ -435,6 +501,358 @@ const headlessWPQuestions = [
     ],
     active: false
   },
+  {
+    id: 5,
+    title: "Minkälaäisiä kompponenttejä ja lisäpalveluita tarvitsette vielä sivustolle??",
+    subtitle: "Valitse mielytt'v't",
+    options: [
+      {
+        id: 1,
+        title: "Hakukoneoptimoinnin laaja toteutus",
+        subtitle: null,
+        icon: login,
+        iconAlt: "outline of a person with a plus sign",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 2,
+        title: "Ananvarausjärjestelmä",
+        subtitle: null,
+        icon: videoPlayer,
+        iconAlt: "fingerprint",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 3,
+        title: "Sekälaistä, kirjoita oma ehdotus...",
+        subtitle: null,
+        icon: pushNotification,
+        iconAlt: "outline of a bell",
+        selected: false,
+        cost: 250
+      }
+    ],
+    active: false
+  },
+  {
+    id: 6,
+    title: "Monellako eri kielellä haluat että toteutamme sivustosi?",
+    subtitle: "Select one.",
+    options: [
+      {
+        id: 1,
+        title: "Yksi kieli",
+        subtitle: "(tiedotus)",
+        icon: info,
+        iconAlt: "'i' inside a circle",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 2,
+        title: "Kolme eri kieltä",
+        subtitle: "(Interactive, Customizable, Realtime)",
+        icon: customized,
+        iconAlt: "two toggle switches",
+        selected: false,
+        cost: 500
+      },
+      {
+        id: 3,
+        title: "Useempi kieli",
+        subtitle: "(Data Modeling and Computation)",
+        icon: data,
+        iconAlt: "outline of line graph",
+        selected: false,
+        cost: 1000
+      }
+    ],
+    active: false
+  },
+  {
+    id: 7,
+    title: "Minkäläisen ulkoasun haluat sivustolle?",
+    subtitle: "Valitse yski ja napsuta kuvalla sekä pyydä ilmainen hinta arviointi.",
+    options: [
+      {
+        id: 1,
+        title: "Yksinkertainen",
+        subtitle: null,
+        icon: person,
+        iconAlt: "person outline",
+        selected: false,
+        cost: 1
+      },
+      {
+        id: 2,
+        title: "Kustomoitu",
+        subtitle: null,
+        icon: persons,
+        iconAlt: "outline of two people",
+        selected: false,
+        cost: 1.125
+      },
+      {
+        id: 3,
+        title: "Ainulaatuinen",
+        subtitle: null,
+        icon: people,
+        iconAlt: "outline of three people",
+        selected: false,
+        cost: 1.25
+      }
+    ],
+    active: false
+  }
+];
+
+const headlessWPQuestions = [
+  {
+    id: 1,
+    title: "Millaisesta kotisivusta olet kiinnostunut?",
+    active: false,
+    options: [
+      {
+        id: 1,
+        title: "Moderni GatsbyJS LandingPage, tarkoitettu esittelemään yrityksen vahvuuksia ja ainutlaatuisuutta sekä tukemaan digimarkkinointia.",
+        subtitle: null,
+        icon: responsiveApp,
+        iconAlt: "progressiivinen kotisivu desktop tablet mobile",
+        selected: false,
+        cost: 0
+      },
+      {
+        id: 2,
+        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
+        subtitle: null,
+        icon: verkkokauppa,
+        iconAlt: "headlessCMS sisällönhallinta",
+        selected: false,
+        cost: 0
+      },
+      {
+        id: 3,
+        title: "Turvallinen ja täysin Sinun käsissä oleva sisällönhallinta Headless WordPressin ja GatsbyJS kokonaisuudella.",
+        subtitle: null,
+        icon: digiMarkkinointi,
+        iconAlt: "digitaalisen marketingin työvälinet",
+        selected: false,
+        cost: 0
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Miten haluat että toteutamme laadukkaan ja Sinun tarpeittesi mukaan olevan sisällön?",
+    subtitle: "Valitse sopiva vaihtoehto ja likkuu nuolella seuraavaan valikoimaan.",
+    options: [
+      {
+        id: 1,
+        title: "Minullö on omat tekstit ja kuvat valmiina, tarvitsen pieniä muutoksia sopivien anainsanojen lisäämisellä.",
+        subtitle: null,
+        icon: landingPage,
+        iconAlt: "computer outline",
+        selected: false,
+        cost: 1000
+      },
+      {
+        id: 2,
+        title: "Haluan että tuotatte yhteystyössä minun kanssa mielenkiintoisen ja hakukoneystävällisen silällön.",
+        subtitle: null,
+        icon: basicApp,
+        iconAlt: "outline of iphone",
+        selected: false,
+        cost: 1000
+      },
+      {
+        id: 3,
+        title: "Haluan että tuotatte yhteystyössä minun kanssa mielenkiintoisen ja hakukoneystävällisen silällön sekä täydännette sitä säännöllisesti ensimmäisen vuoden.",
+        subtitle: null,
+        icon: headlessApp,
+        iconAlt: "",
+        selected: false,
+        cost: 1000
+      }
+    ],
+    active: true
+  },
+  {
+    id: 3,
+    title: "Minkälaäisiä kompponenttejä  tarvitsette sivustolle?",
+    subtitle: "Valitse useampi jos näet että on Sinulle hyötyä ja liikkuu nuolella seuraavaan valikkoon.",
+    options: [
+      {
+        id: 1,
+        title: "Analyyttiset työvälinet",
+        subtitle: null,
+        icon: sisallonhallinta,
+        iconAlt: "camera outline",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 2,
+        title: "Chatbot",
+        subtitle: null,
+        icon: chatBot,
+        iconAlt: "chatBot",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 3,
+        title: "Etsintä sisällöstä",
+        subtitle: null,
+        icon: search,
+        iconAlt: "outline of cloud with arrow pointing up",
+        selected: false,
+        cost: 250
+      }
+    ],
+    active: false
+  },
+  {
+    id: 4,
+    title: "Minkälaäisiä kompponenttejä ja lisäpalveluita tarvitsette vielä sivustolle??",
+    subtitle: "Valitse mielytt'v't",
+    options: [
+      {
+        id: 1,
+        title: "Sisäänkirjoitus",
+        subtitle: null,
+        icon: login,
+        iconAlt: "outline of a person with a plus sign",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 2,
+        title: "Videon tai Podcastin esittäjät",
+        subtitle: null,
+        icon: videoPlayer,
+        iconAlt: "fingerprint",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 3,
+        title: "Push-ilmoitukset",
+        subtitle: null,
+        icon: pushNotification,
+        iconAlt: "outline of a bell",
+        selected: false,
+        cost: 250
+      }
+    ],
+    active: false
+  },
+  {
+    id: 5,
+    title: "Minkälaäisiä kompponenttejä ja lisäpalveluita tarvitsette vielä sivustolle??",
+    subtitle: "Valitse mielytt'v't",
+    options: [
+      {
+        id: 1,
+        title: "Hakukoneoptimoinnin laaja toteutus",
+        subtitle: null,
+        icon: login,
+        iconAlt: "outline of a person with a plus sign",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 2,
+        title: "Ananvarausjärjestelmä",
+        subtitle: null,
+        icon: videoPlayer,
+        iconAlt: "fingerprint",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 3,
+        title: "Sekälaistä, kirjoita oma ehdotus...",
+        subtitle: null,
+        icon: pushNotification,
+        iconAlt: "outline of a bell",
+        selected: false,
+        cost: 250
+      }
+    ],
+    active: false
+  },
+  {
+    id: 6,
+    title: "Monellako eri kielellä haluat että toteutamme sivustosi?",
+    subtitle: "Select one.",
+    options: [
+      {
+        id: 1,
+        title: "Yksi kieli",
+        subtitle: "(tiedotus)",
+        icon: info,
+        iconAlt: "'i' inside a circle",
+        selected: false,
+        cost: 250
+      },
+      {
+        id: 2,
+        title: "Kolme eri kieltä",
+        subtitle: "(Interactive, Customizable, Realtime)",
+        icon: customized,
+        iconAlt: "two toggle switches",
+        selected: false,
+        cost: 500
+      },
+      {
+        id: 3,
+        title: "Useempi kieli",
+        subtitle: "(Data Modeling and Computation)",
+        icon: data,
+        iconAlt: "outline of line graph",
+        selected: false,
+        cost: 1000
+      }
+    ],
+    active: false
+  },
+  {
+    id: 7,
+    title: "Minkäläisen ulkoasun haluat sivustolle?",
+    subtitle: "Valitse yski ja napsuta kuvalla sekä pyydä ilmainen hinta arviointi.",
+    options: [
+      {
+        id: 1,
+        title: "Yksinkertainen",
+        subtitle: null,
+        icon: person,
+        iconAlt: "person outline",
+        selected: false,
+        cost: 1
+      },
+      {
+        id: 2,
+        title: "Kustomoitu",
+        subtitle: null,
+        icon: persons,
+        iconAlt: "outline of two people",
+        selected: false,
+        cost: 1.125
+      },
+      {
+        id: 3,
+        title: "Ainulaatuinen",
+        subtitle: null,
+        icon: people,
+        iconAlt: "outline of three people",
+        selected: false,
+        cost: 1.25
+      }
+    ],
+    active: false
+  }
 ];
 
 
@@ -571,7 +989,7 @@ export default function Estimate() {
     }
 
     switch (newSelected.title) {
-      case "Moderni GatsbyJS LandingPage, tarkoitettu tukeman digimarkkinointia.":
+      case "Moderni GatsbyJS LandingPage, tarkoitettu esittelemään yrityksen vahvuuksia ja ainutlaatuisuutta sekä tukemaan digimarkkinointia.":
         setQuestions(landingPageQuestions);
         setService(newSelected.title);
         setPlatforms([]);
@@ -589,7 +1007,7 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-      case "Headless WordPressin ja GatsbyJS kokonaisuus asiakkaan oman sisällönhallinnalla.":
+      case "Turvallinen ja täysin Sinun muokkattava sisällönhallinta Headless WordPressin ja GatsbyJS kokonaisuudella.":
         setQuestions(headlessWPQuestions);
         setService(newSelected.title);
         setPlatforms([]);
