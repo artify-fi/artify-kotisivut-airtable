@@ -58,16 +58,6 @@ module.exports = {
       },
     },
 
-<<<<<<< HEAD
-=======
-    // {
-    //   resolve: 'gatsby-plugin-drift',
-    //   options: {
-    //     appId: '2i4exv35dtby',
-    //   },
-    // },
-
->>>>>>> develop
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
