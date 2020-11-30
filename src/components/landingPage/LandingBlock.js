@@ -394,10 +394,10 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
-                        liiketoiminnalliset tulokset ja lisäämään näkyvyyttä. Teemme hyvälaatuisten
-                        kotisivujen lisäksi verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
-                    </Typography>
+                        Hyvin toimiva sivusto, mikä lisää näkyvyyttä sekä nykyisille että
+                        uusille asiakkaille toteutetaan perusteellisella suunnittelulla,
+                        kaiken kattavalla testaamisella ja jatkuvalla optimoinilla.
+                      </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
@@ -409,10 +409,10 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Hyvin toimiva sivusto, mikä lisää näkyvyyttä sekä nykyisille että
-                        uusille asiakkaille toteutetaan perusteellisella suunnittelulla,
-                        kaiken kattavalla testaamisella ja jatkuvalla optimoinilla.
-                      </Typography>
+                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
+                        liiketoiminnalliset tulokset ja lisäämään näkyvyyttä. Teemme hyvälaatuisten
+                        kotisivujen lisäksi verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
+                    </Typography>
                     </ListItemText>
                   </ListItem>
                   <Divider variant="inset" component="li" />
