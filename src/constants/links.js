@@ -22,7 +22,7 @@ export default [
   {
     page: "palvelut",
     label: "hakukoneoptimointi- ja markkinointi",
-    url: `/palvelut/hakukoneoptimointi`,
+    url: `/palvelut/hakukoneOptimointi`,
     icon: <FaCreditCard className="icon" />,
   },
   {
