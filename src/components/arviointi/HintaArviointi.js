@@ -1415,20 +1415,28 @@ export default function Estimate() {
                     }}
                     direction="column"
                     alignItems="center"
+                    justify='center'
                     md
                   >
-                    <Grid item style={{ maxWidth: "14em" }}>
-                      <Typography
-                        align="center"
-                        variant="h5"
-                      >
-                        {option.title}
-                      </Typography>
+                    <Grid item container justify='center'>
+                      <Grid item
+                        className={classes.optionsTitle}
+                        style={{ maxWidth: "31vw" }}>
+                        <Typography
+                          align="center"
+
+                          variant="h5"
+                          style={{ textSizeAdjust: '40%', textAlign: 'center' }}
+                        >
+                          {option.title}
+                        </Typography>
 
 
-                      <Typography align="center" variant="caption">
-                        {option.subtitle}
-                      </Typography>
+                        <Typography align="center" variant="caption">
+                          {option.subtitle}
+                        </Typography>
+                      </Grid>
+
                     </Grid>
                     <Grid item>
                       <img
