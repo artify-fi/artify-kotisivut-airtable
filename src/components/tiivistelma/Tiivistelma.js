@@ -265,7 +265,7 @@ export default function Services(props) {
               SEO <span style={{ fontWeight: 'bolder' }} >(Search Engine Optimization)</span>
               eli hakukoneoptimointi, mikä tarkoittaa sitä, että luomamme kotisivut ovat
               helposti löydettävissä esim. Googlessa tai Yahoossa ja siksi houkuttelevat
-              sivustollesi saapuu enemmän tarjoamistasi palveluista tai tavaroista kiinnostuneita ihmisiä.
+              sivustollesi enemmän tarjoamistasi palveluista tai tavaroista kiinnostuneita ihmisiä.
             </Typography>
 
             <Button
@@ -409,13 +409,13 @@ export default function Services(props) {
               variant="subtitle1"
               style={{ marginRight: matchesMD ? 0 : '4em' }}
               className={classes.subtitle}>
-              Vierailijoiden analysoiminen on nykyään oleellinen osa verkkosivuja kehittämisessä.
+              Vierailijoiden analysoiminen on nykyään oleellinen osa verkkosivojen kehittämisessä.
               Esimerkiksi kuinka kauan he ovat sivulla ja missä sekä miten he ovat tulleet sivulle.
               Google Analytics vastaa näiden lisäksi moniin muihin kysymyksiin.
               Nämä tiedot voivat auttaa selvittämään, että millainen kohderyhmä on kyseessä
               ja toimiiko kyseinen Internet-markkinointi. Näiden tietojen perusteella voi luoda
               Internet-markkinointistrategian ja hyvän mediasuunnitelman tulevaa toimintaa varten -
-              mitä pitäisi tehdä ja miten se tulisi tehdä?
+              Mitä pitäisi tehdä ja miten se tulisi tehdä?
             </Typography>
 
             <Button

@@ -1,15 +1,15 @@
 import React from 'react'
 import Layout from "../../components/layout"
 import SEO from "../../components/SEO"
-import Tiivistelmä from '../../components/tiivistelmä/Tiivistelmä'
+import Tiivistelma from '../../components/tiivistelma/Tiivistelma'
 
-const tiivistelmä = () => {
+const tiivistelma = () => {
   return (
     <Layout>
       <SEO title='Yleiskatsaus kotisivujen kehittämisprosessista' />
-      <Tiivistelmä />
+      <Tiivistelma />
     </Layout>
   )
 }
 
-export default tiivistelmä
+export default tiivistelma

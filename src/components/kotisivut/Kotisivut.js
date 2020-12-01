@@ -98,13 +98,15 @@ export default function About(props) {
           className={classes.missionStatement}
         >
           Gatsby on kehys nykyaikaisten verkkosivujen ja sovellusten rakentamiseen.
-          Se voi siirtää tietoja sivustolle mistä tahansa
-           <Link
-            // style={{ marginTop: '2em' }}
+          Se voi siirtää tietoja sivustolle mistä tahansa sisällönhallintajärjestelmästä
+         {/*   <Link
+            style={{ marginTop: '2em' }}
             href="/ratkaisut/headlessCMS"
             className={classes.link}
-            onClick={preventDefault}>&nbsp;sisällönhallintajärjestelmästä&nbsp;</Link>
-           tai muista tällä hetkellä käyttämistäsi lähteistä. Yritykset  jotka ovat siirtäneet 
+            onClick={preventDefault}>&nbsp;
+            sisällönhallintajärjestelmästä
+            &nbsp;</Link> */}
+            &nbsp;tai muista tällä hetkellä käyttämistäsi lähteistä. Yritykset  jotka ovat siirtäneet 
            sivustonsa Gatsby:n alustalle, ovat kokeneet merkittävää nousua liideissä, 
            Googlen orgaanisen haun liikenteessä ja turvallisuudessa.
         </Typography>
@@ -216,7 +218,7 @@ export default function About(props) {
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
-                style={{ fontWeight: 700, fontStyle: "italic", }}
+                style={{ fontWeight: 600, fontSize: "1.3rem", fontStyle: "italic", }}
               >Gatsby on React-pohjainen kehys tehokkaiden verkkosivujen ja sovellusten rakentamiseen. 
               Gatsby-sivustoilla on hämmästyttävä suorituskyky, tavallista parempi tietoturva 
               ja parhaat verkkokäytännöt.
@@ -227,7 +229,7 @@ export default function About(props) {
                 paragraph
               >
                 <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Tehokkaampi liidien luominen ja asiakkaiden sitoutuminen. </span>
-                Sivuston tehokkuudella ja suorituskyvyllä on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen. 
+                Sivuston toimivuudella ja suorituskyvyllä on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen. 
                 Äskettäinen&nbsp; <span><Link className={classes.link} to="https://blogs.akamai.com/2020/09/metrics-that-matter-continuous-performance-optimization.html">Akamai-tutkimus</Link></span>
               &nbsp;
               osoitti, että 100 millisekunnin viive sivuston latausajassa laskee tulosprosentteja jopa seitsemällä prosentilla 
@@ -244,7 +246,7 @@ export default function About(props) {
                 Hitaalla sivustolla voi olla negatiivinen lumipallovaikutus hakukoneoptimointiin. 
                 Google siis indeksoi hitaita sivustoja kauemmin, eli niiden välitön poistumisprosentti on suurempi 
                 ja alhaisemmat tulosprosentit laskevat sijoitustasi. Gatsby -sivustoissa on automaattinen suorituskyvyn optimointi. 
-                Gatsby hakee  parhailla sisällönhallinta- ja verkkokauppatyökaluilla tietoja käyttämistäsi sekä muista tietokannoista.
+                Gatsby hakee parhailla sisällönhallinta- ja verkkokauppatyökaluilla tietoja käyttämistäsi sekä muista tietokannoista.
               </Typography>
               <Typography
                 variant="body1"

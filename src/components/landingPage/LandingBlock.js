@@ -394,9 +394,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Hyvin toimiva sivusto, mikä lisää näkyvyyttä sekä nykyisille että
-                        uusille asiakkaille toteutetaan perusteellisella suunnittelulla,
-                        kaiken kattavalla testaamisella ja jatkuvalla optimoinilla.
+                        Hyvin toimiva sivusto, mikä lisää näkyvyyttä sekä nykyisille että
+                        uusille asiakkaille, toteutetaan perusteellisella suunnittelulla,
+                        kaiken kattavalla  testaamisella ja jatkuvalla kehittelyllä.
                       </Typography>
                     </ListItemText>
                   </ListItem>
@@ -409,9 +409,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
-                        liiketoiminnalliset tulokset ja lisäämään näkyvyyttä. Teemme hyvälaatuisten
-                        kotisivujen lisäksi verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
+                        Yritykset taistelevat jatkuvasti asiakkaista ja valtaosa kotisivujen vierailijoista
+                        tulee hakukoneiden kautta. Siispä hyvin tehty hakukoneoptimointi on yksi menestyksen
+                        lähtökohdista.
                     </Typography>
                     </ListItemText>
                   </ListItem>
@@ -424,8 +424,9 @@ const LandingBlock = () => {
                     </ListItemAvatar>
                     <ListItemText>
                       <Typography className={classes.cardText}>
-                        Yritykset taistelevat jatkuvasti asiakkaista ja valtaosa kotisivujen vierailijoista tulee hakukoneiden kautta.
-                        Siispä hyvin tehty hakukoneoptimointi on yksi menestyksen lähtökohdista.
+                        Verkkosivustomme kehityspalvelu on optimoitu saavuttamaan parhaat
+                        liiketoiminnalliset tulokset ja lisäämään näkyvyyttä. Teemme hyvänlaatuisten
+                        kotisivujen lisäksi verkkoratkaisuja, jotka lisäävät asiakkaiden määrää sekä myyntiä.
                       </Typography>
                     </ListItemText>
                   </ListItem>

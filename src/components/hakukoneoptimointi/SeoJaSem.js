@@ -7,7 +7,7 @@ import { Link } from 'gatsby'
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Divider from '@material-ui/core/Divider';
 import ArtifyfSEO from "../../assets/images/ArtifySEO.webp";
-import ArtifySEM from '../../assets/images/ArtifySEM.webp'
+import ArtifySEM from '../../assets/images/seo_sem/seo&sem_banner.jpg'
 import { Underline } from "@styled-icons/fa-solid";
 
 
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '1.8rem',
+      fontSize: '1.6rem',
       marginTop: '2em',
       paddingLeft: '3em',
       paddingRight: '3em'
@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      fontSize: '1.6rem',
+      fontSize: '1.5rem',
       paddingLeft: '2em',
       paddingRight: '2em'
     },
@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
       fontSize: '2rem',
-      marginTop: '2.6em',
+      marginTop: '2em',
       marginBottom: '1em',
       paddingLeft: '3em',
       paddingRight: '3em',
@@ -86,8 +86,8 @@ const useStyles = makeStyles(theme => ({
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '2.2rem',
-      marginTop: '2.6em',
+      fontSize: '2rem',
+      marginTop: '2em',
       marginBottom: '1em',
       paddingLeft: '2.3em',
       paddingRight: '2.3em',
@@ -203,45 +203,52 @@ export default function About(props) {
             maxWidth: matchesMD ? undefined : '70vw',
           }}
           variant="h1">
-          Miten tulla näkyvämmäksi hakukoneissa?
-          Yritykselläsi on verkkosivusto ja haluat enemmän liikennettä, enemmän hintakyselyjä,
-          enemmän myyntiä ja enemmän tuotemerkkitietoisuutta verkkosivustosi kautta.
-          Joten mitä pitäisi tehdä tavoitteidesi saavuttamiseksi? Kuinka hakukoneoptimointi
-          ja hakukonemarkkinointi voivat auttaa sinua pääsemään selvästi havaittavaksi Googlessa?
+          Miten saada näkyvyyttä hakukoneissa? Onko yritykselläsi toimiva verkkosivu jolle
+          haluat enemmän liikennettä, hinakyselyä, myyntiä tai tuotemerkkitietoisuutta mutta
+          et tiedä miten sen saavuttaisit tai miten hakukoneoptimointi ja hakukonemarkkinointi
+          auttaisivat sivustosi havaittavuudessa?
         </Typography>
       </Grid>
       <Divider className={classes.divider} />
+
+
+
       <Grid
         item
         container
-        justify="center"
+        justify={matchesMD ? "center" : undefined}
         className={classes.rowContainer}
         style={{ marginTop: "3em" }}
       >
-        <Typography
-          variant="h2"
-          align="center"
-          className={classes.missionStatement}
-        >
-          {/* hakukoneoptimointi */}
+        <Grid item md>
+          <Typography
 
-          Lyhenne SEO tulee englanninkielisestä termistä search engine optimization eli hakukoneoptimointi.
-          Tämä tarkoittaa, että verkkosivusto tai verkkokauppa tehdään hakukoneille mahdollisimman
-          ymmärrettäväksi avainsanojen ja sivujen avulla. Tällä tavoin hakukoneet, kuten Google,
-          ymmärtävät paremmin sivuilla olevat tiedot ja luottavat siihen, että ne näytetään hakijoille.
-          Hakukoneiden tarkoitus on hyödynnä hakijoita mahdollisimman paljon ja antaa parhaat sivut
-          vastauksena jokaiseen hakuun ja joiden sisältö sisältää vastauksen hakijan pyyntöön.
+            variant="h2"
+            align="center"
+            className={classes.missionStatement}
+          >
+            {/* hakukoneoptimointi */}
+
+          Sana hakukoneoptimointi tulee englanninkielisestä termistä <span style={{ fontWeight: 600 }}>search engine optimization</span>
+          &nbsp;eli lyhennettynä&nbsp;<span style={{ fontWeight: 600 }}>SEO</span>.
+          Hakukoneoptimointi on sitä, että verkkosivusta tai verkkokaupasta tehdään hakukoneille
+          mahdollisimman ymmärrettävä sopivilla avainsanoilla ja sivuilla avulla. Näin hakukoneet
+          kuten Google ymmärtävät paremmin sivustolla olevaa tietoa ja varmistavat sen, että se
+          näkyy hakijoille. Hakukoneiden päämääränä on antaa hakijalle sopivimmat ja vastauksen sisältävät sivustot haun tuloksena.
         </Typography>
-      </Grid>
-      <Grid item>
-        <Grid item container justify="center" lg>
-          <img
-            src={ArtifyfSEO}
-            alt="Gatsby logo"
-            style={{ maxHeight: matchesMD ? 320 : "32em", marginTop: '8em' }}
-          />
+        </Grid>
+
+        <Grid item md>
+          <Grid item container justify="center">
+            <img
+              src={ArtifyfSEO}
+              alt="Gatsby logo"
+              style={{ maxHeight: matchesMD ? 260 : "28em", marginTop: matchesMD ? '2em' : '4em' }}
+            />
+          </Grid>
         </Grid>
       </Grid>
+
 
 
       {/* SEO Section Paragraphs */}
@@ -260,7 +267,6 @@ export default function About(props) {
             item
             container
             direction="column"
-            lg
             style={{
               maxWidth: "35em",
               marginLeft: matchesMD ? undefined : '7em'
@@ -272,41 +278,44 @@ export default function About(props) {
                 variant="h3"
                 gutterBottom
               >
-                Perustiedot hakukoneoptimoinnista
+                Perustietoa hakukoneoptimoinnista.
               </Typography>
             </Grid>
-            <Grid item>
+
+            <Grid item style={{ width: '60vw' }}>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
                 style={{ fontWeight: 700, fontStyle: "italic", }}
               >
-                Hakukoneoptimoinnista on hyötyä, jos tarjoamasi tuotteet tai palvelut  haetaan Googlesta ja haluat,
-                että Internet-hausta saapuu enemmän juuri ostavia asiakkaita sivullesi. Vierailijat, jotka tulevat
-                verkkosivustollesi Internet-haun kautta, ovat painonsa kullan arvoisia, koska he ovat
-                kiinnostuneita siitä, mitä sinulla on tarjottavana verkkoympäristössäsi.
+                Hakukoneoptimoinnista on silloin hyötyä, jos tarjoamiasi tuotteita tai palveluja haetaan
+                esimerkiksi Googlesta ja haluat, että Internet-hausta saapuu enemmän ostavia asiakkaita
+                juuri sinun sivustolle. Internet-haun kautta verkkosivullesi saapuvat vierailijat ovat arvokkaita kuten kulta,
+                sillä he ovat kiinnostuneita siitä, mitä sinulla on tarjottavana verkkoympäristössäsi.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '1em' }}>SEO-asetukset ovat muutakin kuin vain avainsanoja.</span><br />
-                SEO-nimellä tehty työ on kuitenkin jaettu laajalti kahteen osaan:<br /><br />
-                1. Sivun sisäinen hakukoneoptimointi tekee sivuista merkityksellisiä, eli kotisivut,
-                sähköinen kaupankäynti tai blogi  liittyy oikeisiin avainsanoihin.
-                Tämän seurauksena optimoiduen verkkosivustojen sijoitus on haussa korkeampi  ja hakuliikenne kasvaa hieman.
+                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '1em' }}>SEO-asetukset ovat
+                enemmän kuin vain avainsanoja.</span><br />
+                SEO -nimellä tehty työ on jaettu suurinpiirtein kahteen osaan:<br /><br />
+                1. Verkkosivun sisäinen hakukoneoptimointi tekee sivuista täsmällisiä,
+                eli avainsanat ovat juuri sopivia kotisivulle, sähköiselle kaupankäynnille tai blogille.
+                Siispä optimoitujen verkkosivustojen sijoitus on haussa korkeampi ja samalla hakuliikenne kasvaa.
               </Typography>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                2.Sivun ulkopuoliset toiminnot luovat auktoriteetin, eli ennalta optimoiduista sivuista tulee
-                hakukoneiden luotettava tietolähde, joka kannattaa näyttää haun etusivulla.
-                Luomalla saman tai korkeamman auktoriteetin hakukoneille kuin kilpailijat varmistat,
-                että olet listalla ensimmäisten joukossa  ja tähän liittyy vierailujen ja kyselyjen merkittävä kasvu.
+                2. Sivuston ulkopuoliset toiminnot luovat auktoriteetin, eli ennalta optimoidut sivustot toimivat
+                hakukoneiden luotettavimpina tietolähteinä, jotka sitten näkyvät muita sivustoja todennäköisemmin
+                haun etusivulla. Luomalla hakukoneille yhtä korkean tai korkeamman auktoriteetin kuin kilpailijoilla,
+                varmistat olevasi listan ensimmäisten joukossa, mikä vaikuttaa positiivisesti sivustosi vierailujen
+                ja kyselyiden määrään.
               </Typography>
               <Typography
                 variant="body1"
@@ -336,11 +345,11 @@ export default function About(props) {
 
       {/* SEM block starts from here */}
       <Grid item>
-        <Grid item container justify="center" lg>
+        <Grid item container justify="center" >
           <img
             src={ArtifySEM}
             alt="Gatsby logo"
-            style={{ maxHeight: matchesMD ? 260 : "32em", marginTop: '8em' }}
+            style={{ maxHeight: matchesMD ? 200 : "20em", marginTop: '-6em', width: '70vw' }}
           />
         </Grid>
       </Grid>
@@ -360,7 +369,6 @@ export default function About(props) {
             item
             container
             direction="column"
-            lg
             style={{
               maxWidth: "35em",
               marginLeft: matchesMD ? undefined : '7em'
@@ -375,7 +383,7 @@ export default function About(props) {
                 Perustiedot hakukonemarkkinoinnista
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid item item style={{ width: '60vw' }}>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}

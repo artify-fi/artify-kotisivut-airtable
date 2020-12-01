@@ -25,12 +25,12 @@ export default [
     url: `/palvelut/hakukoneOptimointi`,
     icon: <FaCreditCard className="icon" />,
   },
-  {
-    page: "palvelut",
-    label: "digimarkkinointi",
-    url: `/palvelut/digimarkkinointi`,
-    icon: <FaCreditCard className="icon" />,
-  },
+  /*  {
+     page: "palvelut",
+     label: "digimarkkinointi",
+     url: `/palvelut/digimarkkinointi`,
+     icon: <FaCreditCard className="icon" />,
+   }, */
   {
     page: "ratkaisut",
     label: "kehitysprosessi",
