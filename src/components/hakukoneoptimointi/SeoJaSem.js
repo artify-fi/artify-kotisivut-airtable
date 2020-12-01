@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     fontStyle: "italic",
     fontWeight: 300,
     fontSize: "1.5rem",
-    maxWidth: "50em",
+    maxWidth: "40em",
     lineHeight: 1.4,
     [theme.breakpoints.down('xl')]: {
       fontSize: '2rem',

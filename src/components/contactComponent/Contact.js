@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
-import background from '../../assets/images/contact/contactbackgroundsm1.webp'
+import background from '../../assets/images/contact/contact_image.jpg'
 import mobileBackground from '../../assets/images/contact/mobile_screen_background.webp'
 
 import Art from '../../assets/images/art_bachmann_oval_small.webp'
@@ -18,12 +18,16 @@ import ButtonArrow from '../original'
 const useStyles = makeStyles(theme => ({
   background: {
     backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
+
+    backgroundPosition: "right",
+    backgroundSize: "60vw",
+
     backgroundRepeat: "no-repeat",
     marginTop: '5em',
     [theme.breakpoints.down("md")]: {
-      backgroundImage: `url(${mobileBackground})`
+      backgroundImage: `url(${mobileBackground})`,
+      backgroundSize: 'cover',
+      marginTop: '-8em'
     }
   },
 
@@ -34,6 +38,11 @@ const useStyles = makeStyles(theme => ({
     width: 210,
     backgroundColor: theme.palette.common.grey2,
     fontSize: "1.1rem",
+    marginTop: '4em',
+    marginBottom: '4em',
+    [theme.breakpoints.down("sm")]: {
+      marginTop: '-2em'
+    },
     "&:hover": {
       backgroundColor: theme.palette.secondary.light
     },
@@ -57,6 +66,13 @@ const useStyles = makeStyles(theme => ({
       maxHeight: 300,
       maxWidth: 300
     },
+  },
+
+  header: {
+    [theme.breakpoints.down("sm")]: {
+      fontSize: '1.6rem',
+      marginTop: '1em'
+    }
   }
 }));
 
@@ -76,9 +92,9 @@ export default function Contact(props) {
         justify="center"
         alignItems="center"
         style={{
-          padding: '1em',
+          padding: '0.2em',
           marginBottom: matchesMD ? "5em" : 0,
-          marginTop: matchesSM ? "1em" : matchesMD ? "5em" : '10em'
+          marginTop: matchesSM ? "4em" : matchesMD ? "10em" : '10em'
         }}
         lg={3}
         xl={3} >
@@ -130,7 +146,7 @@ export default function Contact(props) {
         container
         direction={matchesMD ? "column" : "row"}
         className={classes.background}
-        alignItems="center"
+        alignItems={matchesMD ? "center" : undefined}
         justify={matchesMD ? "center" : undefined}
         lg={9}
         xl={9}
@@ -140,25 +156,21 @@ export default function Contact(props) {
           style={{
             marginLeft: matchesMD ? 0 : "3em",
             textAlign: matchesMD ? "center" : "inherit",
-            marginTop: '10em'
+            marginTop: matchesMD ? '2em' : '10em'
           }}>
-          <Grid container direction="column" style={{ width: matchesMD ? '60vw' : '30vw' }}>
-            <Grid item>
-              <Typography align={matchesMD ? "center" : undefined} variant="h2">
-                Tavallinen ohjelmisto.
+          <Grid container alignItems='center' direction="column" style={{ width: matchesMD ? '80vw' : '30vw' }}>
+            <Grid item justify='center'>
+              <Typography className={classes.header} align={matchesMD ? "center" : undefined} variant="h2">
+                Yksinkertaiset kotisivut.
                 <br />
                 Vallankumoukselliset tulokset.
               </Typography>
-              <Typography
-                variant='h3'
-                align={matchesMD ? 'center' : undefined}>
-                Simple Software. <br /> Revolutionary Results.
-            </Typography>
+
               <Typography
                 variant='subtitle2'
                 align={matchesMD ? 'center' : undefined}
                 style={{ fontSize: '1.4rem' }}>
-                Take advantage of the 21st century.
+                Hyödynnä 2020. vuosikymmen.
             </Typography>
               <Grid item justify={'center'} lg>
                 <img
@@ -180,7 +192,6 @@ export default function Contact(props) {
                   to="/hinnasto/hinta_arviointi"
                   className={classes.estimateButton}
                   variant='outlined'
-                  style={{ marginTop: '4em', marginBottom: '4em' }}
                   className={classes.estimateButton}>
                   <span>
                     Hinta-arviointi

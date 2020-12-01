@@ -67,14 +67,15 @@ const useStyles = makeStyles(theme => ({
   learnButtonHero: {
     ...theme.typography.learnButton,
     fontSize: '1rem',
-    fontWeight: 500,
+    fontWeight: 600,
     height: 45,
-    width: 160,
+    width: 200,
+
     marginTop: '-4em',
     marginLeft: '2em',
-    backgroundColor: theme.palette.common.grey1,
+    backgroundColor: theme.palette.common.avatar,
     '&:hover': {
-      backgroundColor: theme.palette.common.grey3,
+      backgroundColor: theme.palette.common.grey2,
       color: 'white'
     }
   },
@@ -476,28 +477,35 @@ const LandingBlock = () => {
                     className={classes.learnButtonHero}
                   >
                     <span style={{ marginRight: 10 }}>Lue Lisää</span>
-                    <ButtonArrow
+                    {/* <ButtonArrow
                       width={15}
                       height={15}
                       fill={theme.palette.common.Grey4}
-                    />
+                    /> */}
                   </Button>
-                  <Button
-                    component={Link}
-                    to="/hinnasto/hinta_arviointi"
-                    className={classes.estimateButton}
-                    variant='outlined'
-                    style={{ marginTop: '8em', marginBottom: '2em' }}
-                    className={classes.estimateButton}>
-                    <span>
-                      Hinta-arviointi
-                  </span>
-                    <ButtonArrow
-                      width={15}
-                      height={15}
-                      fill={'white'}
-                    />
-                  </Button>
+
+                  <Grid item container justify='center'>
+                    <Button
+                      component={Link}
+                      to="/hinnasto/hinta_arviointi"
+                      variant='outlined'
+                      style={{
+                        marginTop: '8em',
+                        marginBottom: '2em',
+                      }}
+                      className={classes.estimateButton}>
+                      <span>
+                        Hinta-arviointi
+                      </span>
+                      <ButtonArrow
+                        width={15}
+                        height={15}
+                        fill={'white'}
+                      />
+                    </Button>
+                  </Grid>
+
+
                 </CardActions>
               </CardContent>
             </CardActionArea>

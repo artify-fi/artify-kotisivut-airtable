@@ -20,6 +20,7 @@ const blueLogo = '#344d63'
 // Misc.. 
 const sea_foam = '#a5c0ad'
 const violet = '#1F1641'
+const avatar = '#d4f1f4'
 
 export default createMuiTheme({
   palette: {
@@ -37,7 +38,8 @@ export default createMuiTheme({
       sea_foam: `${sea_foam}`,
       green5: `${green5}`,
       aqua3dark: `${aqua3dark}`,
-      aqua3light: `${aqua3light}`
+      aqua3light: `${aqua3light}`,
+      avatar: `${avatar}`
 
     },
     primary: {
