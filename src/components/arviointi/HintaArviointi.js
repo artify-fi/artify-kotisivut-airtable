@@ -78,7 +78,167 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 700,
     fontSize: "2rem",
     color: theme.palette.common.orange
-  }
+  },
+
+  header1: {
+    ...theme.typography.h1,
+    // larger than 1920
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+      marginTop: '2.6em',
+      marginBottom: '1em',
+      paddingLeft: '3em',
+      paddingRight: '3em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2.2rem',
+      marginTop: '2.6em',
+      marginBottom: '1em',
+      paddingLeft: '2.3em',
+      paddingRight: '2.3em',
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      marginTop: '2.6em',
+      fontSize: '1.9rem',
+      paddingLeft: '2em',
+      paddingRight: '2em',
+    },
+
+    // 600 up to 960        
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '2em',
+      fontSize: '1.5rem',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+    // 0 upt to 600
+    fontFamily: 'Open Sans Condensed',
+    fontWeight: '500',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '2.2em',
+      fontSize: '1.4rem',
+      marginBottom: '1em',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+  },
+
+  header2: {
+    // larger than 1920
+    ...theme.typography.h2,
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.8rem',
+      marginTop: '2em',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.6rem',
+      paddingLeft: '2em',
+      paddingRight: '2em'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '1.4em',
+      paddingRight: '1.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+      marginBottom: '0.4em'
+    },
+  },
+
+  optionsTitle: {
+    ...theme.typography.h5,
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1.8rem',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.7rem',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '2em',
+      paddingRight: '2em'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '1.4em',
+      paddingRight: '1.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.1rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+      marginBottom: '0.4em'
+    },
+  },
+
+  questionSubtitle: {
+    // larger than 1920
+    ...theme.typography.h2,
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.6rem',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '2em',
+      paddingRight: '2em'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '1.4em',
+      paddingRight: '1.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+      marginBottom: '0.4em'
+    },
+  },
 }));
 
 const defaultQuestions = [
@@ -937,18 +1097,10 @@ export default function Estimate() {
           setEmailHelper("");
         }
         break;
-      // case "phone":
-      //   setPhone(event.target.value);
-      //   valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
-      //     event.target.value
-      //   );
-
-      //   if (!valid) {
-      //     setPhoneHelper("Invalid phone");
-      //   } else {
-      //     setPhoneHelper("");
-      //   }
-      //   break;
+      case "phone":
+        setPhone(event.target.value);
+        setPhoneHelper("");
+        break;
       default:
         break;
     }
@@ -1173,24 +1325,24 @@ export default function Estimate() {
       </Grid>
     </Grid>
   );
-  /* 
-    const websiteSelections = (
-      <Grid container direction="column" style={{ marginTop: "14em" }}>
-        <Grid item container alignItems="center">
-          <Grid item xs={2}>
-            <img src={check} alt="checkmark" />
-          </Grid>
-          <Grid item xs={10}>
-            <Typography variant="body1">
-              {`You want `}
-              {category === "Basic"
-                ? "a Basic Website."
-                : `an ${category} Website.`}
-            </Typography>
-          </Grid>
+
+  const websiteSelections = (
+    <Grid container direction="column" style={{ marginTop: "14em" }}>
+      <Grid item container alignItems="center">
+        <Grid item xs={2}>
+          <img src={check} alt="checkmark" />
+        </Grid>
+        <Grid item xs={10}>
+          <Typography variant="body1">
+            {`You want `}
+            {category === "Basic"
+              ? "a Basic Website."
+              : `an ${category} Website.`}
+          </Typography>
         </Grid>
       </Grid>
-    ); */
+    </Grid>
+  );
 
   return (
     <Grid container direction="row">
@@ -1202,9 +1354,8 @@ export default function Estimate() {
       >
         <Grid
           item
-          style={{ marginTop: "12em", marginLeft: matchesMD ? 0 : "5em" }}
-        >
-          <Typography variant="h1" align={matchesMD ? "center" : undefined}>
+          style={{ marginTop: matchesMD ? '4em' : "12em", marginLeft: matchesMD ? 0 : "7em" }}>
+          <Typography className={classes.header1} variant="h1" align={matchesMD ? "center" : undefined}>
             Arviointi kotisivujen hinnasta.
           </Typography>
         </Grid>
@@ -1215,7 +1366,7 @@ export default function Estimate() {
         container
         direction="column"
         alignItems="center"
-        style={{ marginRight: matchesMD ? 0 : "2em", marginBottom: "25em" }}
+        style={{ marginRight: matchesMD ? 0 : "2em", marginBottom: "20em" }}
       >
         {questions
           .filter(question => question.active)
@@ -1225,26 +1376,26 @@ export default function Estimate() {
                 <Typography
                   align="center"
                   variant="h2"
-                  style={{
-                    fontWeight: 500,
-                    fontSize: "2.25rem",
-                    marginTop: "1em",
-                    lineHeight: 1.25,
-                    marginLeft: matchesSM ? "1em" : 0,
-                    marginRight: matchesSM ? "1em" : 0
-                  }}
+                  className={classes.header2}
                 >
                   {question.title}
                 </Typography>
+
+
                 <Typography
-                  variant="body1"
+                  className={classes.header2}
+                  variant="h2"
                   align="center"
-                  style={{ marginBottom: "2.5em" }}
                   gutterBottom
                 >
-                  {question.subtitle}
+                  <span className={classes.questionSubtitle}>
+                    {question.subtitle}
+                  </span>
                 </Typography>
               </Grid>
+
+
+              {/* Options Block */}
               <Grid item container>
                 {question.options.map(option => (
                   <Grid
@@ -1258,6 +1409,7 @@ export default function Estimate() {
                       borderRadius: 0,
                       marginBottom: matchesSM ? "1.5em" : 0,
                       backgroundColor: option.selected
+                        // Background color
                         ? theme.palette.common.grey0
                         : undefined
                     }}
@@ -1268,14 +1420,12 @@ export default function Estimate() {
                     <Grid item style={{ maxWidth: "14em" }}>
                       <Typography
                         align="center"
-                        variant="h6"
-                        style={{
-                          lineHeight: 1,
-                          marginBottom: "1em"
-                        }}
+                        variant="h5"
                       >
                         {option.title}
                       </Typography>
+
+
                       <Typography align="center" variant="caption">
                         {option.subtitle}
                       </Typography>
@@ -1324,6 +1474,7 @@ export default function Estimate() {
             </IconButton>
           </Grid>
         </Grid>
+
         <Grid item>
           <Button
             variant="contained"
@@ -1446,11 +1597,11 @@ export default function Estimate() {
               alignItems={matchesSM ? "center" : undefined}
             >
               <Hidden smDown>
-                {/*   <Grid item>
+                <Grid item>
                   {questions.length > 2
                     ? softwareSelections
                     : websiteSelections}
-                </Grid> */}
+                </Grid>
               </Hidden>
               <Grid item>
                 <Button
