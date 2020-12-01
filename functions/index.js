@@ -35,7 +35,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         mailOptions = {
           from: 'Art Bachmann',
           to: "artifyfi@gmail.com",
-          subject: "Arviointi!",
+          subject: "Artify on vastaanottanut Teidän viestin!!",
           html: `
             <p style="font-size: 16px;">From: ${name}</p>
             <p style="font-size: 16px;">Email: ${email}</p>
@@ -58,7 +58,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         mailOptions = {
           from: 'Art Bachmann',
           to: "artifyfi@gmail.com",
-          subject: "Arviointi!",
+          subject: "Artify on vastaanottanut Teidän viestin!i!",
           html: `
             <p style="font-size: 16px;">From: ${name}</p>
             <p style="font-size: 16px;">Email: ${email}</p>
@@ -77,7 +77,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
           if (error) {
             res.send(error);
           } else {
-            res.send("Arviointi.");
+            res.send("Artify on vastaanottanut Teidän viestin!.");
           }
         });
       }
@@ -85,7 +85,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
       mailOptions = {
         from: 'Art Bachmann',
         to: email,
-        subject: "We have received your message!",
+        subject: "Artify on vastaanottanut Teidän viestin!!",
         html: `
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
   <html
@@ -287,13 +287,13 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                         <tr>
                           <td align="center">
                             <a
-                              href="http://www.arcsoftwaredevelopment.com/"
+                              href="http://www.artify.fi/"
                               target="_blank"
                             >
                               <img
                                 align="center"
-                                src="https://i.imgur.com/o1hebvN.jpg"
-                                alt="Arc Development"
+                                src="https://res.cloudinary.com/artb/image/upload/c_scale,w_1653/v1606761867/GatsbyBanner.png"
+                                alt="Artify kotisivut"
                                 width="600"
                                 height=""
                                 style="width:600px; max-width:600px; display:block;"
@@ -396,7 +396,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                                           align="center"
                                           style="padding:20px 0px 0px 0px; font-family: 'Roboto', Tahoma, Segoe, sans-serif; font-size:20px; font-weight:normal; line-height:25.50px; color:#868686; text-align:center;"
                                         >
-                                          Thanks for placing your estimate request! We'll go over the details and get back to you as soon as possible.
+                                        Kiitos hinta-arvioinnin lähettämisestä! Käymme läpi yksityiskohdat ja otamme sinuun yhteyttä mahdollisimman pian.
                                         </td>
                                       </tr>
                                     </table>
@@ -456,7 +456,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                             valign="middle"
                             width="64.666666%"
                             style="width: 64.666666%; background-repeat:no-repeat; background-position:top right"
-                            background="https://i.imgur.com/6IymB98.jpg"
+                            background="https://res.cloudinary.com/artb/image/upload/v1606762467/ArtifyLogo_zkp0sw.jpg"
                           >
                             <table
                               align="center"
@@ -658,14 +658,14 @@ exports.sendMail = functions.https.onRequest((req, res) => {
         if (error) {
           res.send(error);
         } else {
-          res.send("Message sent successfully.");
+          res.send("Viesti lähetetty onnistuneesti.");
         }
       });
 
       mailOptions = {
         from: 'Art Bachmann',
         to: email,
-        subject: "We have received your message!",
+        subject: "Artify on vastaanottanut Teidän viestin!",
         html: `
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
   <html
@@ -867,12 +867,12 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                         <tr>
                           <td align="center">
                             <a
-                              href="http://www.arcsoftwaredevelopment.com/"
+                              href="http://www.artify.fi/"
                               target="_blank"
                             >
                               <img
                                 align="center"
-                                src="https://i.imgur.com/o1hebvN.jpg"
+                                src="https://res.cloudinary.com/artb/image/upload/v1606761867/GatsbyBanner.png"
                                 alt="Arc Development"
                                 width="600"
                                 height=""
@@ -1037,7 +1037,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                             valign="middle"
                             width="64.666666%"
                             style="width: 64.666666%; background-repeat:no-repeat; background-position:top right"
-                            background="https://i.imgur.com/6IymB98.jpg"
+                            background="https://res.cloudinary.com/artb/image/upload/v1606762467/ArtifyLogo_zkp0sw.jpg"
                           >
                             <table
                               align="center"

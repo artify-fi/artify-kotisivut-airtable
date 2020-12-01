@@ -48,13 +48,17 @@ import verkkokauppa from '../../assets/images/arviointi/verkkokauppa.webp'
 
 const useStyles = makeStyles(theme => ({
   icon: {
-    width: "12em",
-    height: "10em"
+    width: "16em",
+    height: "16em",
+    [theme.breakpoints.down("sm")]: {
+      width: "12em",
+      height: "12em",
+    }
   },
   estimateButton: {
     ...theme.typography.estimate,
     borderRadius: 50,
-    backgroundColor: theme.palette.common.orange,
+    backgroundColor: theme.palette.common.grey5,
     height: 50,
     width: 225,
     marginTop: "5em",
@@ -1223,7 +1227,7 @@ export default function Estimate() {
                   variant="h2"
                   style={{
                     fontWeight: 500,
-                    // fontSize: "2.25rem",
+                    fontSize: "2.25rem",
                     marginTop: "1em",
                     lineHeight: 1.25,
                     marginLeft: matchesSM ? "1em" : 0,
@@ -1334,7 +1338,7 @@ export default function Estimate() {
               getCategory();
             }}
           >
-            Get Estimate
+            Hinta-arviointi
           </Button>
         </Grid>
       </Grid>
@@ -1349,7 +1353,7 @@ export default function Estimate() {
         <Grid container justify="center">
           <Grid item style={{ marginTop: "1em" }}>
             <Typography variant="h2" align="center">
-              Estimate
+              Hinnan arviointi
             </Typography>
           </Grid>
         </Grid>
@@ -1418,7 +1422,7 @@ export default function Estimate() {
                   align={matchesSM ? "center" : undefined}
                   style={{ lineHeight: 1.1 }}
                 >
-                  We can create this digital solution for an estimated{" "}
+                  Voimme toteuttaa Teidän vision kotisuvuista noin{" "}
                   <span className={classes.specialText}>
                     ${total.toFixed(2)}
                   </span>
@@ -1428,9 +1432,8 @@ export default function Estimate() {
                   paragraph
                   align={matchesSM ? "center" : undefined}
                 >
-                  Fill out your name, number, and email, place your request, and
-                  we’ll get back to you with details moving forward and a final
-                  price.
+                  Kirjoita nimesi ja sähköpostiosoitteesi, lähetä pyyntösi ja
+                  palaamme sinuun enemmän yksityiskohtaisilla tiedoilla.
                 </Typography>
               </Grid>
             </Grid>
@@ -1465,7 +1468,7 @@ export default function Estimate() {
                     <CircularProgress />
                   ) : (
                       <React.Fragment>
-                        Place Request
+                        Lähetä pyyntö
                         <img
                           src={send}
                           alt="paper airplane"
