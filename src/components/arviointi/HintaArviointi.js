@@ -1058,7 +1058,7 @@ export default function Estimate() {
         setCategory("");
         break;
       case "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.":
-        setQuestions(landingPageQuestions);
+        setQuestions(kotisivutQuestions);
         setService(newSelected.title);
         setPlatforms([]);
         setFeatures([]);
