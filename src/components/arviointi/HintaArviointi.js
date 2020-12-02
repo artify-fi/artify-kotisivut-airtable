@@ -47,6 +47,7 @@ import verkkokauppa from '../../assets/images/arviointi/verkkokauppa.webp'
 import yksiKieli from '../../assets/images/arviointi/yksiKielitr.png'
 import kolmeKielta from '../../assets/images/arviointi/kolmeKieltatr.png'
 import montaKielta from '../../assets/images/arviointi/montaKieltatr.png'
+import infoBackground from '../../assets/images/abstract_background_small.webp'
 
 
 
@@ -59,6 +60,39 @@ const useStyles = makeStyles(theme => ({
       height: "12em",
     }
   },
+
+  infoBackground: {
+    backgroundImage: `url(${infoBackground})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    position: 'sticky',
+    width: '100%',
+    // larger than 1920
+    [theme.breakpoints.down('xl')]: {
+      height: '240vh',
+    },
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      height: '240vh',
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      height: '226vh'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      height: '204vh',
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      height: '220vh',
+    },
+  },
+
   estimateButton: {
     ...theme.typography.estimate,
     borderRadius: 50,
@@ -1348,7 +1382,9 @@ export default function Estimate() {
   );
 
   return (
-    <Grid container direction="row">
+    <Grid container
+      direction="row"
+      className={classes.infoBackground}>
       <Grid
         item
         container
