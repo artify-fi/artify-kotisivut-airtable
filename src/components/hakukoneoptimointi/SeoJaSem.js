@@ -204,7 +204,7 @@ export default function About(props) {
           }}
           variant="h1">
           Miten saada näkyvyyttä hakukoneissa? Onko yritykselläsi toimiva verkkosivu jolle
-          haluat enemmän liikennettä, hinakyselyä, myyntiä tai tuotemerkkitietoisuutta mutta
+          haluat enemmän liikennettä, hintakyselyä, myyntiä tai tuotemerkkitietoisuutta mutta
           et tiedä miten sen saavuttaisit tai miten hakukoneoptimointi ja hakukonemarkkinointi
           auttaisivat sivustosi havaittavuudessa?
         </Typography>

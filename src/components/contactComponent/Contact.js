@@ -161,7 +161,7 @@ export default function Contact(props) {
           <Grid container alignItems='center' direction="column" style={{ width: matchesMD ? '80vw' : '30vw' }}>
             <Grid item justify='center'>
               <Typography className={classes.header} align={matchesMD ? "center" : undefined} variant="h2">
-                Yksinkertaiset kotisivut.
+                Progressiiviset kotisivut.
                 <br />
                 Vallankumoukselliset tulokset.
               </Typography>
@@ -184,6 +184,16 @@ export default function Contact(props) {
                   }}
                 />
               </Grid>
+              <Typography
+                variant='subtitle2'
+                align={matchesMD ? 'center' : undefined}
+                style={{ fontSize: '1.2rem' }}>
+                Art Bachmann
+                <br />
+                <span style={{ fontSize: '0,8rem' }}>
+                  puh. 041 743 1350
+                </span>
+              </Typography>
 
               <Grid container item
                 justify={'center'}>
