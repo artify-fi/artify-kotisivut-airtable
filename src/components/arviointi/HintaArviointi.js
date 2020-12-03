@@ -24,13 +24,13 @@ import backArrowDisabled from "../../assets/images/arviointi-react/backArrowDisa
 import forwardArrow from "../../assets/images/arviointi-react/forwardArrow.svg";
 import forwardArrowDisabled from "../../assets/images/arviointi-react/forwardArrowDisabled.svg";
 
-import person from "../../assets/images/arviointi-react/person.svg";
-import persons from "../../assets/images/arviointi-react/persons.svg";
-import info from "../../assets/images/arviointi-react/info.svg";
-import people from "../../assets/images/arviointi-react/people.svg";
-import customized from "../../assets/images/arviointi-react/customized.svg";
-import data from "../../assets/images/arviointi-react/data.svg";
-import globe from "../../assets/images/arviointi-react/globe.svg";
+// import person from "../../assets/images/arviointi-react/person.svg";
+// import persons from "../../assets/images/arviointi-react/persons.svg";
+// import info from "../../assets/images/arviointi-react/info.svg";
+// import people from "../../assets/images/arviointi-react/people.svg";
+// import customized from "../../assets/images/arviointi-react/customized.svg";
+// import data from "../../assets/images/arviointi-react/data.svg";
+// import globe from "../../assets/images/arviointi-react/globe.svg";
 
 import responsiveApp from '../../assets/images/arviointi/appDevelopmentTr.webp'
 import digiMarkkinointi from "../../assets/images/arviointi/digitalMarketingW.webp";
@@ -150,6 +150,7 @@ const useStyles = makeStyles(theme => ({
   header2: {
     // larger than 1920
     ...theme.typography.h2,
+
     [theme.breakpoints.down('xl')]: {
     },
 
@@ -169,6 +170,7 @@ const useStyles = makeStyles(theme => ({
       marginBottom: '1.8em',
       paddingLeft: '2em',
       paddingRight: '2em',
+      maxWidth: '60vw'
     },
 
     // 600 up to 960
@@ -177,7 +179,8 @@ const useStyles = makeStyles(theme => ({
       marginTop: '0.6em',
       marginBottom: '1.6em',
       paddingLeft: '1.4em',
-      paddingRight: '1.4em'
+      paddingRight: '1.4em',
+      maxWidth: '80vw'
     },
 
     // 0 upt to 600
@@ -187,7 +190,8 @@ const useStyles = makeStyles(theme => ({
       paddingRight: '1.2em',
       marginTop: '2em',
       marginTop: '0.2em',
-      marginBottom: '0.4em'
+      marginBottom: '0.4em',
+      maxWidth: '80vw'
     },
   },
 
@@ -320,7 +324,7 @@ const defaultQuestions = [
         icon: responsiveApp,
         iconAlt: "progressiivinen kotisivu desktop tablet mobile",
         selected: false,
-        cost: 0
+        cost: 300
       },
       {
         id: 2,
@@ -329,7 +333,7 @@ const defaultQuestions = [
         icon: verkkokauppa,
         iconAlt: "headlessCMS sisällönhallinta",
         selected: false,
-        cost: 0
+        cost: 400
       },
       {
         id: 3,
@@ -338,7 +342,7 @@ const defaultQuestions = [
         icon: digiMarkkinointi,
         iconAlt: "digitaalisen marketingin työvälinet",
         selected: false,
-        cost: 0
+        cost: 700
       }
     ]
   }
@@ -357,7 +361,7 @@ const landingPageQuestions = [
         icon: responsiveApp,
         iconAlt: "progressiivinen landingpage desktop tablet mobile",
         selected: false,
-        cost: 0
+        cost: 300
       },
       {
         id: 2,
@@ -366,7 +370,7 @@ const landingPageQuestions = [
         icon: verkkokauppa,
         iconAlt: "responsiivinen kotisivu",
         selected: false,
-        cost: 0
+        cost: 400
       },
       {
         id: 3,
@@ -375,14 +379,14 @@ const landingPageQuestions = [
         icon: digiMarkkinointi,
         iconAlt: "headless wordpress ja gatsby.js",
         selected: false,
-        cost: 0
+        cost: 700
       }
     ]
   },
 
   {
     id: 2,
-    title: "Miten haluatte että toteutamme Teidän kotisivun sisällön?",
+    title: "Miten haluatte että toteutamme Teidän kotisivun sisällön?",
     subtitle: "Valitse sopiva ja menee nuolella seuraavaan valikoimaan.",
     options: [
       {
@@ -392,25 +396,25 @@ const landingPageQuestions = [
         icon: landingPage,
         iconAlt: "valmiina oleva sisältö",
         selected: false,
-        cost: 1000
+        cost: 100
       },
       {
         id: 2,
-        title: "Haluamme että laaditte itse hakukoneystävällisen sisällön.",
+        title: "Haluamme että laaditte  hakukoneystävällisen sisällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "Artify luo oman sisällön",
         selected: false,
-        cost: 1000
+        cost: 200
       },
       {
         id: 3,
-        title: "Tuotatte itse sisällön ja päivitätte sitä ensimmäisen vuoden",
+        title: "Tuotatte sisällön ja päivitätte sitä ensimmäisen vuoden",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "päätön wordpress",
         selected: false,
-        cost: 1000
+        cost: 500
       }
     ],
     active: true
@@ -426,8 +430,8 @@ const landingPageQuestions = [
         subtitle: 'Esim. Google Analytics',
         icon: sisallonhallinta,
         iconAlt: "google analytics search engine optimization",
-        selected: false,
-        cost: 250
+        selected: true,
+        cost: 50
       },
       {
         id: 2,
@@ -436,7 +440,7 @@ const landingPageQuestions = [
         icon: chatBot,
         iconAlt: "chat bot voice bot",
         selected: false,
-        cost: 250
+        cost: 150
       },
       {
         id: 3,
@@ -445,8 +449,8 @@ const landingPageQuestions = [
         icon: search,
         iconAlt: "etsinta ja tiedon haku",
         selected: false,
-        cost: 250
-      }
+        cost: 50
+      },
     ],
     active: false
   },
@@ -462,7 +466,7 @@ const landingPageQuestions = [
         icon: login,
         iconAlt: "sisäänkirjoitus käyttäjille",
         selected: false,
-        cost: 250
+        cost: 50
       },
       {
         id: 2,
@@ -471,7 +475,7 @@ const landingPageQuestions = [
         icon: videoPlayer,
         iconAlt: "video esitys",
         selected: false,
-        cost: 250
+        cost: 50
       },
       {
         id: 3,
@@ -480,7 +484,7 @@ const landingPageQuestions = [
         icon: pushNotification,
         iconAlt: "tiedon lähettäminen push ilmoitukset",
         selected: false,
-        cost: 250
+        cost: 50
       }
     ],
     active: false
@@ -497,7 +501,7 @@ const landingPageQuestions = [
         icon: yksiKieli,
         iconAlt: "yksi kieli sivustollaf",
         selected: false,
-        cost: 250
+        cost: 0
       },
       {
         id: 2,
@@ -506,7 +510,7 @@ const landingPageQuestions = [
         icon: kolmeKielta,
         iconAlt: "kolme kielta sivustolla",
         selected: false,
-        cost: 500
+        cost: 200
       },
       {
         id: 3,
@@ -515,7 +519,7 @@ const landingPageQuestions = [
         icon: montaKielta,
         iconAlt: "paljon eri kielia sivustolla",
         selected: false,
-        cost: 1000
+        cost: 300
       }
     ],
     active: false
@@ -540,7 +544,7 @@ const landingPageQuestions = [
         icon: kustomoitu,
         iconAlt: "kustomoitu kotisivu",
         selected: false,
-        cost: 1.125
+        cost: 1.25
       },
       {
         id: 3,
@@ -549,7 +553,7 @@ const landingPageQuestions = [
         icon: ainulaatuinen,
         iconAlt: "personaalinen ainulaatuinen kotisivu",
         selected: false,
-        cost: 1.25
+        cost: 1.75
       }
     ],
     active: false
@@ -569,7 +573,7 @@ const kotisivutQuestions = [
         icon: responsiveApp,
         iconAlt: "progressiivinen landingpage desktop tablet mobile",
         selected: false,
-        cost: 0
+        cost: 300
       },
       {
         id: 2,
@@ -578,7 +582,7 @@ const kotisivutQuestions = [
         icon: verkkokauppa,
         iconAlt: "responsiivinen kotisivu",
         selected: false,
-        cost: 0
+        cost: 400
       },
       {
         id: 3,
@@ -587,13 +591,13 @@ const kotisivutQuestions = [
         icon: digiMarkkinointi,
         iconAlt: "headless wordpress ja gatsby.js",
         selected: false,
-        cost: 0
+        cost: 700
       }
     ]
   },
   {
     id: 2,
-    title: "Miten haluatte että toteutamme Teidän kotisivun hakukoneoptimoidun sisällön?",
+    title: "Miten haluatte että toteutamme Teidän kotisivun sisällön?",
     subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
     options: [
       {
@@ -603,25 +607,25 @@ const kotisivutQuestions = [
         icon: landingPage,
         iconAlt: "valmiina oleva sisältö",
         selected: false,
-        cost: 1000
+        cost: 100
       },
       {
         id: 2,
-        title: "Haluamme että laaditte itse hakukoneystävällisen sisällön.",
+        title: "Haluamme että laaditte hakukoneystävällisen sisällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "Artify luo oman sisällön",
         selected: false,
-        cost: 1000
+        cost: 200
       },
       {
         id: 3,
-        title: "Tuotatte itse sisällön ja päivitätte sitä ensimmäisen vuoden.",
+        title: "Tuotatte sisällön ja päivitätte sitä ensimmäisen vuoden.",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "päätön wordpress",
         selected: false,
-        cost: 1000
+        cost: 500
       }
     ],
     active: true
@@ -637,8 +641,8 @@ const kotisivutQuestions = [
         subtitle: 'Esim. Google Analytics',
         icon: sisallonhallinta,
         iconAlt: "google analytics search engine optimization",
-        selected: false,
-        cost: 250
+        selected: true,
+        cost: 50
       },
       {
         id: 2,
@@ -647,7 +651,7 @@ const kotisivutQuestions = [
         icon: chatBot,
         iconAlt: "chat bot voice bot",
         selected: false,
-        cost: 250
+        cost: 150
       },
       {
         id: 3,
@@ -656,7 +660,7 @@ const kotisivutQuestions = [
         icon: search,
         iconAlt: "etsinta ja tiedon haku",
         selected: false,
-        cost: 250
+        cost: 50
       }
     ],
     active: false
@@ -673,7 +677,7 @@ const kotisivutQuestions = [
         icon: login,
         iconAlt: "sisäänkirjoitus käyttäjille",
         selected: false,
-        cost: 250
+        cost: 50
       },
       {
         id: 2,
@@ -682,7 +686,7 @@ const kotisivutQuestions = [
         icon: videoPlayer,
         iconAlt: "video esitys",
         selected: false,
-        cost: 250
+        cost: 50
       },
       {
         id: 3,
@@ -691,7 +695,7 @@ const kotisivutQuestions = [
         icon: pushNotification,
         iconAlt: "tiedon lähettäminen push ilmoitukset",
         selected: false,
-        cost: 250
+        cost: 50
       }
     ],
     active: false
@@ -708,7 +712,7 @@ const kotisivutQuestions = [
         icon: yksiKieli,
         iconAlt: "yksi kieli sivustollaf",
         selected: false,
-        cost: 250
+        cost: 0
       },
       {
         id: 2,
@@ -717,7 +721,7 @@ const kotisivutQuestions = [
         icon: kolmeKielta,
         iconAlt: "kolme kielta sivustolla",
         selected: false,
-        cost: 500
+        cost: 200
       },
       {
         id: 3,
@@ -726,7 +730,7 @@ const kotisivutQuestions = [
         icon: montaKielta,
         iconAlt: "paljon eri kielia sivustolla",
         selected: false,
-        cost: 1000
+        cost: 300
       }
     ],
     active: false
@@ -751,7 +755,7 @@ const kotisivutQuestions = [
         icon: kustomoitu,
         iconAlt: "kustomoitu kotisivu",
         selected: false,
-        cost: 1.125
+        cost: 1.25
       },
       {
         id: 3,
@@ -760,7 +764,7 @@ const kotisivutQuestions = [
         icon: ainulaatuinen,
         iconAlt: "personaalinen ainulaatuinen kotisivu",
         selected: false,
-        cost: 1.25
+        cost: 1.75
       }
     ],
     active: false
@@ -780,7 +784,7 @@ const headlessWPQuestions = [
         icon: responsiveApp,
         iconAlt: "progressiivinen landingpage desktop tablet mobile",
         selected: false,
-        cost: 0
+        cost: 300
       },
       {
         id: 2,
@@ -790,7 +794,7 @@ const headlessWPQuestions = [
         icon: verkkokauppa,
         iconAlt: "responsiivinen kotisivu",
         selected: false,
-        cost: 0
+        cost: 400
       },
       {
         id: 3,
@@ -799,13 +803,13 @@ const headlessWPQuestions = [
         icon: digiMarkkinointi,
         iconAlt: "headless wordpress ja gatsby.js",
         selected: false,
-        cost: 0
+        cost: 700
       }
     ]
   },
   {
     id: 2,
-    title: "Miten haluatte että toteutamme Teidän kotisivun hakukoneoptimoidun sisällön?",
+    title: "Miten haluatte että toteutamme Teidän kotisivun sisällön?",
     subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
     options: [
       {
@@ -815,25 +819,25 @@ const headlessWPQuestions = [
         icon: landingPage,
         iconAlt: "valmiina oleva sisältö",
         selected: false,
-        cost: 1000
+        cost: 100
       },
       {
         id: 2,
-        title: "Haluamme että laaditte itse hakukoneystävällisen sisällön.",
+        title: "Haluamme että laaditte hakukoneystävällisen sisällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "Artify luo oman sisällön",
         selected: false,
-        cost: 1000
+        cost: 200
       },
       {
         id: 3,
-        title: "Tuotatte itse sisällön ja päivitätte sitä seuraavan vuoden",
+        title: "Tuotatte sisällön ja päivitätte sitä seuraavan vuoden",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "päätön wordpress",
         selected: false,
-        cost: 1000
+        cost: 500
       }
     ],
     active: true
@@ -849,8 +853,8 @@ const headlessWPQuestions = [
         subtitle: 'Esim. Google Analytics',
         icon: sisallonhallinta,
         iconAlt: "google analytics search engine optimization",
-        selected: false,
-        cost: 250
+        selected: true,
+        cost: 50
       },
       {
         id: 2,
@@ -859,7 +863,7 @@ const headlessWPQuestions = [
         icon: chatBot,
         iconAlt: "chat bot voice bot",
         selected: false,
-        cost: 250
+        cost: 150
       },
       {
         id: 3,
@@ -868,7 +872,7 @@ const headlessWPQuestions = [
         icon: search,
         iconAlt: "etsinta ja tiedon haku",
         selected: false,
-        cost: 250
+        cost: 50
       }
     ],
     active: false
@@ -885,7 +889,7 @@ const headlessWPQuestions = [
         icon: login,
         iconAlt: "sisäänkirjoitus käyttäjille",
         selected: false,
-        cost: 250
+        cost: 50
       },
       {
         id: 2,
@@ -894,7 +898,7 @@ const headlessWPQuestions = [
         icon: videoPlayer,
         iconAlt: "video esitys",
         selected: false,
-        cost: 250
+        cost: 50
       },
       {
         id: 3,
@@ -903,7 +907,7 @@ const headlessWPQuestions = [
         icon: pushNotification,
         iconAlt: "tiedon lähettäminen push ilmoitukset",
         selected: false,
-        cost: 250
+        cost: 50
       }
     ],
     active: false
@@ -920,7 +924,7 @@ const headlessWPQuestions = [
         icon: yksiKieli,
         iconAlt: "yksi kieli sivustollaf",
         selected: false,
-        cost: 250
+        cost: 0
       },
       {
         id: 2,
@@ -929,7 +933,7 @@ const headlessWPQuestions = [
         icon: kolmeKielta,
         iconAlt: "kolme kielta sivustolla",
         selected: false,
-        cost: 500
+        cost: 200
       },
       {
         id: 3,
@@ -938,7 +942,7 @@ const headlessWPQuestions = [
         icon: montaKielta,
         iconAlt: "paljon eri kielia sivustolla",
         selected: false,
-        cost: 1000
+        cost: 300
       }
     ],
     active: false
@@ -963,7 +967,7 @@ const headlessWPQuestions = [
         icon: kustomoitu,
         iconAlt: "kustomoitu kotisivu",
         selected: false,
-        cost: 1.125
+        cost: 1.25
       },
       {
         id: 3,
@@ -972,7 +976,7 @@ const headlessWPQuestions = [
         icon: ainulaatuinen,
         iconAlt: "personaalinen ainulaatuinen kotisivu",
         selected: false,
-        cost: 1.25
+        cost: 1.75
       }
     ],
     active: false
@@ -1203,7 +1207,7 @@ export default function Estimate() {
       questions
         .filter(
           question =>
-            question.title === "Miten haluatte että toteutamme Teidän kotisivun hakukoneoptimoidun sisällön?"
+            question.title === "Miten haluatte että toteutamme Teidän kotisivun sisällön?"
         )
         .map(question => question.options.filter(option => option.selected))[0]
         .map(option => newPlatforms.push(option.title));
@@ -1436,13 +1440,16 @@ export default function Estimate() {
         container
         direction="column"
         alignItems="center"
-        style={{ marginRight: matchesMD ? 0 : "2em", marginBottom: "10em" }}
-      >
+        style={{
+          marginRight: matchesMD ? 0 : "2em", marginBottom: "10em"
+
+        }}>
+
         {questions
           .filter(question => question.active)
           .map((question, index) => (
             <React.Fragment key={index}>
-              <Grid item>
+              <Grid item justify='center' >
                 <Typography
                   align="center"
                   variant="h2"
@@ -1453,6 +1460,7 @@ export default function Estimate() {
                 </Typography>
 
                 <Typography
+                  style={{ color: '#932424' }}
                   className={classes.questionSubtitle}
                   variant="h5"
                   align="center"
