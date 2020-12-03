@@ -86,16 +86,31 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       `Open Sans Condensed`,
+    //       `Merriweather`,
+
+    //     ],
+    //     display: 'swap'
+    //   }
+    // },
+
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
         fonts: [
           `Open Sans Condensed`,
           `Merriweather`,
-
+          // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
-    }
+        display: "swap",
+        attributes: {
+          rel: "stylesheet preload prefetch",
+        },
+      },
+    },
   ],
 }
