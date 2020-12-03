@@ -103,8 +103,8 @@ const useStyles = makeStyles(theme => ({
     ...theme.typography.h1,
     // larger than 1920
     [theme.breakpoints.down('xl')]: {
-      fontSize: '2rem',
-      marginTop: '2.6em',
+      fontSize: '2.4rem',
+      marginTop: '1.2em',
       marginBottom: '1em',
       paddingLeft: '3em',
       paddingRight: '3em',
@@ -112,8 +112,8 @@ const useStyles = makeStyles(theme => ({
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '2.2rem',
-      marginTop: '2.6em',
+      fontSize: '2.4rem',
+      marginTop: '1em',
       marginBottom: '1em',
       paddingLeft: '2.3em',
       paddingRight: '2.3em',
@@ -121,16 +121,16 @@ const useStyles = makeStyles(theme => ({
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
+      fontSize: '2rem',
       marginTop: '2.6em',
-      fontSize: '1.9rem',
       paddingLeft: '2em',
       paddingRight: '2em',
     },
 
     // 600 up to 960        
     [theme.breakpoints.down('sm')]: {
-      marginTop: '2em',
-      fontSize: '1.5rem',
+      marginTop: '4em',
+      fontSize: '1.6rem',
       paddingLeft: '0.8em',
       paddingRight: '0.8em',
     },
@@ -139,8 +139,8 @@ const useStyles = makeStyles(theme => ({
     fontFamily: 'Open Sans Condensed',
     fontWeight: '500',
     [theme.breakpoints.down('xs')]: {
-      marginTop: '2.2em',
-      fontSize: '1.4rem',
+      marginTop: '4em',
+      fontSize: '1.6rem',
       marginBottom: '1em',
       paddingLeft: '0.8em',
       paddingRight: '0.8em',
@@ -151,13 +151,13 @@ const useStyles = makeStyles(theme => ({
     // larger than 1920
     ...theme.typography.h2,
     [theme.breakpoints.down('xl')]: {
-      fontSize: '2rem',
     },
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
       fontSize: '1.8rem',
       marginTop: '2em',
+      marginBottom: '2em',
       paddingLeft: '3em',
       paddingRight: '3em'
     },
@@ -165,28 +165,71 @@ const useStyles = makeStyles(theme => ({
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
       fontSize: '1.6rem',
+      marginTop: '1em',
+      marginBottom: '1.8em',
       paddingLeft: '2em',
-      paddingRight: '2em'
+      paddingRight: '2em',
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
       fontSize: '1.4rem',
+      marginTop: '0.6em',
+      marginBottom: '1.6em',
       paddingLeft: '1.4em',
       paddingRight: '1.4em'
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      fontSize: '1.2rem',
+      fontSize: '1.4rem',
       paddingLeft: '1.2em',
       paddingRight: '1.2em',
+      marginTop: '2em',
+      marginTop: '0.2em',
       marginBottom: '0.4em'
     },
   },
 
   optionsTitle: {
+    ...theme.typography.h4,
+    marginBottom: '0.2em',
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2rem',
+      paddingLeft: '1.3em',
+      paddingRight: '1.3em'
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.8rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+    },
+  },
+
+  optionsSubtitle: {
     ...theme.typography.h5,
+    ...theme.palette.common.blue1dark,
     [theme.breakpoints.down('xl')]: {
       fontSize: '1.8rem',
       marginBottom: '2em',
@@ -194,23 +237,24 @@ const useStyles = makeStyles(theme => ({
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '1.7rem',
-      paddingLeft: '3em',
-      paddingRight: '3em'
+      fontSize: '1.5rem',
+      paddingLeft: '1.3em',
+      paddingRight: '1.3em'
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      fontSize: '1.4rem',
-      paddingLeft: '2em',
-      paddingRight: '2em'
+      fontSize: '1.3rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+      color: 'blue1dark',
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.2rem',
-      paddingLeft: '1.4em',
-      paddingRight: '1.4em'
+      fontSize: '1.1rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em'
     },
 
     // 0 upt to 600
@@ -231,23 +275,26 @@ const useStyles = makeStyles(theme => ({
 
     // 1280  and  up to 1920
     [theme.breakpoints.down('lg')]: {
-      fontSize: '1.6rem',
+      fontSize: '1.4rem',
       paddingLeft: '3em',
-      paddingRight: '3em'
+      paddingRight: '3em',
+      marginBottom: '2em'
     },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      fontSize: '1.4rem',
+      fontSize: '1.2rem',
       paddingLeft: '2em',
-      paddingRight: '2em'
+      paddingRight: '2em',
+      marginBottom: '2em'
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.2rem',
+      fontSize: '1.1rem',
       paddingLeft: '1.4em',
-      paddingRight: '1.4em'
+      paddingRight: '1.4em',
+      marginBottom: '1.4em'
     },
 
     // 0 upt to 600
@@ -1389,7 +1436,7 @@ export default function Estimate() {
         container
         direction="column"
         alignItems="center"
-        style={{ marginRight: matchesMD ? 0 : "2em", marginBottom: "20em" }}
+        style={{ marginRight: matchesMD ? 0 : "2em", marginBottom: "10em" }}
       >
         {questions
           .filter(question => question.active)
@@ -1399,21 +1446,18 @@ export default function Estimate() {
                 <Typography
                   align="center"
                   variant="h2"
+                  gutterBottom
                   className={classes.header2}
                 >
                   {question.title}
                 </Typography>
 
-
                 <Typography
-                  className={classes.header2}
-                  variant="h2"
+                  className={classes.questionSubtitle}
+                  variant="h5"
                   align="center"
-                  gutterBottom
                 >
-                  <span className={classes.questionSubtitle}>
-                    {question.subtitle}
-                  </span>
+                  {question.subtitle}
                 </Typography>
               </Grid>
 
@@ -1442,20 +1486,22 @@ export default function Estimate() {
                     md
                   >
                     <Grid item container justify='center'>
-                      <Grid item
-                        className={classes.optionsTitle}
-                        style={{ maxWidth: "31vw" }}>
+                      <Grid item>
+
                         <Typography
                           align="center"
-
-                          variant="h5"
-                          style={{ textSizeAdjust: '40%', textAlign: 'center' }}
+                          variant="h4"
+                          className={classes.optionsTitle}
                         >
                           {option.title}
+
                         </Typography>
 
 
-                        <Typography align="center" variant="caption">
+                        <Typography
+                          align="center"
+                          className={classes.optionsSubtitle}
+                          variant="h5">
                           {option.subtitle}
                         </Typography>
                       </Grid>
