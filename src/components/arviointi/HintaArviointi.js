@@ -268,8 +268,8 @@ const defaultQuestions = [
     options: [
       {
         id: 1,
-        title: "Moderni GatsbyJS responsiivinen LandingPage, erinomainen vaihtoehto esitellä yrityksen liiketoimnitaa ja tukemaan digimarkkinointia.",
-        subtitle: null,
+        title: "Moderni GatsbyJS LandingPage",
+        subtitle: 'Mobiilisovellus kaupan päälle*',
         icon: responsiveApp,
         iconAlt: "progressiivinen kotisivu desktop tablet mobile",
         selected: false,
@@ -277,8 +277,8 @@ const defaultQuestions = [
       },
       {
         id: 2,
-        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
-        subtitle: null,
+        title: 'GatsbyJS progressiivinen kotisivu',
+        subtitle: 'Mobiilisovellus kaupan päälle*',
         icon: verkkokauppa,
         iconAlt: "headlessCMS sisällönhallinta",
         selected: false,
@@ -305,8 +305,8 @@ const landingPageQuestions = [
     options: [
       {
         id: 1,
-        title: "Moderni GatsbyJS responsiivinen LandingPage, erinomainen vaihtoehto esitellä yrityksen liiketoimnitaa ja tukemaan digimarkkinointia.",
-        subtitle: null,
+        title: "Moderni GatsbyJS LandingPage",
+        subtitle: 'Mobiilisovellus kaupan päälle',
         icon: responsiveApp,
         iconAlt: "progressiivinen landingpage desktop tablet mobile",
         selected: false,
@@ -314,8 +314,8 @@ const landingPageQuestions = [
       },
       {
         id: 2,
-        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
-        subtitle: null,
+        title: 'Moderni GatsbyJS progressiivinen kotisivu',
+        subtitle: 'Mobiilisovellus kaupan päälle',
         icon: verkkokauppa,
         iconAlt: "responsiivinen kotisivu",
         selected: false,
@@ -516,8 +516,8 @@ const kotisivutQuestions = [
     options: [
       {
         id: 1,
-        title: "Moderni GatsbyJS responsiivinen LandingPage, erinomainen vaihtoehto esitellä yrityksen liiketoimnitaa ja tukemaan digimarkkinointia.",
-        subtitle: null,
+        title: "Moderni GatsbyJS LandingPage",
+        subtitle: 'Mobiilisovellus kaupan päälle',
         icon: responsiveApp,
         iconAlt: "progressiivinen landingpage desktop tablet mobile",
         selected: false,
@@ -525,8 +525,8 @@ const kotisivutQuestions = [
       },
       {
         id: 2,
-        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
-        subtitle: null,
+        title: 'Moderni GatsbyJS progressiivinen kotisivu',
+        subtitle: 'Mobiilisovellus kaupan päälle',
         icon: verkkokauppa,
         iconAlt: "responsiivinen kotisivu",
         selected: false,
@@ -727,8 +727,8 @@ const headlessWPQuestions = [
     options: [
       {
         id: 1,
-        title: "Moderni GatsbyJS responsiivinen LandingPage, erinomainen vaihtoehto esitellä yrityksen liiketoimnitaa ja tukemaan digimarkkinointia.",
-        subtitle: null,
+        title: "Moderni GatsbyJS LandingPage",
+        subtitle: 'Mobiilisovellus kaupan päälle',
         icon: responsiveApp,
         iconAlt: "progressiivinen landingpage desktop tablet mobile",
         selected: false,
@@ -736,7 +736,8 @@ const headlessWPQuestions = [
       },
       {
         id: 2,
-        title: "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.",
+        title: 'Moderni GatsbyJS progressiivinen kotisivu',
+        subtitle: 'Mobiilisovellus kaupan päälle',
         subtitle: null,
         icon: verkkokauppa,
         iconAlt: "responsiivinen kotisivu",
@@ -1064,7 +1065,7 @@ export default function Estimate() {
     }
 
     switch (newSelected.title) {
-      case "Moderni GatsbyJS responsiivinen LandingPage, erinomainen vaihtoehto esitellä yrityksen liiketoimnitaa ja tukemaan digimarkkinointia.":
+      case "Moderni GatsbyJS LandingPage":
         setQuestions(landingPageQuestions);
         setService(newSelected.title);
         setPlatforms([]);
@@ -1073,7 +1074,7 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-      case "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.":
+      case "Moderni GatsbyJS progressiivinen kotisivu":
         setQuestions(kotisivutQuestions);
         setService(newSelected.title);
         setPlatforms([]);
