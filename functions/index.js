@@ -292,7 +292,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                             >
                               <img
                                 align="center"
-                                src="https://res.cloudinary.com/artb/image/upload/c_scale,w_1653/v1606761867/GatsbyBanner.png"
+                                src="https://res.cloudinary.com/artb/image/upload/v1606942370/Gatsby_header_for_mail_ktccio.jpg"
                                 alt="Artify kotisivut"
                                 width="600"
                                 height=""
@@ -343,21 +343,7 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                           cellspacing="0"
                           cellpadding="0"
                         >
-                          <tr>
-                            <td
-                              align="center"
-                              width="85"
-                              style="width:85px"
-                              class="mob_hidden"
-                            >
-                              <img
-                                align="center"
-                                src="https://i.imgur.com/HR1pI0g.gif"
-                                alt=""
-                                width="85"
-                                style="width:85px; display:block"
-                              />
-                            </td>
+                          <tr>                           
                             <td
                               align="center"
                               style="padding:160px 0px"
@@ -381,43 +367,21 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                                       width="100%"
                                       border="0"
                                       cellspacing="0"
-                                      cellpadding="0"
-                                    >
-                                      <tr>
-                                        <td
-                                          align="center"
-                                          style="font-family: 'Pacifico', cursive; font-size:34.28px; font-weight:normal; line-height:35px; color:#0b72b9; text-align:center;"
-                                        >
-                                          We're ready.
-                                        </td>
-                                      </tr>
+                                      cellpadding="0"                                    >
+                                     
                                       <tr>
                                         <td
                                           align="center"
                                           style="padding:20px 0px 0px 0px; font-family: 'Roboto', Tahoma, Segoe, sans-serif; font-size:20px; font-weight:normal; line-height:25.50px; color:#868686; text-align:center;"
                                         >
-                                        Kiitos hinta-arvioinnin lähettämisestä! Käymme läpi yksityiskohdat ja otamme sinuun yhteyttä mahdollisimman pian.
+                                        Kiitos hinta-arvioinnin lähettämisestä! Käymme läpi yksityiskohdat ja otamme Teihiin yhteyttä mahdollisimman pian.
                                         </td>
                                       </tr>
                                     </table>
                                   </td>
                                 </tr>
                               </table>
-                            </td>
-                            <td
-                              align="center"
-                              width="85"
-                              style="width:85px"
-                              class="mob_hidden"
-                            >
-                              <img
-                                align="center"
-                                src="https://i.imgur.com/HR1pI0g.gif"
-                                alt=""
-                                width="85"
-                                style="width:85px; display:block"
-                              />
-                            </td>
+                            </td>                           
                           </tr>
                         </table>
                       </div>
@@ -457,175 +421,10 @@ exports.sendMail = functions.https.onRequest((req, res) => {
                             width="64.666666%"
                             style="width: 64.666666%; background-repeat:no-repeat; background-position:top right"
                             background="https://res.cloudinary.com/artb/image/upload/v1606762467/ArtifyLogo_zkp0sw.jpg"
-                          >
-                            <table
-                              align="center"
-                              width="100%"
-                              border="0"
-                              cellspacing="0"
-                              cellpadding="0"
                             >
-                              <tr>
-                                <td align="center" style="padding:40px 10px">
-                                  <table
-                                    align="center"
-                                    width="100%"
-                                    border="0"
-                                    cellspacing="0"
-                                    cellpadding="0"
-                                  >
-                                    <tr>
-                                      <td
-                                        align="left"
-                                        width="18"
-                                        style="width:18px; padding:0px 0px 7px 0px"
-                                      >
-                                        <img
-                                          align="left"
-                                          src="https://i.imgur.com/ZtalTud.png"
-                                          alt=""
-                                          width="18"
-                                          height="18"
-                                          style="width:18px; max-width:18px; display:block"
-                                          class="sm_icon"
-                                        />
-                                      </td>
-                                      <td
-                                        align="left"
-                                        style="padding:0px 0px 7px 5px;font-family: 'Roboto', Tahoma, Segoe, sans-serif; font-size:13.70px; font-weight:normal; line-height:14px; color:#ffffff; text-align:left;"
-                                        class="font11"
-                                      >
-                                        (555) 555-5555
-                                      </td>
-                                    </tr>
-                                    <tr>
-                                      <td
-                                        align="left"
-                                        width="18"
-                                        style="width:18px;"
-                                      >
-                                        <img
-                                          align="left"
-                                          src="https://i.imgur.com/9T7w2Kv.png"
-                                          alt=""
-                                          width="18"
-                                          height="12"
-                                          style="width:18px; max-width:18px; display:block"
-                                          class="sm_icon"
-                                        />
-                                      </td>
-                                      <td
-                                        align="left"
-                                        style="padding:0px 0px 0px 5px;font-family: 'Roboto', Tahoma, Segoe, sans-serif; font-size:13.70px; font-weight:normal; line-height:14px; color:#ffffff; text-align:left;"
-                                        class="font11"
-                                      >
-                                        <a
-                                          href="mailto:zachary@gmail.com"
-                                          style="color:#ffffff; text-decoration:none!important"
-                                          >zachary@gmail.com</a
-                                        >
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </th>
-                          <th
-                            align="left"
-                            valign="middle"
-                            bgcolor="#0b71b9"
-                            width="35.333333%"
-                            style="width: 35.333333%;"
-                          >
-                            <table
-                              align="center"
-                              width="100%"
-                              border="0"
-                              cellspacing="0"
-                              cellpadding="0"
-                            >
-                              <tr>
-                                <td
-                                  align="center"
-                                  style="padding:0px 44px 0px 0px"
-                                  class="mob_pr12"
-                                >
-                                  <table
-                                    align="right"
-                                    border="0"
-                                    cellspacing="0"
-                                    cellpadding="0"
-                                  >
-                                    <tr>
-                                      <td
-                                        align="center"
-                                        style="padding:0px 14px"
-                                        class="spacer"
-                                      >
-                                        <a
-                                          href="https://www.instagram.com/development_arc"
-                                          target="_blank"
-                                        >
-                                          <img
-                                            align="center"
-                                            src="https://i.imgur.com/auxeind.png"
-                                            alt=""
-                                            width="31"
-                                            height="31"
-                                            style="width:31px; max-width:31px; display:block"
-                                            class="social_icon"
-                                          />
-                                        </a>
-                                      </td>
-                                      <td
-                                        align="center"
-                                        style="padding:0px 14px"
-                                        class="spacer"
-                                      >
-                                        <a
-                                          href="https://twitter.com/development_arc"
-                                          target="_blank"
-                                        >
-                                          <img
-                                            align="center"
-                                            src="https://i.imgur.com/QV0qmLC.png"
-                                            alt=""
-                                            width="30"
-                                            height="25"
-                                            style="width:30px; max-width:30px; display:block"
-                                            class="social_icon"
-                                          />
-                                        </a>
-                                      </td>
-                                      <td
-                                        align="center"
-                                        style="padding:0px 14px"
-                                        class="spacer"
-                                      >
-                                        <a
-                                          href="https://www.facebook.com/"
-                                          target="_blank"
-                                        >
-                                          <img
-                                            align="center"
-                                            src="https://i.imgur.com/wPb7ijk.png"
-                                            alt=""
-                                            width="17"
-                                            height="31"
-                                            style="width:17px; max-width:17px; display:block"
-                                            class="social_icon"
-                                          />
-                                        </a>
-                                      </td>
-                                    </tr>
-                                  </table>
-                                </td>
-                              </tr>
-                            </table>
-                          </th>
-                        </tr>
-                      </table>
+                            </th>
+                          </tr>                               
+                      </table>                        
                     </td>
                   </tr>
                 </table>
@@ -640,6 +439,8 @@ exports.sendMail = functions.https.onRequest((req, res) => {
           `
       };
 
+
+      // Second mail
       transporter.sendMail(mailOptions);
     } else {
       mailOptions = {
