@@ -286,7 +286,7 @@ const defaultQuestions = [
       },
       {
         id: 3,
-        title: "Turvallinen ja täysin Teidän muokattavana oleva sisällönhallinta Headless WordPressin ja GatsbyJS:n yhteistyöllä.",
+        title: "GatsbyJS:n verkkosovellus Headless WordPressin taustajärjestelmällä.",
         subtitle: null,
         icon: digiMarkkinointi,
         iconAlt: "digitaalisen marketingin työvälinet",
@@ -300,7 +300,7 @@ const defaultQuestions = [
 const landingPageQuestions = [
   {
     id: 1,
-    title: "Millaisesta kotisivusta olet kiinnostunut?",
+    title: "Millaisista kotisivuista olette kiinnostunut?",
     active: false,
     options: [
       {
@@ -323,7 +323,7 @@ const landingPageQuestions = [
       },
       {
         id: 3,
-        title: "Turvallinen ja täysin Teidän muokattavana oleva sisällönhallinta Headless WordPressin ja GatsbyJS:n yhteistyöllä.",
+        title: "GatsbyJS:n verkkosovellus Headless WordPressin taustajärjestelmällä.",
         subtitle: null,
         icon: digiMarkkinointi,
         iconAlt: "headless wordpress ja gatsby.js",
@@ -332,14 +332,15 @@ const landingPageQuestions = [
       }
     ]
   },
+
   {
     id: 2,
-    title: "Miten haluatte että toteutamme Teidän kotisivun hakukoneoptimoidun sisällön?",
-    subtitle: "Valitse sopiva ja mene nuolella seuraavaan valikkoimaan.",
+    title: "Miten haluatte että toteutamme Teidän kotisivun sisällön?",
+    subtitle: "Valitse sopiva ja menee nuolella seuraavaan valikoimaan.",
     options: [
       {
         id: 1,
-        title: "Minulla on omat tekstit ja kuvamateriaali hyvin valituilla avainsanoilla",
+        title: "Tuotamme itse hyvänlaatuisen sisällön",
         subtitle: null,
         icon: landingPage,
         iconAlt: "valmiina oleva sisältö",
@@ -348,7 +349,7 @@ const landingPageQuestions = [
       },
       {
         id: 2,
-        title: "Haluan että tuotatte itse hakukoneystävällisen ja mielenkiintoisen silällön.",
+        title: "Haluamme että laaditte itse hakukoneystävällisen sisällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "Artify luo oman sisällön",
@@ -357,7 +358,7 @@ const landingPageQuestions = [
       },
       {
         id: 3,
-        title: "Haluan että tuotatte itse sisällön ja täydennätte sitä aktiivisesti ensimmäisen vuoden.",
+        title: "Tuotatte itse sisällön ja päivitätte sitä ensimmäisen vuoden",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "päätön wordpress",
@@ -370,12 +371,12 @@ const landingPageQuestions = [
   {
     id: 3,
     title: "Minkälaäisiä komponentteja tarvitsette sivustolle?",
-    subtitle: "Valitse haluaetessa useampi ja liikuu nuolella seuraavaan valikkoon.",
+    subtitle: "Valitse haluaetessa useampi ja liikuu nuolella seuraavaan valikoimaan.",
     options: [
       {
         id: 1,
         title: "Analyyttiset työvälinet",
-        subtitle: null,
+        subtitle: 'Esim. Google Analytics',
         icon: sisallonhallinta,
         iconAlt: "google analytics search engine optimization",
         selected: false,
@@ -534,7 +535,7 @@ const kotisivutQuestions = [
       },
       {
         id: 3,
-        title: "Turvallinen ja täysin Teidän muokattavana oleva sisällönhallinta Headless WordPressin ja GatsbyJS:n yhteistyöllä.",
+        title: "GatsbyJS:n verkkosovellus Headless WordPressin taustajärjestelmällä.",
         subtitle: null,
         icon: digiMarkkinointi,
         iconAlt: "headless wordpress ja gatsby.js",
@@ -550,7 +551,7 @@ const kotisivutQuestions = [
     options: [
       {
         id: 1,
-        title: "Minulla on omat tekstit ja kuvamateriaali hyvin valituilla avainsanoilla",
+        title: "Tuotamme itse hyvänlaatuisen sisällön",
         subtitle: null,
         icon: landingPage,
         iconAlt: "valmiina oleva sisältö",
@@ -559,7 +560,7 @@ const kotisivutQuestions = [
       },
       {
         id: 2,
-        title: "Haluan että tuotatte itse hakukoneystävällisen ja mielenkiintoisen silällön.",
+        title: "Haluamme että laaditte itse hakukoneystävällisen sisällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "Artify luo oman sisällön",
@@ -568,7 +569,7 @@ const kotisivutQuestions = [
       },
       {
         id: 3,
-        title: "Haluan että tuotatte itse sisällön ja täydennätte sitä aktiivisesti ensimmäisen vuoden.",
+        title: "Tuotatte itse sisällön ja päivitätte sitä ensimmäisen vuoden.",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "päätön wordpress",
@@ -586,7 +587,7 @@ const kotisivutQuestions = [
       {
         id: 1,
         title: "Analyyttiset työvälinet",
-        subtitle: null,
+        subtitle: 'Esim. Google Analytics',
         icon: sisallonhallinta,
         iconAlt: "google analytics search engine optimization",
         selected: false,
@@ -746,7 +747,7 @@ const headlessWPQuestions = [
       },
       {
         id: 3,
-        title: "Turvallinen ja täysin Teidän muokattavana oleva sisällönhallinta Headless WordPressin ja GatsbyJS:n yhteistyöllä.",
+        title: "GatsbyJS:n verkkosovellus Headless WordPressin taustajärjestelmällä.",
         subtitle: null,
         icon: digiMarkkinointi,
         iconAlt: "headless wordpress ja gatsby.js",
@@ -762,7 +763,7 @@ const headlessWPQuestions = [
     options: [
       {
         id: 1,
-        title: "Minulla on omat tekstit ja kuvamateriaali hyvin valituilla avainsanoilla",
+        title: "Tuotamme itse hyvänlaatuisen sisällön",
         subtitle: null,
         icon: landingPage,
         iconAlt: "valmiina oleva sisältö",
@@ -771,7 +772,7 @@ const headlessWPQuestions = [
       },
       {
         id: 2,
-        title: "Haluan että tuotatte itse hakukoneystävällisen ja mielenkiintoisen silällön.",
+        title: "Haluamme että laaditte itse hakukoneystävällisen sisällön.",
         subtitle: null,
         icon: basicApp,
         iconAlt: "Artify luo oman sisällön",
@@ -780,7 +781,7 @@ const headlessWPQuestions = [
       },
       {
         id: 3,
-        title: "Haluan että tuotatte itse sisällön ja täydennätte sitä aktiivisesti ensimmäisen vuoden.",
+        title: "Tuotatte itse sisällön ja päivitätte sitä seuraavan vuoden",
         subtitle: null,
         icon: headlessApp,
         iconAlt: "päätön wordpress",
@@ -798,7 +799,7 @@ const headlessWPQuestions = [
       {
         id: 1,
         title: "Analyyttiset työvälinet",
-        subtitle: null,
+        subtitle: 'Esim. Google Analytics',
         icon: sisallonhallinta,
         iconAlt: "google analytics search engine optimization",
         selected: false,
@@ -1074,7 +1075,7 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-      case "Moderni GatsbyJS progressiivinen kotisivu":
+      case "GatsbyJS progressiivinen kotisivu":
         setQuestions(kotisivutQuestions);
         setService(newSelected.title);
         setPlatforms([]);
@@ -1083,7 +1084,7 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-      case "Turvallinen ja täysin Teidän muokattavana oleva sisällönhallinta Headless WordPressin ja GatsbyJS:n yhteistyöllä.":
+      case "GatsbyJS:n verkkosovellus Headless WordPressin taustajärjestelmällä.":
         setQuestions(headlessWPQuestions);
         setService(newSelected.title);
         setPlatforms([]);
