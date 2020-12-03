@@ -67,7 +67,7 @@ const Wrapper = styled.li`
       text-transform: capitalize;
       font-family: 'Merriweather';
       font-weight: 500;
-      font-size: '1.1rem';
+      font-size: '1.2rem';
       .icon {
         color: #88add2;
       }
