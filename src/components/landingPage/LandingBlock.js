@@ -300,8 +300,8 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '1em',
     fontFamily: 'Open Sans Condensed',
     fontSize: '1.2rem',
-    fontWeight: 400,
-    color: '#443f3f',
+    fontWeight: 500,
+    color: '#1b2733',
 
     // larger than 1920  
     [theme.breakpoints.down('xl')]: {
