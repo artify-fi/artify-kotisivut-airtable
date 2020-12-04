@@ -128,7 +128,10 @@ export default function Contact(props) {
                       className="form-control"
                     ></textarea>
                   </div>
-                  <button type="submit" className="submit-btn btn">
+                  <button
+                    type="submit"
+                    aria-label='lähetä viesti painike'
+                    className="submit-btn btn">
                     Lähetä vesti
                   </button>
                 </form>
@@ -202,6 +205,7 @@ export default function Contact(props) {
                   to="/hinnasto/hinta_arviointi"
                   className={classes.estimateButton}
                   variant='outlined'
+                  aria-label='hinnan arvioinnin painike'
                   className={classes.estimateButton}>
                   <span>
                     Hinta-arviointi

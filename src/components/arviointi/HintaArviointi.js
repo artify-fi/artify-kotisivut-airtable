@@ -24,14 +24,6 @@ import backArrowDisabled from "../../assets/images/arviointi-react/backArrowDisa
 import forwardArrow from "../../assets/images/arviointi-react/forwardArrow.svg";
 import forwardArrowDisabled from "../../assets/images/arviointi-react/forwardArrowDisabled.svg";
 
-// import person from "../../assets/images/arviointi-react/person.svg";
-// import persons from "../../assets/images/arviointi-react/persons.svg";
-// import info from "../../assets/images/arviointi-react/info.svg";
-// import people from "../../assets/images/arviointi-react/people.svg";
-// import customized from "../../assets/images/arviointi-react/customized.svg";
-// import data from "../../assets/images/arviointi-react/data.svg";
-// import globe from "../../assets/images/arviointi-react/globe.svg";
-
 import responsiveApp from '../../assets/images/arviointi/appDevelopmentTr.webp'
 import digiMarkkinointi from "../../assets/images/arviointi/digitalMarketingW.webp";
 import landingPage from '../../assets/images/arviointi/landingPageW.webp'
@@ -50,7 +42,6 @@ import montaKielta from '../../assets/images/arviointi/montaKieltatr.png'
 import yksinkertainen from '../../assets/images/arviointi/yksinkertainen.webp'
 import kustomoitu from '../../assets/images/arviointi/kustomoitu.webp'
 import ainulaatuinen from '../../assets/images/arviointi/ainulaatuinen.webp'
-//import infoBackground from '../../assets/images/abstract_background_small.webp'
 import infoBackground from '../../assets/images/background4.jpg'
 import gatsbyLogo from "../../assets/images/Gatsby_Logo.webp";
 
@@ -1394,6 +1385,40 @@ export default function Estimate() {
                 </Typography>
               </Grid>
 
+              <Grid
+                item
+                container
+                justify="space-between"
+                style={{ width: "18em", marginTop: "1.6em", marginBottom: '1.6em' }}
+              >
+                <Grid item>
+                  <IconButton
+                    disabled={backButtonDisabled()}
+                    onClick={previousQuestion}
+                    aria-label='takaisiin painike'
+                  >
+                    <img
+                      src={backButtonDisabled() ? backArrowDisabled : backArrow}
+                      alt="Edellinen kysymys"
+                    />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <IconButton
+                    disabled={forwardButtonDisabled()}
+                    onClick={nextQuestion}
+                    aria-label='eteenpain painike'
+                  >
+                    <img
+                      src={
+                        forwardButtonDisabled() ? forwardArrowDisabled : forwardArrow
+                      }
+                      alt="Seuraava kysymys"
+                    />
+                  </IconButton>
+                </Grid>
+              </Grid>
+
 
               {/* Options Block */}
               <Grid item container>
@@ -1402,6 +1427,7 @@ export default function Estimate() {
                     item
                     container
                     component={Button}
+                    aria-label='painike sisältää kuvan palvelusta ja selittävän tekstin'
                     onClick={() => handleSelect(option.id)}
                     style={{
                       display: "block",
@@ -1453,41 +1479,12 @@ export default function Estimate() {
               </Grid>
             </React.Fragment>
           ))}
-        <Grid
-          item
-          container
-          justify="space-between"
-          style={{ width: "18em", marginTop: "3em" }}
-        >
-          <Grid item>
-            <IconButton
-              disabled={backButtonDisabled()}
-              onClick={previousQuestion}
-            >
-              <img
-                src={backButtonDisabled() ? backArrowDisabled : backArrow}
-                alt="Previous question"
-              />
-            </IconButton>
-          </Grid>
-          <Grid item>
-            <IconButton
-              disabled={forwardButtonDisabled()}
-              onClick={nextQuestion}
-            >
-              <img
-                src={
-                  forwardButtonDisabled() ? forwardArrowDisabled : forwardArrow
-                }
-                alt="Next question"
-              />
-            </IconButton>
-          </Grid>
-        </Grid>
+
 
         <Grid item>
           <Button
             variant="contained"
+            aria-label='hinta arviointi painikke'
             disabled={estimateDisabled()}
             className={classes.estimateButton}
             onClick={() => {
@@ -1617,6 +1614,7 @@ export default function Estimate() {
               <Grid item>
                 <Button
                   variant="contained"
+                  aria-label='lähtä pyyntö painikke'
                   className={classes.estimateButton}
                   onClick={sendEstimate}
                   disabled={
@@ -1644,6 +1642,7 @@ export default function Estimate() {
                 <Grid item style={{ marginBottom: matchesSM ? "5em" : 0 }}>
                   <Button
                     style={{ fontWeight: 300 }}
+                    aria-label='painikke tilauksen peruutamisesta'
                     color="primary"
                     onClick={() => setDialogOpen(false)}
                   >

@@ -17,14 +17,14 @@ import frontendDevelopment from "../../assets/images/frontendDevelopment.webp";
 
 const useStyles = makeStyles(theme => ({
 
-  subtitle: {
-    marginBottom: "3em",
-    maxWidth: '36vw',
-    [theme.breakpoints.down("sm")]: {
-      maxWidth: '86vw',
-      textAlign: 'center'
-    }
-  },
+  // subtitle: {
+  //   marginBottom: "3em",
+  //   maxWidth: '36vw',
+  //   [theme.breakpoints.down("sm")]: {
+  //     maxWidth: '86vw',
+  //     textAlign: 'center'
+  //   }
+  // },
   icon: {
     marginLeft: "2em",
     [theme.breakpoints.down("xs")]: {
@@ -63,32 +63,145 @@ const useStyles = makeStyles(theme => ({
     position: 'sticky',
     width: '100%',
   },
-  mainHeading: {
+
+  // TIIVISTELMA HEADING1
+
+  heading1: {
+    ...theme.typography.h1,
     // larger than 1920
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+      marginTop: '2.6em',
+      marginBottom: '1em',
+      paddingLeft: '3em',
+      paddingRight: '3em',
+    },
 
     // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2.2rem',
+      marginTop: '2.6em',
+      marginBottom: '1em',
+      paddingLeft: '2.3em',
+      paddingRight: '2.3em',
+    },
 
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
-      fontSize: '2.2rem',
+      marginTop: '2.6em',
+      fontSize: '1.9rem',
+      paddingLeft: '2em',
+      paddingRight: '2em',
+    },
+
+    // 600 up to 960        
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '2em',
+      fontSize: '1.5rem',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+    // 0 upt to 600
+    fontFamily: 'Open Sans Condensed',
+    fontWeight: '500',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '2.2em',
+      fontSize: '1.4rem',
+      marginBottom: '1em',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+  },
+
+  // TIIVISTELMA HEADING2
+
+  heading2: {
+    // larger than 1920
+    ...theme.typography.h2,
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.8rem',
+      marginTop: '2em',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.6rem',
+      paddingLeft: '2em',
+      paddingRight: '2em'
     },
 
     // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.6rem',
-      paddingLeft: '2.6em',
-      paddingRight: '2.6em',
-      marginBottom: '2em'
+      fontSize: '1.4rem',
+      paddingLeft: '1.4em',
+      paddingRight: '1.4em'
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      fontSize: '1.4rem',
+      fontSize: '1.2rem',
       paddingLeft: '1.2em',
-      paddingRight: '1.2em'
+      paddingRight: '1.2em',
+      marginBottom: '0.4em'
+
+    },
+  },
+
+
+  // TIIVISTELMA TEXT
+  text: {
+    paddingLeft: '2em',
+    paddingRight: '2em',
+    paddingTop: '1em',
+    fontFamily: 'Open Sans Condensed',
+    fontSize: '1.2rem',
+    fontWeight: 400,
+    color: '#443f3f',
+
+    // larger than 1920  
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1.4rem',
+      marginBottom: '2em',
     },
 
-  }
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem',
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.3rem',
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
+    },
+  },
 
 }));
 
@@ -122,19 +235,19 @@ export default function Services(props) {
 
       <Grid
         item
+        container
+        direction={matchesMD ? "column" : "row"}
+        alignItems={matchesMD ? "center" : undefined}
         style={{
-          marginLeft: matchesMD ? 0 : "5em",
-          marginTop: matchesMD ? "10em" : "12em",
-          maxWidth: matchesMD ? undefined : '60vw',
-          alignItems: matchesMD ? 'center' : undefined,
+          marginTop: matchesMD ? "7em" : "12em",
           marginBottom: '2em',
         }}
       >
         <Typography
-          className={classes.mainHeading}
-          align={matchesMD ? "center" : undefined}
+          className={classes.heading1}
+          style={{ width: matchesMD ? '80vw' : '60vw' }}
+          alignItems={matchesMD ? "center" : undefined}
           variant="h1"
-          component="h1"
           gutterBottom
         >
           Kattava palveluvalikoima josta saat kotisivullesi kompaktin
@@ -173,6 +286,8 @@ export default function Services(props) {
           <Grid
             md
             item
+            container
+            justify={matchesMD ? 'center' : undefined}
             style={{
               marginLeft: matchesMD ? 0 : "5em",
               textAlign: matchesMD ? "center" : undefined
@@ -180,7 +295,11 @@ export default function Services(props) {
 
             <Typography
               paragraph
-              style={{ marginRight: matchesMD ? 0 : '4em' }}
+              className={classes.heading2}
+              style={{
+                marginRight: matchesMD ? 0 : '4em',
+                maxWidth: matchesMD ? '80vw' : matchesSM ? '300px' : undefined
+              }}
               variant="h4">
               Progressiiviset GatsbyJS kotisivut
             </Typography>
@@ -188,7 +307,7 @@ export default function Services(props) {
             <Typography
               variant="subtitle1"
               style={{ marginRight: matchesMD ? 0 : '4em' }}
-              className={classes.subtitle}>
+              className={classes.text}>
               Progressiivinen kotisivu on verkkosivusto, joka muistuttaa natiivisovellusta,
               mutta toimii mobiilin ja tietokoneen selaimessa. Ne toimivat ilman lataamista,
               synkronoituvat taustalla ja lähettävät push-ilmoituksia.
@@ -200,13 +319,14 @@ export default function Services(props) {
               component={Link}
               to="/palvelut/kotisivut"
               variant="outlined"
+              aria-label='lue enemman gatsby js progressiiviseista kotisivuista'
               className={classes.learnButton}
               onClick={() => {
                 props.setValue(1);
                 props.setSelectedIndex(2);
               }}>
 
-              <span style={{ marginRight: 10 }}>Katso Lisää</span>
+              <span style={{ marginRight: 10 }}>Lue Lisää</span>
               <ButtonArrow
                 width={10}
                 height={10}
@@ -253,6 +373,7 @@ export default function Services(props) {
 
             <Typography
               paragraph
+              className={classes.heading2}
               style={{ marginRight: matchesMD ? 0 : '4em' }}
               variant="h4">
               Hakukoneoptimointi (SEO)
@@ -261,7 +382,7 @@ export default function Services(props) {
             <Typography
               variant="subtitle1"
               style={{ marginRight: matchesMD ? 0 : '4em' }}
-              className={classes.subtitle}>
+              className={classes.text}>
               SEO <span style={{ fontWeight: 'bolder' }} >(Search Engine Optimization)</span>
               eli hakukoneoptimointi, mikä tarkoittaa sitä, että luomamme kotisivut ovat
               helposti löydettävissä esim. Googlessa tai Yahoossa ja siksi houkuttelevat
@@ -272,6 +393,7 @@ export default function Services(props) {
               component={Link}
               to="/palvelut/hakukoneOptimointi"
               variant="outlined"
+              aria-label='lue enemman hakukone optimoinnista'
               className={classes.learnButton}
               onClick={() => {
                 props.setValue(1);
@@ -308,6 +430,7 @@ export default function Services(props) {
 
             <Typography
               paragraph
+              className={classes.heading2}
               style={{ marginRight: matchesMD ? 0 : '4em' }}
               variant="h4">
               Hakukonemarkkinointi (SEM)
@@ -316,7 +439,7 @@ export default function Services(props) {
             <Typography
               variant="subtitle1"
               style={{ marginRight: matchesMD ? 0 : '8em' }}
-              className={classes.subtitle}>
+              className={classes.text}>
               SEM <span style={{ fontWeight: 'bolder' }}>(Search Engine Marketing)</span> on
               näkyvyyden lisäämistä maksullisten strategioiden avulla.
               *Tuotemerkit maksavat siitä, että heidän mainokset näkyvät hakukoneiden
@@ -325,7 +448,7 @@ export default function Services(props) {
 
             <Typography
               variant="subtitle1"
-              className={classes.subtitle}>
+              className={classes.text}>
               *tuotemerkki määritellään "henkilön käsitykseksi tuotteesta, palvelusta,
               kokemuksesta tai organisaatiosta".
             </Typography>
@@ -333,6 +456,7 @@ export default function Services(props) {
             <Button
               component={Link}
               to="/palvelut/hakukoneOptimointi"
+              aria-label='lue enemman hakukone markkinoinnista'
               variant="outlined"
               className={classes.learnButton}
               onClick={() => {
@@ -400,6 +524,7 @@ export default function Services(props) {
 
             <Typography
               paragraph
+              className={classes.heading2}
               style={{ marginRight: matchesMD ? 0 : '4em' }}
               variant="h4"
             >Digimarkkinointi & Google Analytics
@@ -408,7 +533,7 @@ export default function Services(props) {
             <Typography
               variant="subtitle1"
               style={{ marginRight: matchesMD ? 0 : '4em' }}
-              className={classes.subtitle}>
+              className={classes.text}>
               Vierailijoiden analysoiminen on nykyään oleellinen osa verkkosivojen kehittämisessä.
               Esimerkiksi kuinka kauan he ovat sivulla ja missä sekä miten he ovat tulleet sivulle.
               Google Analytics vastaa näiden lisäksi moniin muihin kysymyksiin.
@@ -420,8 +545,9 @@ export default function Services(props) {
 
             <Button
               component={Link}
-              to="/palvelut/hakukoneMarkkinointi"
+              to="/palvelut/digimarkkinointi"
               variant="outlined"
+              aria-label='lue enemman digimarkkinoinnista'
               className={classes.learnButton}
               onClick={() => {
                 props.setValue(1);
