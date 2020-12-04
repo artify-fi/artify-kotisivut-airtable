@@ -64,14 +64,14 @@ module.exports = {
         trackingId: 'UA-180499768-1'
       }
     },
-    // {
-    //   resolve: `gatsby-plugin-hotjar`,
-    //   options: {
-    //     includeInDevelopment: true, // optional parameter to include script in development
-    //     id: 2120624,
-    //     sv: 6,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        includeInDevelopment: true, // optional parameter to include script in development
+        id: 2120624,
+        sv: 6,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -86,31 +86,30 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       `Open Sans Condensed`,
-    //       `Merriweather`,
-
-    //     ],
-    //     display: 'swap'
-    //   }
-    // },
-
     {
-      resolve: `gatsby-plugin-google-fonts-with-attributes`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
           `Open Sans Condensed`,
           `Merriweather`,
-          // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
-        display: "swap",
-        attributes: {
-          rel: "stylesheet preload prefetch",
-        },
-      },
+        display: 'swap'
+      }
     },
+
+    // {
+    //   resolve: `gatsby-plugin-google-fonts-with-attributes`,
+    //   options: {
+    //     fonts: [
+    //       `Open Sans Condensed`,
+    //       `Merriweather`,
+    //       // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
+    //     ],
+    //     display: "swap",
+    //     attributes: {
+    //       rel: "stylesheet preload prefetch",
+    //     },
+    //   },
+    // },
   ],
 }
