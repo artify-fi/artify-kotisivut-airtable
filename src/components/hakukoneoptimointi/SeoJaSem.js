@@ -233,7 +233,7 @@ export default function About(props) {
       <Grid
         item
         className={classes.rowContainer}
-        style={{ marginTop: matchesMD ? "8em" : "10em" }}
+        style={{ marginTop: matchesMD ? "8em" : matchesSM ? '2em' : "14em" }}
       >
 
         {/* Yhteinen otsikko SEO JA SEM */}
@@ -245,7 +245,9 @@ export default function About(props) {
             marginLeft: matchesMD ? undefined : '3em',
             maxWidth: matchesMD ? undefined : '70vw',
           }}
-          variant="h1">
+          variant="h1"
+          className={classes.h1}>
+
           Miten saada näkyvyyttä hakukoneissa? Onko yritykselläsi toimiva verkkosivu jolle
           haluat enemmän liikennettä, hintakyselyä, myyntiä tai tuotemerkkitietoisuutta mutta
           et tiedä miten sen saavuttaisit tai miten hakukoneoptimointi ja hakukonemarkkinointi

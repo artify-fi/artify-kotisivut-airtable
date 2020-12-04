@@ -199,7 +199,8 @@ const useStyles = makeStyles(theme => ({
       fontSize: '1.2rem',
       paddingLeft: '0.4em',
       paddingRight: '0.4em',
-      marginBottom: '0.4em'
+      margin: 0,
+      maxWidth: '90vw'
     },
   },
 
@@ -239,9 +240,9 @@ export default function Services(props) {
         container
         justify={matchesMD ? 'center' : undefined}
         style={{
-          // marginLeft: matchesMD ? 0 : "5em",
+          marginLeft: matchesMD ? 0 : "5em",
           marginTop: matchesMD ? "10em" : "12em",
-          maxWidth: matchesMD ? '70vw' : '60vw',
+          maxWidth: '70vw',
           alignItems: matchesMD ? 'center' : undefined,
           marginBottom: '2em',
         }}
@@ -267,16 +268,16 @@ export default function Services(props) {
         <Grid
           container
           direction={matchesMD ? "column" : "row"}
-          justify={matchesMD ? "center" : "flex-stert"}
+          justify={matchesMD ? "center" : "flex-start"}
           className={classes.serviceContainer}
           style={{ marginTop: matchesMD ? "1em" : "5em" }} >
 
           <Grid
             item
             style={{
-              marginLeft: matchesMD ? 0 : "6em",
+              marginLeft: matchesMD ? 0 : "10em",
               textAlign: matchesMD ? "center" : undefined,
-              marginBottom: '4em'
+              marginTop: matchesMD ? '1em' : '6em'
             }}
             md>
             <img
@@ -354,9 +355,9 @@ export default function Services(props) {
           <Grid
             item
             style={{
-              marginLeft: matchesMD ? 0 : "6em",
+              marginLeft: matchesMD ? 0 : "10em",
               textAlign: matchesMD ? "center" : undefined,
-              marginBottom: '4em'
+              marginTop: '6em'
             }}
             md>
 
@@ -430,7 +431,8 @@ export default function Services(props) {
             style={{
               marginLeft: matchesMD ? 0 : "8em",
               textAlign: matchesMD ? "center" : undefined
-            }} >
+            }}
+            md>
 
             <Typography
               paragraph
@@ -474,15 +476,17 @@ export default function Services(props) {
                 height={10}
                 fill={theme.palette.common.blue} />
             </Button>
-
           </Grid>
+
           <Grid
+            item
             style={{
-              marginRight: matchesMD ? 0 : "6em",
+              marginLeft: matchesMD ? 0 : "10em",
               textAlign: matchesMD ? "center" : undefined,
-              marginBottom: '4em'
+              marginTop: matchesMD ? '2em' : '6em',
+              marginBottom: matchesMD ? '4em' : undefined
             }}
-            item>
+            md>
             <img
               className={classes.icon}
               alt="hakukonen markkinointi"
@@ -498,16 +502,17 @@ export default function Services(props) {
         <Grid
           container
           direction={matchesMD ? "column" : "row"}
-          justify={matchesMD ? "center" : "flex-stert"}
+          justify={matchesMD ? "center" : "flex-start"}
           className={classes.serviceContainer}
           style={{ marginTop: matchesMD ? "1em" : "5em" }} >
 
           <Grid
             item
             style={{
-              marginLeft: matchesMD ? 0 : "6em",
+              marginLeft: matchesMD ? 0 : "10em",
               textAlign: matchesMD ? "center" : undefined,
-              marginBottom: '4em'
+              marginTop: matchesMD ? '2em' : '6em',
+              marginBottom: matchesMD ? '4em' : undefined
             }}
             md>
             <img
