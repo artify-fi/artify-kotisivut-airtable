@@ -47,6 +47,153 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
+  // revolutionCard: {
+  //   width: '30vw',
+  //   [theme.breakpoints.down("sm")]: {
+  //     width: '50vw',
+  //   }
+  // },
+
+  // TIIVISTELMA HEADING1
+
+  heading1: {
+    ...theme.typography.h1,
+    // larger than 1920
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+      marginTop: '2.6em',
+      marginBottom: '1em',
+      paddingLeft: '3em',
+      paddingRight: '3em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '2.2rem',
+      marginTop: '2.6em',
+      marginBottom: '1em',
+      paddingLeft: '2.3em',
+      paddingRight: '2.3em',
+    },
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      marginTop: '2.6em',
+      fontSize: '1.9rem',
+      paddingLeft: '2em',
+      paddingRight: '2em',
+    },
+
+    // 600 up to 960        
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '2em',
+      fontSize: '1.5rem',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+    // 0 upt to 600
+    fontFamily: 'Open Sans Condensed',
+    fontWeight: '500',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '2.2em',
+      fontSize: '1.4rem',
+      marginBottom: '1em',
+      paddingLeft: '0.8em',
+      paddingRight: '0.8em',
+    },
+
+  },
+
+  // TIIVISTELMA HEADING2
+
+  heading2: {
+    // larger than 1920
+    ...theme.typography.h2,
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '2rem',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.8rem',
+      marginTop: '2em',
+      paddingLeft: '3em',
+      paddingRight: '3em'
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.6rem',
+      paddingLeft: '2em',
+      paddingRight: '2em'
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+      paddingLeft: '1.4em',
+      paddingRight: '1.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '1.2em',
+      paddingRight: '1.2em',
+      marginBottom: '0.4em'
+
+    },
+  },
+
+
+  // TIIVISTELMA TEXT
+  text: {
+    paddingLeft: '2em',
+    paddingRight: '2em',
+    paddingTop: '1em',
+    fontFamily: 'Open Sans Condensed',
+    fontSize: '1.2rem',
+    fontWeight: 400,
+    color: '#443f3f',
+
+    // larger than 1920  
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1.4rem',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem',
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.3rem',
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
+    },
+  },
+
+
   link: {
     color: '#45a3b2',
     textDecoration: 'underline',
@@ -80,6 +227,7 @@ export default function About(props) {
             maxWidth: matchesMD ? undefined : '70vw'
 
           }}
+          className={classes.heading1}
           variant="h1">
          GatsbyJS kotisivut ja mobiilisovellukset. Sivuston helppoudella ja suorituskyvyllä 
          on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen. 
@@ -89,12 +237,13 @@ export default function About(props) {
         item
         container
         justify="center"
+       
         className={classes.rowContainer}
         style={{ marginTop: "3em" }}
       >
         <Typography
           variant="h4"
-          align="center"
+          align="center"         
           className={classes.missionStatement}
         >
           Gatsby on kehys nykyaikaisten verkkosivujen ja sovellusten rakentamiseen.
@@ -135,9 +284,10 @@ export default function About(props) {
         >
 
         <Grid item>
-          <Grid item container justify="center" lg>
-          <Card
-            style={{ marginBottom: matchesMD ? '2em' : undefined }}
+          <Grid item container justify="center" md>
+            <Card
+            style={{ marginBottom: matchesMD ? '2em' : undefined,
+          marginTop: matchesMD ? undefined : '8em' }}
             className={classes.revolutionCard}>
             <CardContent >
               <Grid container>
@@ -176,31 +326,33 @@ export default function About(props) {
               justify="center"         
               style={{ marginTop: "1em" }}
             >
-            <Typography
-              variant='body1'
-              align="center"   
-              style={{ width: matchesSM ? '16em' : '20em' }}      
-            >
-              Skannaa QR-koodi tai napsauta kuvaa ja koe itse poikkeuksellisen hyvä suorituskysy 
-              useammasta laadukkaasta valokuvasta huolimatta. Gatsby:n käyttäminen kotisivujen 
-              kehittämisessä on loistava tapa lisätä sivustojen tehokkuutta, skaalautuvuutta ja 
-              turvallisuutta. Älä tilaa verkkosivua joka käyttää edellisen vuosikymmenen tekniikkaa. 
-              Gatsby:n avulla rakennetaan mahdollisimman tehokas verkkosivusto. 
-              
-            </Typography>
-      </Grid>
+              <Typography
+                variant='body1'
+                align="center"   
+                // className={classes.text}
+                style={{ width: matchesSM ? '16em' : '20em' }}      
+              >
+                Skannaa QR-koodi tai napsauta kuvaa ja koe itse poikkeuksellisen hyvä suorituskysy 
+                useammasta laadukkaasta valokuvasta huolimatta. Gatsby:n käyttäminen kotisivujen 
+                kehittämisessä on loistava tapa lisätä sivustojen tehokkuutta, skaalautuvuutta ja 
+                turvallisuutta. Älä tilaa verkkosivua joka käyttää edellisen vuosikymmenen tekniikkaa. 
+                Gatsby:n avulla rakennetaan mahdollisimman tehokas verkkosivusto. 
+                
+              </Typography>
+            </Grid>
             </CardContent>
           </Card>
           </Grid>
         </Grid>
+
         <Grid item>
           <Grid
             item
             container
             direction="column"
-            lg
+            md
             style={{
-              maxWidth: "35em",
+              maxWidth: "45em",
               // marginLeft: matchesMD ? undefined : '7em'
             }} >
 
@@ -208,6 +360,7 @@ export default function About(props) {
               <Typography
                 align={matchesMD ? "center" : undefined}
                 variant="h3"
+                className={classes.heading2}
                 gutterBottom
               >
               Perustietoa GatsbyJS:stä
@@ -217,8 +370,9 @@ export default function About(props) {
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
+                className={classes.text}
                 paragraph
-                style={{ fontWeight: 600, fontSize: "1.3rem", fontStyle: "italic", }}
+                style={{ fontWeight: 600, fontStyle: "italic", }}
               >Gatsby on React-pohjainen kehys tehokkaiden verkkosivujen ja sovellusten rakentamiseen. 
               Gatsby-sivustoilla on hämmästyttävä suorituskyky, tavallista parempi tietoturva 
               ja parhaat verkkokäytännöt.
@@ -226,9 +380,10 @@ export default function About(props) {
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
+                className={classes.text}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Tehokkaampi liidien luominen ja asiakkaiden sitoutuminen. </span>
+                <span style={{ fontWeight: 600, marginLeft: '1em' }}>Tehokkaampi liidien luominen ja asiakkaiden sitoutuminen. </span>
                 Sivuston toimivuudella ja suorituskyvyllä on valtava vaikutus myyntiin ja asiakkaiden sitoutumiseen. 
                 Äskettäinen&nbsp; <span><Link className={classes.link} to="https://blogs.akamai.com/2020/09/metrics-that-matter-continuous-performance-optimization.html">Akamai-tutkimus</Link></span>
               &nbsp;
@@ -240,8 +395,9 @@ export default function About(props) {
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
+                className={classes.text}
                 paragraph >             
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Parannettu hakuliikenne. </span>&nbsp;<br />
+                <span style={{ fontWeight: 600, marginLeft: '1em' }}>Parannettu hakuliikenne. </span>&nbsp;<br />
                 Sivuston tehokkuus on yksi vaikuttavimmista tekijöistä Googlen hakusijoitusalgoritmissa. 
                 Hitaalla sivustolla voi olla negatiivinen lumipallovaikutus hakukoneoptimointiin. 
                 Google siis indeksoi hitaita sivustoja kauemmin, eli niiden välitön poistumisprosentti on suurempi 
@@ -251,9 +407,10 @@ export default function About(props) {
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
+                className={classes.text}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, marginLeft: '1em' }}>Turvallisuus</span>&nbsp;<br />
+                <span style={{ fontWeight: 600, marginLeft: '1em' }}>Turvallisuus</span>&nbsp;<br />
                 Gatsby on staattisia HTML-sivuja tuottava sivustogeneraattori. Tämä tarkoittaa sitä, että et tarvitse 
                 julkisilla palvelimilla toimivaa tietokantaa tai sisällönhallintajärjestelmää, 
                 joissa on useimmiten uhka tietoturvaloukkaukseen. Staattista sisältöä on paljon helpompi suojata. 

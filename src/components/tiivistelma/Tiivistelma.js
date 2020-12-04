@@ -17,14 +17,14 @@ import frontendDevelopment from "../../assets/images/frontendDevelopment.webp";
 
 const useStyles = makeStyles(theme => ({
 
-  // subtitle: {
-  //   marginBottom: "3em",
-  //   maxWidth: '36vw',
-  //   [theme.breakpoints.down("sm")]: {
-  //     maxWidth: '86vw',
-  //     textAlign: 'center'
-  //   }
-  // },
+  subtitle: {
+    marginBottom: "3em",
+    maxWidth: '36vw',
+    [theme.breakpoints.down("sm")]: {
+      maxWidth: '86vw',
+      textAlign: 'center'
+    }
+  },
   icon: {
     marginLeft: "2em",
     [theme.breakpoints.down("xs")]: {
@@ -230,24 +230,28 @@ export default function Services(props) {
     <Grid
       container
       direction="column"
+      alignItems={matchesMD ? 'center' : undefined}
       className={classes.infoBackground}
       style={{ margin: '5px' }}>
 
       <Grid
         item
         container
-        direction={matchesMD ? "column" : "row"}
-        alignItems={matchesMD ? "center" : undefined}
+        justify={matchesMD ? 'center' : undefined}
         style={{
-          marginTop: matchesMD ? "7em" : "12em",
+          // marginLeft: matchesMD ? 0 : "5em",
+          marginTop: matchesMD ? "10em" : "12em",
+          maxWidth: matchesMD ? '70vw' : '60vw',
+          alignItems: matchesMD ? 'center' : undefined,
           marginBottom: '2em',
         }}
       >
         <Typography
           className={classes.heading1}
-          style={{ width: matchesMD ? '80vw' : '60vw' }}
-          alignItems={matchesMD ? "center" : undefined}
+          style={{ width: matchesMD ? '70vw' : undefined }}
+          align={matchesMD ? "center" : undefined}
           variant="h1"
+          component="h1"
           gutterBottom
         >
           Kattava palveluvalikoima josta saat kotisivullesi kompaktin
@@ -298,7 +302,7 @@ export default function Services(props) {
               className={classes.heading2}
               style={{
                 marginRight: matchesMD ? 0 : '4em',
-                maxWidth: matchesMD ? '80vw' : matchesSM ? '300px' : undefined
+                maxWidth: matchesMD ? '80vw' : undefined
               }}
               variant="h4">
               Progressiiviset GatsbyJS kotisivut
