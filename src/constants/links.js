@@ -22,7 +22,7 @@ export default [
   {
     page: "palvelut",
     label: "hakukoneoptimointi- ja markkinointi",
-    url: `/palvelut/hakukoneOptimointi`,
+    url: `/palvelut/hakukone`,
     icon: <FaAward className="icon" />,
   },
   {
