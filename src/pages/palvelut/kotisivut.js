@@ -7,9 +7,9 @@ const gatsby_kotisivut = () => {
   return (
     <Layout>
       <SEO
-        title='GatsbyJS kotisivut pienyrittäjille'
-        description='Gatsby JS kotisivut ja mobiilisovellukset. 
-         Sivuston nopeudella ja suorituskyvyllä on valtava vaikutus asiakkaiden sitoutumiseen ja myyntiin. '
+        title='Modernit hakukoneoptimoidut kotisivut pienyrittäjille'
+        description='Nykyaikaise salamannopeatt kotisivut ja mobiilisovellukset mikä tukevat
+         nopeudella ja suorituskyvyllä asiakkaiden sitoutumista ja myyntiä. '
       />
       <Kotisivut />
     </Layout>

@@ -1,52 +1,46 @@
 import React from "react"
-import { FaCcStripe, FaCreditCard, FaAlipay } from "react-icons/fa"
+import { FaHome, FaAward, FaMailBulk, FaMoneyBill, FaObjectGroup, FaTv, FaUsersCog } from "react-icons/fa"
 export default [
   {
     page: "koti",
     label: "etusivu",
     url: `/`,
-    icon: <FaCreditCard className="icon" />,
+    icon: <FaHome className="icon" />,
   },
   {
     page: "palvelut",
     label: "yhteenveto",
     url: `/palvelut/yhteenveto`,
-    icon: <FaCreditCard className="icon" />,
+    icon: <FaObjectGroup className="icon" />,
   },
   {
     page: "palvelut",
     label: "gatsbyJS kotisivut",
     url: `/palvelut/kotisivut`,
-    icon: <FaCreditCard className="icon" />,
+    icon: <FaTv className="icon" />,
   },
   {
     page: "palvelut",
     label: "hakukoneoptimointi- ja markkinointi",
-    url: `/palvelut/hakukoneOptimointi`,
-    icon: <FaCreditCard className="icon" />,
+    url: `/palvelut/hakukone`,
+    icon: <FaAward className="icon" />,
   },
-  /*  {
-     page: "palvelut",
-     label: "digimarkkinointi",
-     url: `/palvelut/digimarkkinointi`,
-     icon: <FaCreditCard className="icon" />,
-   }, */
   {
     page: "ratkaisut",
     label: "kehitysprosessi",
     url: `/ratkaisut/kehitysprosessi`,
-    icon: <FaAlipay className="icon" />,
+    icon: <FaUsersCog className="icon" />,
   },
   {
     page: "yritys",
     label: "yhteystiedot",
     url: `/yritys/yhteystiedot`,
-    icon: <FaAlipay className="icon" />,
+    icon: <FaMailBulk className="icon" />,
   },
   {
     page: "hinnasto",
-    label: "ilmainen arviointi",
-    url: `/hinnasto/hinta_arviointi`,
-    icon: <FaAlipay className="icon" />,
+    label: "hinta-arviointi",
+    url: `/hinnasto/hinta`,
+    icon: <FaMoneyBill className="icon" />,
   },
 ]

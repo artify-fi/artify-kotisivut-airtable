@@ -8,7 +8,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Divider from '@material-ui/core/Divider';
 import ArtifyfSEO from "../../assets/images/ArtifySEO.webp";
 import ArtifySEM from '../../assets/images/seo_sem/seo&sem_banner.jpg'
-import { Underline } from "@styled-icons/fa-solid";
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -96,7 +96,7 @@ const useStyles = makeStyles(theme => ({
     // 960 and up to 1280
     [theme.breakpoints.down('md')]: {
       marginTop: '2.6em',
-      fontSize: '1.9rem',
+      fontSize: '1.8rem',
       paddingLeft: '2em',
       paddingRight: '2em',
     },
@@ -104,7 +104,7 @@ const useStyles = makeStyles(theme => ({
     // 600 up to 960        
     [theme.breakpoints.down('sm')]: {
       marginTop: '2em',
-      fontSize: '1.5rem',
+      fontSize: '1.3rem',
       paddingLeft: '0.8em',
       paddingRight: '0.8em',
     },
@@ -162,6 +162,49 @@ const useStyles = makeStyles(theme => ({
     },
   },
 
+  text: {
+    paddingLeft: '2em',
+    paddingRight: '2em',
+    paddingTop: '1em',
+    fontFamily: 'Open Sans Condensed',
+    fontSize: '1.2rem',
+    fontWeight: 400,
+    color: '#443f3f',
+
+    // larger than 1920  
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1.4rem',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem',
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.3rem',
+    },
+
+    // 600 up to 960
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
+    },
+
+    // 0 upt to 600
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
+    },
+  },
+
   link: {
     color: '#45a3b2',
     textDecoration: 'underline',
@@ -190,7 +233,7 @@ export default function About(props) {
       <Grid
         item
         className={classes.rowContainer}
-        style={{ marginTop: matchesMD ? "8em" : "10em" }}
+        style={{ marginTop: matchesMD ? "8em" : matchesSM ? '2em' : "14em" }}
       >
 
         {/* Yhteinen otsikko SEO JA SEM */}
@@ -202,9 +245,11 @@ export default function About(props) {
             marginLeft: matchesMD ? undefined : '3em',
             maxWidth: matchesMD ? undefined : '70vw',
           }}
-          variant="h1">
+          variant="h1"
+          className={classes.h1}>
+
           Miten saada näkyvyyttä hakukoneissa? Onko yritykselläsi toimiva verkkosivu jolle
-          haluat enemmän liikennettä, hinakyselyä, myyntiä tai tuotemerkkitietoisuutta mutta
+          haluat enemmän liikennettä, hintakyselyä, myyntiä tai tuotemerkkitietoisuutta mutta
           et tiedä miten sen saavuttaisit tai miten hakukoneoptimointi ja hakukonemarkkinointi
           auttaisivat sivustosi havaittavuudessa?
         </Typography>
@@ -268,7 +313,6 @@ export default function About(props) {
             container
             direction="column"
             style={{
-              maxWidth: "35em",
               marginLeft: matchesMD ? undefined : '7em'
             }} >
 
@@ -282,11 +326,12 @@ export default function About(props) {
               </Typography>
             </Grid>
 
-            <Grid item style={{ width: '60vw' }}>
+            <Grid item style={{ width: '70vw' }}>
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
                 paragraph
+                className={classes.text}
                 style={{ fontWeight: 700, fontStyle: "italic", }}
               >
                 Hakukoneoptimoinnista on silloin hyötyä, jos tarjoamiasi tuotteita tai palveluja haetaan
@@ -297,9 +342,10 @@ export default function About(props) {
               <Typography
                 variant="body1"
                 align={matchesMD ? "center" : undefined}
+                className={classes.text}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '1em' }}>SEO-asetukset ovat
+                <span style={{ fontWeight: 600, padding: '1em' }}>SEO-asetukset ovat
                 enemmän kuin vain avainsanoja.</span><br />
                 SEO -nimellä tehty työ on jaettu suurinpiirtein kahteen osaan:<br /><br />
                 1. Verkkosivun sisäinen hakukoneoptimointi tekee sivuista täsmällisiä,
@@ -307,7 +353,7 @@ export default function About(props) {
                 Siispä optimoitujen verkkosivustojen sijoitus on haussa korkeampi ja samalla hakuliikenne kasvaa.
               </Typography>
               <Typography
-                variant="body1"
+                variant="body1" className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
@@ -319,24 +365,25 @@ export default function About(props) {
               </Typography>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                Avainsanojen lisäksi SEO:n tekniset näkökohdat, SEO-tuloksia tukevan verkkoympäristön suunnittelu,
-                sisällön suunnittelu, oikein täytetyt Google- ja sosiaalisen median profiilit sekä linkit
+                Avainsanojen lisäksi, myös SEO:n tekniset seikat, SEO-tuloksia tukevan verkkoympäristön suunnittelu,
+                sisällön suunnittelu, edustavat Googlen ja sosiaalisen median profiilit sekä linkit
                 oman verkkosi ulkopuolella ovat yhtä tärkeitä.
               </Typography>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '1em' }}>Mikä on paras aika ajatella SEO:tä?</span>&nbsp;<br />
-                Paras aika ajatella hakukoneoptimointia ja erilaisia ​​mainontamahdollisuuksia yleensä on,
-                kun luot verkkosivustoa tai verkkokauppaa. Pelkkä tosiasia, että uusi verkkosivusto tai verkkokauppa
-                on tänään avoinna yleisölle, ei tuo kävijöitä sinne. On tärkeää miettiä alusta alkaen, miten kävijät
-                tavoittavat sinut.Paras hetki ajatella SEO: tä on myös silloin, kun hakukoneet tavoittavat epäilyttävän
-                vähän ihmisiä ja verkkosivustoa on parannettava. Joten, jos haluat SEO-apua, ota yhteyttä.
+                <span style={{ fontWeight: 600, padding: '1em' }}>Mikä on paras aika ajatella SEO:ta?</span>&nbsp;<br />
+                Paras aika harkita hakukoneoptimoinnin ja erilaisten mainontamahdollisuuksien käyttöön
+                ottoa on yleensä silloin, kun luot verkkosivua tai verkkokauppaa. Ainoastaan  se,
+                että uusi verkkosivu tai verkkokauppa on avoinna yleisölle,
+                ei tuo sinne kävijöitä. On tärkeää ajatella alusta alkaen, miten mahdolliset asiakkaat voivat tavoittaa sinut. Hyvä hetki ajatella SEO:ta on myös silloin, kun hakukoneet tavoittavat liian vähän ihmisiä tai verkkosivua on kehitettävä. Jos siis tarvitset SEO-apua, ota yhteyttä.
                 </Typography>
             </Grid>
           </Grid>
@@ -349,7 +396,7 @@ export default function About(props) {
           <img
             src={ArtifySEM}
             alt="Gatsby logo"
-            style={{ maxHeight: matchesMD ? 200 : "20em", marginTop: '-6em', width: '70vw' }}
+            style={{ maxWidth: matchesMD ? '80vw' : matchesSM ? '90vw' : "70vw", marginTop: matchesMD ? '-3em' : '-1em' }}
           />
         </Grid>
       </Grid>
@@ -370,7 +417,6 @@ export default function About(props) {
             container
             direction="column"
             style={{
-              maxWidth: "35em",
               marginLeft: matchesMD ? undefined : '7em'
             }} >
 
@@ -380,77 +426,77 @@ export default function About(props) {
                 variant="h3"
                 gutterBottom
               >
-                Perustiedot hakukonemarkkinoinnista
+                Perustietoja hakukonemarkkinoinnista
               </Typography>
             </Grid>
-            <Grid item item style={{ width: '60vw' }}>
+            <Grid item item style={{ width: '70vw' }}>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
                 style={{ fontWeight: 700, fontStyle: "italic", }}
               >
                 {/* Lyhyesti hakukonemarkkinoinnista  */}
-                Hakukonemarkkinointi on käytäntö markkinoida yritystä käyttämällä maksettuja
-                mainoksia, jotka näkyvät hakukoneiden tulossivuilla (SERP:issä).
-                Mainostajat tekevät hintatarjouksia avainsanoista, jotka Googlen ja Bingin
-                kaltaisten palvelujen käyttäjät voivat syöttää etsittäessään tiettyjä tuotteita
-                tai palveluita, mikä antaa mainostajalle mahdollisuuden näyttää mainoksensa näiden
-                hakutulosten rinnalla.
+                Hakukonemarkkinointi on yrityksen markkinointia käyttämällä maksullista mainontaa,
+                mikä näkyy hakukoneiden tulossivuilla (SERP:issä).
+                 Mainostajat tekevät hintatarjouksia avainsanoista, joita Googlen ja Bingin
+                 kaltaisten palvelujen käyttäjät voivat syöttää hakukenttään etsiessään tiettyjä tuotteita
+                 tai palveluita, mitkä antavat mainostajalle mahdollisuuden näyttää mainostansa yhtenä hakutuloksista.
               </Typography>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600 }}>Avainsanat: hakukoneen markkinoinnin kantava voima.</span>
-               Kun käyttäjät kirjoittavat hakukoneisiin avainsanoja (osana hakulausekkeita) löytääkseen etsimänsä,
-               ei pitäisi olla yllätys, että avainsanat muodostavat hakukoneiden markkinoinnin perustan mainontastrategiana.
+                <span style={{ diplay: 'inlineBlock', fontWeight: 600, padding: '2em' }}>Avainsanat: hakukonemarkkinoinnin kantava voima.</span>
+               Käyttäjät kirjoittavat hakukoneisiin avainsanoja (osana hakulausekkeita) löytääkseen etsimänsä,joten sen
+               ei pitäisi olla yllätys, että avainsanat muodostavat hakukonemarkkinoinnin perustan.
                Ennen kuin voit valita hakukoneiden markkinointikampanjoissa käytettäviä avainsanoja,
-               sinun on suoritettava kattava tutkimus osana avainsanojen hallintastrategiaa.Ensinnäkin sinun on
-               tunnistettava avainsanat, jotka ovat merkityksellisiä yrityksellesi ja joita mahdolliset asiakkaat
-               todennäköisesti käyttävät etsiessään tuotteitasi ja palveluitasi.
+               sinun on suoritettava kattava tutkimus osana avainsanojen hallintastrategiaa. Ensinnäkin sinun on
+               hyvä tunnistaa yrityksellesi merkilliset avainsanat, joita mahdolliset asiakkaat todennäköisimmin
+               käyttävät etsiessään tuotteitasi tai palveluitasi.
               </Typography>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ diplay: 'inlineBlock', fontSize: '1.2rem', fontWeight: 600, padding: '3em' }}>Hakukonemarkkinoinnin mainoshuutokauppa.</span>&nbsp;<br />
-                Yksi kestävimmistä väärinkäsityksistä hakukonemarkkinoinnissa on, että voittaa se,
-                jolla on suurin mainosbudjetti. Vaikka suurempi mainontabudjetti voi olla varmasti edullista,
-                varsinkin kun kohdistetaan erittäin kilpailukykyisiin avainsanoihin, mutta se on kaukana
-                vaatimuksesta menestyä hakukoneiden markkinoinnissa. Tämä johtuu siitä, että kaikki mainokset käyvät
-                läpi mainoshuutokaupan, ennen kuin ne näkyvät hakutulosten vieressä. Tässä selityksessä keskityn Google AdWordsin
-                mainoshuutokauppaan.
+                <span style={{ diplay: 'inlineBlock', fontWeight: 600, padding: '2em' }}>Hakukonemarkkinoinnin mainoshuutokauppa</span>&nbsp;<br />
+                Yksi yleisimmistä väärinkäsityksistä hakukonemarkkinoinnissa on, että aina se jolla on suurin mainosbudjetti,
+                voittaa. Vaikka suurempi mainontabudjetti voi olla etu, varsinkin kun on kyse erittäin halutuista avainsanoista,
+                on se kaukana menestyvien hakukonemarkkinoiden vaatimuksesta. Tämä johtuu siitä, että kaikki mainokset käyvät läpi
+                mainoshuutokaupan ennen hakutuloksiin ilmestymistä. Tarkoitan tällä erityisesti Google AdWordsin mainoshuutokauppaa.
               </Typography>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '2em' }}>Millä lailla mainoshuutokauppa toimii</span>&nbsp;<br />
-                Mainoshuutokauppaprosessi tapahtuu joka kerta, kun joku kirjoittaa hakulausekkeen Googleen.
-                Ilmoittaakseen mainoshuutokauppaan mainostajat tunnistavat avainsanat, joilta he haluavat tehdä tarjouksen,
-                ja ilmoittavat, kuinka paljon he ovat halukkaita kuluttamaan (napsautusta kohden) mainostensa näyttämiseksi
-                kyseisiin avainsanoihin liittyvien tulosten rinnalla. Jos Google katsoo, että tarjoamasi avainsanat sisältyvät
-                käyttäjän hakulausekkeesssa, mainoksesi osallistuvat mainoshuutokauppaan.
+                <span style={{ diplay: 'inlineBlock', fontWeight: 600, padding: '2em' }}>Miten mainoshuutokauppa toimii?</span>&nbsp;<br />
+                Mainoshuutokauppaprosessi tapahtuu joka kerta, kun joku hakee jotain hakulauseketta esimerkiksi Googlessa.
+                Ilmoittautuakseen mainoshuutokauppaan, mainostajat tarjoavat haluamistaan avainsanoista budjetin
+                (napsautusta kohden) keraa, jotta heidän mainostaan näytettäisiin kyseisten avainsanojen hakutuloksina.
+                Kun Google on tarkistanut, että tarjoamasi avainsanat sisältyvät käyttäjän hakulausekkeesssa,
+                mainoksesi osallistuu mainoshuutokauppaan.
                 </Typography>
               <Typography
                 variant="body1"
+                className={classes.text}
                 align={matchesMD ? "center" : undefined}
                 paragraph
               >
-                <span style={{ fontSize: '1.2rem', fontWeight: 600, padding: '2em' }}>Miten mainokset voittavat mainoshuutokaupan</span>&nbsp;<br />
-                Jokaisia yksittäisiä mainoksia ei näytetä kaikissa hakuissa. Tämä johtuu siitä,
-                että mainoshuutokaupassa otetaan huomioon useat tekijät määritettäessä mainosten sijoittelua
-                SERP:lle(hakukoneen tulossivulle), ja koska kaikilla avainsanoilla ei ole riittävää kaupallista
-                tarkoitusta perustella mainosten näyttämistä tulosten vieressä. Kaksi tärkeintä tekijää,
-                jotka Google arvioi osana mainoshuutokauppaprosessia, ovat korkein hintatarjouksesi ja mainostesi laatupisteet.
-                Korkein tarjous on suurin määrittämäsi summa, jonka olet valmis maksamaan napsautuksesta.
-                Laatupisteet ovat mittari, joka perustuu mainoksesi yleiseen laatuun.
-                Google laskee nämä tiedot mainoshuutokaupan aikana mainosten sijoittelun määrittämiseksi. Tämän laskelman tulos
-                tunnetaan mainoksen sijoituksena.
+                <span style={{ diplay: 'inlineBlock', fontWeight: 600, padding: '2em' }}>Miten mainokset voittavat mainoshuutokaupan</span>&nbsp;<br />
+                Jokaista yksittäistä mainosta ei näytetä kaikissa hauissa. Tämä johtuu siitä,
+                että mainoshuutokaupassa otetaan huomioon useat tekijät mainoksia sijoitellessa SERP:ille
+                (hakukoneen tulossivulle) sekä siksi, koska kaikilla avainsanoilla ei ole riittävää kaupallista
+                tarkoitusta mainosten näyttämistä varten. Kaksi tärkeintä tekijää, joita Google arvioi osana
+                mainoshuutokauppaprosessia, ovat korkein hintatarjouksesi sekä mainostesi laatupisteet. Korkein tarjous
+                on suurin määrittämäsi hinta yhdestä klikkauksesta. Laatupisteet taas toimivat mittarina mainoksesi
+                yleisestä laadusta. Näiden tietojen perusteella Google päättää mainoshuutokaupan sijoitukset.
                 </Typography>
             </Grid>
           </Grid>

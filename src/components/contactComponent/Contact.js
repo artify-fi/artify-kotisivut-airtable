@@ -128,7 +128,10 @@ export default function Contact(props) {
                       className="form-control"
                     ></textarea>
                   </div>
-                  <button type="submit" className="submit-btn btn">
+                  <button
+                    type="submit"
+                    aria-label='lähetä viesti painike'
+                    className="submit-btn btn">
                     Lähetä vesti
                   </button>
                 </form>
@@ -161,7 +164,7 @@ export default function Contact(props) {
           <Grid container alignItems='center' direction="column" style={{ width: matchesMD ? '80vw' : '30vw' }}>
             <Grid item justify='center'>
               <Typography className={classes.header} align={matchesMD ? "center" : undefined} variant="h2">
-                Yksinkertaiset kotisivut.
+                Progressiiviset kotisivut.
                 <br />
                 Vallankumoukselliset tulokset.
               </Typography>
@@ -184,6 +187,16 @@ export default function Contact(props) {
                   }}
                 />
               </Grid>
+              <Typography
+                variant='subtitle2'
+                align={matchesMD ? 'center' : undefined}
+                style={{ fontSize: '1.2rem' }}>
+                Art Bachmann
+                <br />
+                <span style={{ fontSize: '0,8rem' }}>
+                  puh. 041 743 1350
+                </span>
+              </Typography>
 
               <Grid container item
                 justify={'center'}>
@@ -192,6 +205,7 @@ export default function Contact(props) {
                   to="/hinnasto/hinta_arviointi"
                   className={classes.estimateButton}
                   variant='outlined'
+                  aria-label='hinnan arvioinnin painike'
                   className={classes.estimateButton}>
                   <span>
                     Hinta-arviointi

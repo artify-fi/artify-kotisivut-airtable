@@ -28,7 +28,7 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 import infoBackground from '../../assets/images/abstract_background_small.webp'
 import cardImage from '../../assets/images/multiple_screens_optimized.webp'
-import { OpenInBrowser } from '@material-ui/icons';
+
 
 
 
@@ -300,20 +300,40 @@ const useStyles = makeStyles(theme => ({
     paddingTop: '1em',
     fontFamily: 'Open Sans Condensed',
     fontSize: '1.2rem',
-    fontWeight: 400,
-    color: '#443f3f',
+    fontWeight: 500,
+    color: '#1b2733',
 
+    // larger than 1920  
+    [theme.breakpoints.down('xl')]: {
+      fontSize: '1.4rem',
+      marginBottom: '2em',
+    },
+
+    // 1280  and  up to 1920
+    [theme.breakpoints.down('lg')]: {
+      fontSize: '1.4rem',
+    },
+
+
+    // 960 and up to 1280
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.3rem',
+    },
+
+    // 600 up to 960
     [theme.breakpoints.down('sm')]: {
-      fontSize: '1.1rem',
-      paddingLeft: '0.6em',
-      paddingRight: '0.6em'
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
     },
 
     // 0 upt to 600
     [theme.breakpoints.down('xs')]: {
-      fontSize: '0.9rem',
-      paddingLeft: '0.6em',
-      paddingRight: '0.6em'
+      fontSize: '1.2rem',
+      paddingLeft: '0.4em',
+      paddingRight: '0.4em',
+      marginBottom: '0.4em'
     },
   },
 
@@ -369,7 +389,7 @@ const LandingBlock = () => {
                   component="h1"
                   align='center'
                   className={classes.cardHeading}>
-                  Nykyaikaiset ja progressiiviset* kotisivut sekä  mobiilisovellukset
+                  Modernit ja progressiiviset* kotisivut sekä  mobiilisovellukset
                   pienyrittäjille, jotka tukevat uusien asiakkaiden tavoittamista.
                 </Typography>
               </CardContent>
@@ -474,14 +494,10 @@ const LandingBlock = () => {
                     component={Link}
                     to="/palvelut/yhteenveto"
                     variant='outlined'
+                    aria-label='lue enemman progressive web applikaatioista'
                     className={classes.learnButtonHero}
                   >
                     <span style={{ marginRight: 10 }}>Lue Lisää</span>
-                    {/* <ButtonArrow
-                      width={15}
-                      height={15}
-                      fill={theme.palette.common.Grey4}
-                    /> */}
                   </Button>
 
                   <Grid item container justify='center'>
@@ -489,6 +505,7 @@ const LandingBlock = () => {
                       component={Link}
                       to="/hinnasto/hinta_arviointi"
                       variant='outlined'
+                      aria-label='kotisivun hinta arviointi'
                       style={{
                         marginTop: '8em',
                         marginBottom: '2em',

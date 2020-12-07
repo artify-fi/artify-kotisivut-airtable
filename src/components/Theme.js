@@ -98,7 +98,7 @@ export default createMuiTheme({
       fontFamily: 'Open Sans Condensed',
       fontWeight: 500,
       fontSize: '1.2rem',
-      color: grey5,
+      color: blue1dark,
       lineHeight: 1.3
     },
     h6: {

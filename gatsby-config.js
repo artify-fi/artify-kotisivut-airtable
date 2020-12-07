@@ -4,10 +4,10 @@ require("dotenv").config({
 // const queries = require("./src/constants/algolia")
 module.exports = {
   siteMetadata: {
-    title: `Hakukonenoptimoidut GatsbyJS verkkosivut ja mobiilisovellukset`,
-    description: `Responsiiviset Gatsby JS kotisivut ja mobiilisovellukset 
-    jotka näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.`,
-    titleTemplate: `%s | GatsbyJS kotisivut ja hakukonenoptimointi`,
+    title: `Pienyrittäjille modernit ja hakukonenoptimoidut verkkosivut sekä mobiilisovellukset.`,
+    description: `Responsiiviset kotisivut ja mobiilisovellukset 
+    jotka tukevat uusien asiakkaiden tavoittamista sekä näyttävät hyvältä niin pöytäkoneilla kuin mobiililaitteillakin.`,
+    titleTemplate: `%s |Modernit hakukoneoptimoidut kotisivut pienyrittäjille`,
     siteUrl: `https://www.artify.fi/`,
     twitterUsername: `@ArtBachmann`,
     image: `logo.jpg`,
@@ -86,16 +86,30 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       `Open Sans Condensed`,
+    //       `Merriweather`,
+    //     ],
+    //     display: 'swap'
+    //   }
+    // },
+
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-with-attributes`,
       options: {
         fonts: [
           `Open Sans Condensed`,
           `Merriweather`,
-
+          // `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
-    }
+        display: "swap",
+        attributes: {
+          rel: "stylesheet preload prefetch",
+        },
+      },
+    },
   ],
 }
