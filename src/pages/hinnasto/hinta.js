@@ -7,7 +7,7 @@ const arviointi = () => {
   return (
     <Layout>
       <SEO title='Kotisivujen tekemisen hinta'
-        description='Ilmainen arviointi mitä maksaa kotisivujen tekeminen.' />
+        description='Ilmainen arviointi paljon maksaa kotisivujen tekeminen.' />
       <HintaArviointi />
     </Layout>
   )
