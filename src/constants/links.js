@@ -39,8 +39,8 @@ export default [
   },
   {
     page: "hinnasto",
-    label: "ilmainen arviointi",
-    url: `/hinnasto/hinta_arviointi`,
+    label: "hinta-arviointi",
+    url: `/hinnasto/hinta`,
     icon: <FaMoneyBill className="icon" />,
   },
 ]

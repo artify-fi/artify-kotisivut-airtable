@@ -389,7 +389,7 @@ const LandingBlock = () => {
                   component="h1"
                   align='center'
                   className={classes.cardHeading}>
-                  Nykyaikaiset ja progressiiviset* kotisivut sekä  mobiilisovellukset
+                  Modernit ja progressiiviset* kotisivut sekä  mobiilisovellukset
                   pienyrittäjille, jotka tukevat uusien asiakkaiden tavoittamista.
                 </Typography>
               </CardContent>
