@@ -11,7 +11,7 @@ import './layout.css'
 
 
 
-const Layout = ({ children, pageTitle }) => {
+const Layout = ({ children }) => {
 
 
   const { isSidebarOpen } = useContext(GatsbyContext)
