@@ -439,7 +439,7 @@ export default function Services(props) {
               className={classes.heading2}
               style={{ marginRight: matchesMD ? 0 : '4em' }}
               variant="h4">
-              Hakukonemarkkinointi (SEM)
+              Hakusanamarkkinointi (SEM)
             </Typography>
 
             <Typography
@@ -536,7 +536,7 @@ export default function Services(props) {
               className={classes.heading2}
               style={{ marginRight: matchesMD ? 0 : '4em' }}
               variant="h4"
-            >Digimarkkinointi & Google Analytics
+            >Verkkosivujen analyyttikka.
             </Typography>
 
             <Typography

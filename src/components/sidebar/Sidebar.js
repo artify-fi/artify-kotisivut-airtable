@@ -43,8 +43,8 @@ const Wrapper = styled.aside`
   @media (min-width: 800px) {
     display: none;
   }
-  .container {
-    background: var(--clr-white);
+  .container {   
+    background: var(--clr-white); 
     width: 80vw;
     height: 80vh;
     border-radius: var(--radius);

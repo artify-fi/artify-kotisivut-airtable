@@ -1118,11 +1118,7 @@ export default function Estimate() {
         setUsers("");
         setCategory("");
         break;
-<<<<<<< HEAD
-      case "Moderni GatsbyJS responsiivinen kotisivu, lisäetuna progressiivinen mobiilisovellus kaupan päälle.":
-=======
       case "GatsbyJS progressiivinen kotisivu":
->>>>>>> develop
         setQuestions(kotisivutQuestions);
         setService(newSelected.title);
         setPlatforms([]);
